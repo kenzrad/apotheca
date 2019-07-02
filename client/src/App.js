@@ -1,10 +1,11 @@
 import React from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Item from './components/Item';
 
 function App() {
   return (
     <>
-      <h1>This is a page, wow!</h1>
+
     </>
   );
 }

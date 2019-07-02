@@ -1,0 +1,26 @@
+.item {
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+}
+
+.itemDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.itemDescription > div {
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    text-align: center;
+}
+
+.itemDescription:hover {
+    opacity: 0.80;
+    transition-duration: 1s;
+}
