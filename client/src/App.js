@@ -1,14 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Item from './components/Item';
-
-function App() {
-  return (
-    <>
-
-    </>
-=======
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
@@ -31,7 +21,6 @@ function App() {
         </Switch>
       </div>
     </Router>
->>>>>>> ab774c67ad9ba82291669c56271bdf9b60f83c78
   );
 }
 
