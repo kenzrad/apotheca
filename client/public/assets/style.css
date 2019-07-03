@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Cormorant|Forum&display=swap');
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-family: 'Forum', cursive;
+    font-family: 'Garamond','Baskerville','Baskerville Old Face','Hoefler Text','Times New Roman','serif';
+}
+
+body {
+    font-family: 'Cormorant', 'Garamond', serif;
+}
