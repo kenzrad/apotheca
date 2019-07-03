@@ -289,6 +289,295 @@ const elementSeed = [
             tags: ""
         }]
     },
+    {
+        id: 21,
+        name: "Tomatoes",
+        components: ["lycopene", "Vitamin C", "Potassium"],
+        benefits: ["Rejuvinate", "Brighten", "Renews", "Protects"],
+        category: "novo",
+        home_remedy: 21,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 22,
+        name: "Jojoba Oil",
+        components: ["Vitamin E", "Vitamin B", "Copper", "Zinc", "Chromium"],
+        benefits: ["Protects", "Hydrates", "Balances"],
+        category: "novo",
+        home_remedy: 22,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 23,
+        name: "Apple Cider Vinegar",
+        components: ["Acetic Acid", "Potassium", "Magnesium"],
+        benefits: ["Combats Acne"],
+        category: "novo",
+        home_remedy: 23,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 24,
+        name: "Sea Salt",
+        components: ["Magnesium", "Calcium", "Sodium", "Potassium"],
+        benefits: ["Hydrating", "Rejuvinating"],
+        category: "novo",
+        home_remedy: 24,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 25,
+        name: "Mango",
+        components: ["Vitamin C", "Vitamin A", "Vitamin B6", "Copper", "Potassium", "Magnesium", "Vitamin E", "Vitamin K"],
+        benefits: ["Combats Acne", "Soothes", "Renews", "Rejuvinates", "Exfoliates"],
+        category: "novo",
+        home_remedy: 25,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 26,
+        name: "Hyssop",
+        components: ["Limonene", "Eucalptol", "Camphene"],
+        benefits: ["Refreshes", "Balances", "Sensitive Skin"],
+        category: "novo",
+        home_remedy: 26,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 27,
+        name: "Baking Soda",
+        components: ["Sodium Bicarbonate"],
+        benefits: ["Rejuvinating", "Acne Control", "Refreshes"],
+        category: "novo",
+        home_remedy: 27,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 28,
+        name: "Witch Hazel",
+        components: ["Gallic Acid", "Tannins"],
+        benefits: ["Combats Acne", "Soothes", "Protects"],
+        category: "novo",
+        home_remedy: 28,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+    {
+        id: 29,
+        name: "Lemon Oil",
+        components: ["Vitamin C", "Potassium"],
+        benefits: ["Renews", "Rejuvinate", "Brighten", "Protect"],
+        category: "novo",
+        home_remedy: 29,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 30,
+        name: "Egg Whites",
+        components: ["Lysozymes", "Amino Acids", "Potassium"],
+        benefits: ["Combats Acne", "Brighten", "Balances"],
+        category: "novo",
+        home_remedy: 3,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 31,
+        name: "Shea Butter",
+        components: ["Stearic Acid", "Oleic Acid"],
+        benefits: ["Renews", "Rejuvinates", "Brightens", "Hydrates"],
+        category: "bibe",
+        home_remedy: 31,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 32,
+        name: "Cucumber",
+        components: ["Lycopene", "Magnesium", "Potassium", "Biotin"],
+        benefits: ["Hydrates", "Brightens"],
+        category: "bibe",
+        home_remedy: 32,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 33,
+        name: "Honey",
+        components: ["Vitamin B2", "Vitamin B3", "Vitamin B5", "Vitamin B6", "Vitamin C", "Potassium"],
+        benefits: ["Combats Acne", "Hydrates", "Sensitive Skin", "Brightens"],
+        category: "bibe",
+        home_remedy: 33,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 34,
+        name: "Yogurt",
+        components: ["Lactic Acid", "Zinc"],
+        benefits: ["Rejuvinates", "Combats Acne", "Brightens"],
+        category: "bibe",
+        home_remedy: 34,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 35,
+        name: "Coconut Oil",
+        components: ["Lauric Acid", "Medium Chain Triglycerides"],
+        benefits: ["Hydrates", "Rejuvinates"],
+        category: "bibe",
+        home_remedy: 35,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 36,
+        name: "Avocado",
+        components: ["Vitamin A", "Vitamin D", "Vitamin E"],
+        benefits: ["Hydrates", "Brightens"],
+        category: "bibe",
+        home_remedy: 36,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 37,
+        name: "Oatmeal",
+        components: ["Zinc"],
+        benefits: ["Balances", "Hydrates", "Protects", "Combats Acne"],
+        category: "bibe",
+        home_remedy: 37,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 38,
+        name: "Aloe Vera",
+        components: ["Salicylic Acid", "Ligin", "Amino Acids"],
+        benefits: ["Renews", "Hydrates", "Rejuvinates"],
+        category: "bibe",
+        home_remedy: 38,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 39,
+        name: "Cranberry Seed Oil",
+        components: ["Vitamin C", "Vitamin A", "Vitamin E", "Vitamin K"],
+        benefits: ["Hydrates", "Renews", "Rejuvinates", "Protects"],
+        category: "bibe",
+        home_remedy: 39,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+    {
+        id: 40,
+        name: "Olive Oil",
+        components: ["Oleic Acid", "Linoleic Acid"],
+        benefits: [""],
+        category: "bibe",
+        home_remedy: 40,
+        products: [{
+            name: "",
+            src: "",
+            price: "",
+            tags: ""
+        }]
+    },
+
+
 
 
 ];
