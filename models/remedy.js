@@ -5,6 +5,6 @@ const remedySchema = new Schema({
 //anna had it
 });
 
-const Remedy = mongoose.model("Element", remedySchema);
+const Remedy = mongoose.model("Remedy", remedySchema);
 
 module.exports = Remedy;
