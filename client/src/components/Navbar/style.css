@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
+
+.horizontal-list {
+  display: flex;
+  margin-left: 50%;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
+  font-size: 3em;
+  text-decoration: none;
+  color: rgb(73, 64, 64);
+  list-style: none;
+  letter-spacing: 0.25em;
+}
+
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  border-bottom: solid;
+  border-bottom-color: rgba(73, 64, 64, 0.5);
+  border-bottom-width: 1px;
+}
+
+/* .navbar-links {
+  width: 75%;
+} */
+
+ul,
+li,
+a {
+  font-family: 'Cormorant', 'Garamond', serif;
+  letter-spacing: 0.2em;
+  margin-right: 10px;
+  list-style-type: none;
+  text-decoration: none;
+
+}

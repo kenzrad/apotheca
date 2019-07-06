@@ -4,13 +4,13 @@ import Main from "./pages/Main";
 import Profile from "./pages/Profile";
 import Elements from "./pages/Elements";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/Main" component={Main} />
