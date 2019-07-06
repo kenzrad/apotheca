@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
+//commented this out during troubleshooting - not sure if it needs to be seperated out this way based on how you are organizing, so I left it
 //element schema
 
 // const productSchema = new Schema({
@@ -28,9 +28,6 @@ const elementSchema = new Schema({
 });
 
 const Element = mongoose.model("Element", elementSchema);
-// console.log("I am in the element models folder");
-// console.log("elementSchema: " + elementSchema);
-// console.log("Element: " + Element);
 
 module.exports = Element;
 
