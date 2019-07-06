@@ -234,9 +234,9 @@ const componentSeed = [
 
 ];
 
-db.Apotheca
+db.Component
     .remove({})
-    .then(() => db.Apotheca.collection.insertMany(componentSeed))
+    .then(() => db.Component.collection.insertMany(componentSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
