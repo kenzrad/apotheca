@@ -21,7 +21,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 2,
@@ -35,7 +37,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 3,
@@ -49,7 +53,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 4,
@@ -63,7 +69,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 5,
@@ -77,7 +85,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 6,
@@ -91,7 +101,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 7,
@@ -105,7 +117,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 8,
@@ -119,7 +133,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 9,
@@ -133,7 +149,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 10,
@@ -147,7 +165,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 11,
@@ -161,7 +181,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 12,
@@ -175,7 +197,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 13,
@@ -189,7 +213,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 14,
@@ -203,7 +229,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 15,
@@ -217,7 +245,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 16,
@@ -231,7 +261,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 17,
@@ -245,7 +277,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 18,
@@ -259,8 +293,11 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
+
     {
         id: 19,
         name: "Garlic",
@@ -273,7 +310,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 20,
@@ -287,7 +326,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 21,
@@ -301,7 +342,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 22,
@@ -315,7 +358,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -330,7 +375,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -345,7 +392,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -360,7 +409,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -375,7 +426,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -390,7 +443,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -405,7 +460,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
 
     {
@@ -420,7 +477,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 30,
@@ -434,7 +493,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 31,
@@ -448,7 +509,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 32,
@@ -462,7 +525,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 33,
@@ -476,7 +541,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 34,
@@ -490,7 +557,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 35,
@@ -504,7 +573,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 36,
@@ -518,7 +589,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 37,
@@ -532,7 +605,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 38,
@@ -546,7 +621,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 39,
@@ -560,7 +637,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     },
     {
         id: 40,
@@ -574,7 +653,9 @@ const elementSeed = [
             src: "",
             price: "",
             tags: ""
-        }]
+        }],
+        date: new Date(Date.now())
+
     }
 
 

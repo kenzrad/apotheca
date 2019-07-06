@@ -1,6 +1,8 @@
 const router = require("express").Router();
-const elementController = require("../../controllers/apiController");
+const elementController = require("../../controllers/elementController");
 
+console.log("I am in the element api folder")
+console.log(elementController);
 // Matches with "/api/element"
 router.route("/")
   .get(elementController.findAll)
