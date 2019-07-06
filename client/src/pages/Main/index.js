@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
-import Item from "../../components/Item";
-import Navbar from "../../components/Navbar";
 import Wrapper from "../../components/Wrapper";
 import MainArticle from "../../components/MainArticle";
 import SideArticle from "../../components/SideArticle";
