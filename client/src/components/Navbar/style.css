@@ -30,11 +30,17 @@ a.navbar-search-container {
 .line-one {
   height: 6px;
   background-color: rgba(139,142,82, 1);
+  /* background-color: rgba(159,197,233, 1); */
 }
 
 .line-two {
   height: 8px;
-  background-image: linear-gradient(to bottom, rgba(175, 145, 145 ,1), rgba(255, 255, 255, 0)); 
+  background-image: linear-gradient(to bottom, rgba(175, 145, 145 ,1), rgba(175, 145, 145 , 0.3)); 
+}
+
+.line-three {
+  height: 8px;
+  background-image: linear-gradient(to bottom, rgba(175, 145, 145 ,0.3), rgba(175, 145, 145, 0)); 
 }
 
 .navbar {

@@ -8,6 +8,7 @@ function Navbar() {
     <>
       <div className="line-one" />
       <div className="line-two" />
+      <div className="line-three" />
       <nav className="navbar">
         <Link className="nav-brand" to="/">
           APOTHECA

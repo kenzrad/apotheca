@@ -2,6 +2,22 @@
     height: 500px;
     width: 500px;
     background-size: cover;
+    margin: 10px;
+}
+
+.itemMain {
+    height: 500px;
+    width: 500px;
+    display: flex;
+}
+.itemName {
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.itemSynopsis {
+    justify-content: center;
+    align-self: flex-end;
 }
 
 .itemDescription {
