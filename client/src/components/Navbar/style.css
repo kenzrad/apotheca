@@ -1,12 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
 
-.horizontal-list {
-  display: flex;
-  margin-left: 50%;
-  justify-content: space-between;
+ul,
+li
+{
+  font-family: 'Cormorant', 'Garamond', serif;
+  letter-spacing: 0.2em;
+  list-style-type: none;
+  color: rgb(73, 64, 64);
+  text-transform: lowercase;
 }
 
-.navbar-brand {
+a {
+  font-family: 'Cormorant', 'Garamond', serif;
+  letter-spacing: 0.2em;
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(73, 64, 64);
+}
+
+a.navbar-search-container {
+  margin: 0;
+
+}
+
+.horizontal-list {
+  display: flex;
+}
+
+.line-one {
+  height: 6px;
+  background-color: rgba(139,142,82, 1);
+}
+
+.line-two {
+  height: 8px;
+  background-image: linear-gradient(to bottom, rgba(175, 145, 145 ,1), rgba(255, 255, 255, 0)); 
+}
+
+.navbar {
+  display: flex;
+  border-bottom: solid;
+  border-bottom-color: rgba(73, 64, 64, 0.5);
+  border-bottom-width: 1px;
+
+  justify-content: space-between;
+  align-content: center;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+}
+
+.nav-brand {
   font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
   font-size: 3em;
   text-decoration: none;
@@ -15,29 +58,28 @@
   letter-spacing: 0.25em;
 }
 
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-  padding: 0;
+.nav-search-container {
+  border: solid;
+  border-color: rgba(73, 64, 64, 0.5);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 2px 0px;
+
 }
 
-.navbar {
-  display: flex;
-  border-bottom: solid;
-  border-bottom-color: rgba(73, 64, 64, 0.5);
-  border-bottom-width: 1px;
+.nav-item > a {
+  vertical-align: middle;
+  margin-right: 20px;
 }
 
-/* .navbar-links {
-  width: 75%;
-} */
+.nav-search {
+  border: none;
+  margin-right: 0;
+  margin-left: 10px;
+  
+}
 
-ul,
-li,
-a {
-  font-family: 'Cormorant', 'Garamond', serif;
-  letter-spacing: 0.2em;
-  margin-right: 10px;
-  list-style-type: none;
-  text-decoration: none;
-
+i.nav-search {
+  margin-right: 5px;
+  color: rgb(73, 64, 64, 0.5);
 }
