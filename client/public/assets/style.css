@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Cormorant|Forum&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
 
-h1 {
+/* .navbar-brand {
+    font-family: 'Italiana', serif;
     font-family: 'Cinzel', serif;
     font-family: 'Forum', cursive;
     font-family: 'Garamond','Baskerville','Baskerville Old Face','Hoefler Text','Times New Roman','serif';
-}
+} */
 
-body {
+/* body {
     font-family: 'Cormorant', 'Garamond', serif;
-}
+} */

@@ -1,6 +1,8 @@
 //this page will be for listing all elements and finding out information about them
 import React, { Component } from "react";
 import API from "../../utils/API";
+import Item from "../../components/Item";
+import Wrapper from "../../components/Wrapper";
 
 class Elements extends Component {
   state = {
@@ -26,7 +28,7 @@ class Elements extends Component {
       //this will be a grid of images and text
       <Wrapper>
         {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
-        <Element />
+        <Item />
       </Wrapper>
     );
   }

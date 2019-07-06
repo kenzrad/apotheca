@@ -2,6 +2,9 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import API from "../../utils/API";
+import Item from "../../components/Item";
+import Wrapper from "../../components/Wrapper";
+import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
   state = {
@@ -37,9 +40,9 @@ class Profile extends Component {
       //70% width
       <Wrapper>
         {/* the libra componenet will be a title (like ELAVA!) and some sort of symbol doo-dad */}
-        <Libra />
+        {/* <Libra /> */}
         {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
-        <Element />
+        <Item />
         {/* we will later add remedies here, but that will be next gen */}
       </Wrapper>
     );
