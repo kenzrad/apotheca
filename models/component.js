@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//component schema
 const componentSchema = new Schema({
     component: { type: String, required: true },
     description: { type: String, required: true },

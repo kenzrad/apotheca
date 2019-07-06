@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//remedy schema
 const remedySchema = new Schema({
     title: { type: Array, required: true },
     ingredients: { type: Array, required: true },

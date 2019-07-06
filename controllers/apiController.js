@@ -1,6 +1,6 @@
 const db = require("../models");
 
-//Defining methods for the elementController
+//Defining methods for the apiController
 module.exports = {
     findAll: function(req, res) {
       db.Apotheca
