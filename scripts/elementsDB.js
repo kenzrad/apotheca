@@ -15,7 +15,7 @@ const elementSeed = [
         components: ["Vitamin K", "Vitamin C", "Potassium", "Copper", "Zinc", "Iron", "Polyphenols", "Ellagic Acid"],
         benefits: ["Hydrates", "Combats Acne", "Protects", "Renews"],
         category: "kalon",
-        home_remedy: 1,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -29,7 +29,7 @@ const elementSeed = [
         components: ["Caffeine", "Vitamin E", "Essential Fatty Acids", "Sterols", "Antioxidants"],
         benefits: ["Soothes", "Combats Acne", "Rejuvinates", "Renews"],
         category: "kalon",
-        home_remedy: 2,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -43,7 +43,7 @@ const elementSeed = [
         components: ["Copper", "B Vitamins", "Potassium", "Zinc", "Magnesium"],
         benefits: ["Protects", "Renews", "Exfoliates", "Senstive Skin"],
         category: "kalon",
-        home_remedy: 3,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -57,7 +57,7 @@ const elementSeed = [
         components: ["Vitamin C", "Vitamin A", "Oleic Acid", "Palmitic Acid", "Linoleic Acid", "Gamma Linoleic Acid", "Vitamin F"],
         benefits: ["Protects", "Renews", "Combats Acne", "Brightens"],
         category: "kalon",
-        home_remedy: 4,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -71,7 +71,7 @@ const elementSeed = [
         components: ["Vitamin A", "Vitamin C", "B Vitamins", "Calcium", "Magnesium", "Zinc", "Copper"],
         benefits: ["Renews", "Rejuvinates", "Hydrates", "Protects"],
         category: "kalon",
-        home_remedy: 5,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -85,7 +85,7 @@ const elementSeed = [
         components: ["Carotol", "Daucene", "Beta-bisabolene", "Daucol"],
         benefits: ["Protects", "Renews"],
         category: "kalon",
-        home_remedy: 6,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -99,7 +99,7 @@ const elementSeed = [
         components: ["Vitamin B", "Vitamin C", "Vitamin E", "Quercetin", "Resueratrol", "Omega 3", "Omega 6"],
         benefits: ["Renews", "Protects", "Rejuvinates"],
         category: "kalon",
-        home_remedy: 7,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -113,7 +113,7 @@ const elementSeed = [
         components: ["Vitamin E", "Vitamin A", "Protein", "Potassium", "Zinc"],
         benefits: ["Protects", "Renews", "Brightens"],
         category: "kalon",
-        home_remedy: 8,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -127,7 +127,7 @@ const elementSeed = [
         components: ["Potassium", "B Vitamins", "Magnesium", "Vitamin E", "Zinc", "Lectin", "Amino Acids"],
         benefits: ["Hydrates", "Renews", "Rejuvinates", "Protects", "Combats Acne"],
         category: "kalon",
-        home_remedy: 9,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -141,7 +141,7 @@ const elementSeed = [
         components: [""],
         benefits: [""],
         category: "kalon",
-        home_remedy: 1,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -155,7 +155,7 @@ const elementSeed = [
         components: ["Vitamin C", "Vitamin A", "Vitamin E", "Vitamin K"],
         benefits: ["Combats Acne"],
         category: "elavo",
-        home_remedy: 11,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -169,7 +169,7 @@ const elementSeed = [
         components: ["Vitamin C", "Vitamin A", "Vitamin E", "Pantothenic Acid", "Folate", "Magnesium", "Potassium", "Papin"],
         benefits: ["Exfoliating", "Hydrating", "Combats Acne", "Renews"],
         category: "elavo",
-        home_remedy: 12,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -183,7 +183,7 @@ const elementSeed = [
         components: ["Terpinen-4-ol"],
         benefits: ["Combats Acne", "Sensitive Skin"],
         category: "elavo",
-        home_remedy: 13,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -197,7 +197,7 @@ const elementSeed = [
         components: ["Ellagic Acid", "Vitamin C", "Folic Acid", "Fiber"],
         benefits: ["Renews", "Protects", "Combats Acne"],
         category: "elavo",
-        home_remedy: 14,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -211,7 +211,7 @@ const elementSeed = [
         components: ["Potassium", "Vitamin C", "Vitamin B"],
         benefits: ["Brightens", "Combats Acne", "Protects",],
         category: "elavo",
-        home_remedy: 15,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -225,7 +225,7 @@ const elementSeed = [
         components: ["Flavonoids", "Vitamin A", "Vitamin C", "Vitamin E"],
         benefits: ["Rejuvinates", "Protects", "Combats Acne", "Exfoliates"],
         category: "elavo",
-        home_remedy: 16,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -239,7 +239,7 @@ const elementSeed = [
         components: ["Ricinoleic Acid"],
         benefits: ["Sensitive Skin", "Combats Acne", "Hydrates", "Soothes"],
         category: "elavo",
-        home_remedy: 17,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -253,7 +253,7 @@ const elementSeed = [
         components: ["Vitamin B2", "Vitamin E", "Caffeine", "Tannins", "EGCG"],
         benefits: ["Protects", "Combats Acne", "Renews"],
         category: "elavo",
-        home_remedy: 18,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -267,7 +267,7 @@ const elementSeed = [
         components: ["Thiosaulfinates", "Allicin", "Vitamin C", "Vitamin B6", "Copper", "Zinc"],
         benefits: ["Sensitive Skin", "Refreshes", "Combats Acne", "Soothes"],
         category: "elavo",
-        home_remedy: 19,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -281,7 +281,7 @@ const elementSeed = [
         components: ["Vitamin K", "Vitamin A", "Copper", "Tulsi"],
         benefits: ["Combats Acne", "Soothes"],
         category: "elavo",
-        home_remedy: 20,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -295,7 +295,7 @@ const elementSeed = [
         components: ["lycopene", "Vitamin C", "Potassium"],
         benefits: ["Rejuvinate", "Brighten", "Renews", "Protects"],
         category: "novo",
-        home_remedy: 21,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -309,7 +309,7 @@ const elementSeed = [
         components: ["Vitamin E", "Vitamin B", "Copper", "Zinc", "Chromium"],
         benefits: ["Protects", "Hydrates", "Balances"],
         category: "novo",
-        home_remedy: 22,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -324,7 +324,7 @@ const elementSeed = [
         components: ["Acetic Acid", "Potassium", "Magnesium"],
         benefits: ["Combats Acne"],
         category: "novo",
-        home_remedy: 23,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -339,7 +339,7 @@ const elementSeed = [
         components: ["Magnesium", "Calcium", "Sodium", "Potassium"],
         benefits: ["Hydrating", "Rejuvinating"],
         category: "novo",
-        home_remedy: 24,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -354,7 +354,7 @@ const elementSeed = [
         components: ["Vitamin C", "Vitamin A", "Vitamin B6", "Copper", "Potassium", "Magnesium", "Vitamin E", "Vitamin K"],
         benefits: ["Combats Acne", "Soothes", "Renews", "Rejuvinates", "Exfoliates"],
         category: "novo",
-        home_remedy: 25,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -369,7 +369,7 @@ const elementSeed = [
         components: ["Limonene", "Eucalptol", "Camphene"],
         benefits: ["Refreshes", "Balances", "Sensitive Skin"],
         category: "novo",
-        home_remedy: 26,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -384,7 +384,7 @@ const elementSeed = [
         components: ["Sodium Bicarbonate"],
         benefits: ["Rejuvinating", "Acne Control", "Refreshes"],
         category: "novo",
-        home_remedy: 27,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -399,7 +399,7 @@ const elementSeed = [
         components: ["Gallic Acid", "Tannins"],
         benefits: ["Combats Acne", "Soothes", "Protects"],
         category: "novo",
-        home_remedy: 28,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -414,7 +414,7 @@ const elementSeed = [
         components: ["Vitamin C", "Potassium"],
         benefits: ["Renews", "Rejuvinate", "Brighten", "Protect"],
         category: "novo",
-        home_remedy: 29,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -428,7 +428,7 @@ const elementSeed = [
         components: ["Lysozymes", "Amino Acids", "Potassium"],
         benefits: ["Combats Acne", "Brighten", "Balances"],
         category: "novo",
-        home_remedy: 3,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -442,7 +442,7 @@ const elementSeed = [
         components: ["Stearic Acid", "Oleic Acid"],
         benefits: ["Renews", "Rejuvinates", "Brightens", "Hydrates"],
         category: "bibe",
-        home_remedy: 31,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -456,7 +456,7 @@ const elementSeed = [
         components: ["Lycopene", "Magnesium", "Potassium", "Biotin"],
         benefits: ["Hydrates", "Brightens"],
         category: "bibe",
-        home_remedy: 32,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -470,7 +470,7 @@ const elementSeed = [
         components: ["Vitamin B2", "Vitamin B3", "Vitamin B5", "Vitamin B6", "Vitamin C", "Potassium"],
         benefits: ["Combats Acne", "Hydrates", "Sensitive Skin", "Brightens"],
         category: "bibe",
-        home_remedy: 33,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -484,7 +484,7 @@ const elementSeed = [
         components: ["Lactic Acid", "Zinc"],
         benefits: ["Rejuvinates", "Combats Acne", "Brightens"],
         category: "bibe",
-        home_remedy: 34,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -498,7 +498,7 @@ const elementSeed = [
         components: ["Lauric Acid", "Medium Chain Triglycerides"],
         benefits: ["Hydrates", "Rejuvinates"],
         category: "bibe",
-        home_remedy: 35,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -512,7 +512,7 @@ const elementSeed = [
         components: ["Vitamin A", "Vitamin D", "Vitamin E"],
         benefits: ["Hydrates", "Brightens"],
         category: "bibe",
-        home_remedy: 36,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -526,7 +526,7 @@ const elementSeed = [
         components: ["Zinc"],
         benefits: ["Balances", "Hydrates", "Protects", "Combats Acne"],
         category: "bibe",
-        home_remedy: 37,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -540,7 +540,7 @@ const elementSeed = [
         components: ["Salicylic Acid", "Ligin", "Amino Acids"],
         benefits: ["Renews", "Hydrates", "Rejuvinates"],
         category: "bibe",
-        home_remedy: 38,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -554,7 +554,7 @@ const elementSeed = [
         components: ["Vitamin C", "Vitamin A", "Vitamin E", "Vitamin K"],
         benefits: ["Hydrates", "Renews", "Rejuvinates", "Protects"],
         category: "bibe",
-        home_remedy: 39,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
@@ -568,14 +568,14 @@ const elementSeed = [
         components: ["Oleic Acid", "Linoleic Acid"],
         benefits: [""],
         category: "bibe",
-        home_remedy: 40,
+        home_remedy: [],
         products: [{
             name: "",
             src: "",
             price: "",
             tags: ""
         }]
-    },
+    }
 
 
 

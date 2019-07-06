@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Elements collection and inserts the elements below
+// This file empties the Components collection and inserts the componenets below
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -230,7 +230,7 @@ const componentSeed = [
         component: "Lycopene",
         description: "this component is known for it’s ability to combat acne. It is a powerful antioxidant and anti-inflammatory that helps protect skin from environmental agents that can contribute to clogged pores and breakouts.",
         source: "https://www.refinery29.com/en-us/lycopene"
-    },
+    }
 
 ];
 
