@@ -578,8 +578,6 @@ const elementSeed = [
     }
 
 
-
-
 ];
 
 db.Element
