@@ -205,9 +205,9 @@ const remedySeed = [
 
 ];
 
-db.Apotheca
+db.Remedy
     .remove({})
-    .then(() => db.Apotheca.collection.insertMany(remedySeed))
+    .then(() => db.Remedy.collection.insertMany(remedySeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
