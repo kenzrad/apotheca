@@ -1,15 +1,16 @@
 const db = require("../models");
 console.log("i am in the elementController file")
 //Defining methods for the elementController
-console.log(db.Element);
+// console.log(db.Element);
 
 module.exports = {
     findAll: function (req, res) {
+        console.log(req.query);
         db.Element
             .find(req.query)
-            .sort({ date: -1 })
+            // .sort({ date: -1 })
             .then(dbModel => {
-                res.json(dbModel)
+                res.json(dbModel);
                 console.log("this is the dbModel", dbModel);
             })
             .catch(err => res.status(422).json(err));
