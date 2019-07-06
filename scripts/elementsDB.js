@@ -578,13 +578,11 @@ const elementSeed = [
     }
 
 
-
-
 ];
 
-db.Apotheca
+db.Element
     .remove({})
-    .then(() => db.Apotheca.collection.insertMany(elementSeed))
+    .then(() => db.Element.collection.insertMany(elementSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
