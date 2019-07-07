@@ -14,7 +14,7 @@ export function Card(props) {
       className="item" 
       style={{
         backgroundImage: 
-        `url('./assets/images/elements/acai.png')` 
+        `url('${window.location.origin}/assets/images/elements/almond.png')` 
         ? `url('https://via.placeholder.com/400')` 
         : "none"
       }}>
