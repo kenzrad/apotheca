@@ -1,4 +1,4 @@
-.card {
+/* .card {
   background-size: cover;
   background-position: center;
   background-clip: content-box;
@@ -16,4 +16,52 @@
   position: absolute;
   left: 25%;
   top: 25%;
+} */
+.items {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.item {
+
+  box-shadow: 0 3px 6px rgba(175, 145, 145,0.16), 0 3px 6px rgba(175, 145, 145, 0.23);
+  border: 6px solid white;
+  height: 400px;
+  width: 400px;
+  background-size: cover;
+  margin: 10px;
+}
+
+.itemMain {
+  height: 400px;
+  width: 400px;
+  display: flex;
+}
+.itemName {
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.itemDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.itemDescription > div {
+  background-color: white;
+  height: 90%;
+  width: 90%;
+  text-align: center;
+}
+
+.itemDescription:hover {
+  opacity: 0.80;
+  transition-duration: 1s;
 }
