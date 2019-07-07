@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import { Cards, Card } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 
+
 class Elements extends Component {
   state = {
     elements: []
@@ -36,7 +37,13 @@ class Elements extends Component {
         {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
         <Cards>
           {this.state.elements.map(element => (
-            <Card key={element._id} name={element.name} image={element.image} />
+            <Card 
+              key={element._id} 
+              name={element.name} 
+              descripton={element.description} 
+              category={element.category}
+              image={element.image} 
+            />
           ))}
         </Cards>
       </Wrapper>
