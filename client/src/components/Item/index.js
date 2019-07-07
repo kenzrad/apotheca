@@ -1,19 +1,27 @@
 import React from "react";
 import './styles.css';
 
-function Item(props) {
+console.log("I'm in the item prop");
+
+// export function Items() {
+//   return ( 
+    
+//     <div className="elements-container">{console.log("hey")}</div>
+//   );
+// }
+
+function Item({ props }) {
   return (
     <>
-      {/* Sets background image url to props.image or a placeholder. */}
-      <div className="item" style={{ backgroundImage: `url(${props.image || "https://via.placeholder.com/500"})` }}>
+      <div className="item" style={{ backgroundImage: `url( "https://via.placeholder.com/500")` }}>
         <div className="itemMain">
           <div className="itemSynopsis">Short description of the item</div>
-          <div className="itemName">Item Name</div>
+          {/* <div className="itemName">{props.name}</div> */}
         </div>
           <div className="itemDescription">
           <div>More details will appear hear!
             {/* Props.description will appear when image is hovered over. */}
-            {props.description}
+            {/* {props.description} */}
           </div>
         </div>
       </div>
@@ -21,4 +29,6 @@ function Item(props) {
   );
 }
 
-export default Item;
+export default (Item);
+
+

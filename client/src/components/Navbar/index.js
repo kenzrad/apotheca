@@ -33,7 +33,7 @@ function Navbar() {
           <li>
             <div className="nav-search-container">
               <input className="nav-search" type="search" aria-label="Search" />
-              <a><i className="nav-search fas fa-search"></i></a>
+              <a href="#"><i className="nav-search fas fa-search"></i></a>
             </div>
           </li>
           </ul>

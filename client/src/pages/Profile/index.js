@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Item from "../../components/Item";
 import Wrapper from "../../components/Wrapper";
-import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
   state = {
