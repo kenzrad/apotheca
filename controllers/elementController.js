@@ -6,7 +6,7 @@ module.exports = {
     findAll: function (req, res) {
         db.Element
             .find(req.query)
-            // .sort({ date: -1 })
+            .sort({ date: -1 })
             .then(dbModel => {
                 res.json(dbModel);
             })

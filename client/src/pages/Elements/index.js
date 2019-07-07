@@ -1,7 +1,7 @@
 //this page will be for listing all elements and finding out information about them
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Item from "../../components/Item";
+import Card from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 
 class Elements extends Component {
@@ -33,11 +33,25 @@ class Elements extends Component {
     return (
       //this will be a grid of images and text
       <Wrapper>
-        {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
-        <Item />
+        list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details
+
+          {this.state.elements.map(element => (
+            <Card key={element._id} name={element.name} image={element.image}></Card>
+            // <Item 
+            //   key={element._id}>
+            //     <div>{element.name}</div>
+            //   </Item>
+              // name= 
+              // image={element.image}
+              // description={element.description}
+              // category={element.category}
+              // components={element.components}   
+            // />
+          // )})
+        ))}
       </Wrapper>
-    );
-  }
+          );
 }
+};
 
 export default Elements;
