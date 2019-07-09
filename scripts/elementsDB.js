@@ -29,7 +29,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true, 
         components: ["Caffeine", "Vitamin E", "Essential Fatty Acids", "Sterols", "Antioxidants"],
-        benefits: ["Soothes", "Combats Acne", "Rejuvinates", "Renews"],
+        benefits: ["Soothes", "Combats Acne", "Rejuvenates", "Renews"],
         category: "kalon",
         home_remedy: [],
         date: new Date(Date.now())
@@ -68,7 +68,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true,
         components: ["Vitamin A", "Vitamin C", "B Vitamins", "Calcium", "Magnesium", "Zinc", "Copper"],
-        benefits: ["Renews", "Rejuvinates", "Hydrates", "Protects"],
+        benefits: ["Renews", "Rejuvenates", "Hydrates", "Protects"],
         category: "kalon",
         home_remedy: [],
         date: new Date(Date.now())
@@ -94,7 +94,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true,
         components: ["Vitamin B", "Vitamin C", "Vitamin E", "Quercetin", "Resueratrol", "Omega 3", "Omega 6"],
-        benefits: ["Renews", "Protects", "Rejuvinates"],
+        benefits: ["Renews", "Protects", "Rejuvenates"],
         category: "kalon",
         home_remedy: [],
         date: new Date(Date.now())
@@ -120,7 +120,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true,
         components: ["Potassium", "B Vitamins", "Magnesium", "Vitamin E", "Zinc", "Lectin", "Amino Acids"],
-        benefits: ["Hydrates", "Renews", "Rejuvinates", "Protects", "Combats Acne"],
+        benefits: ["Hydrates", "Renews", "Rejuvenates", "Protects", "Combats Acne"],
         category: "kalon",
         home_remedy: [],
         date: new Date(Date.now())
@@ -211,7 +211,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Flavonoids", "Vitamin A", "Vitamin C", "Vitamin E"],
-        benefits: ["Rejuvinates", "Protects", "Combats Acne", "Exfoliates"],
+        benefits: ["Rejuvenates", "Protects", "Combats Acne", "Exfoliates"],
         category: "elavo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -274,7 +274,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true, 
         components: ["lycopene", "Vitamin C", "Potassium"],
-        benefits: ["Rejuvinate", "Brighten", "Renews", "Protects"],
+        benefits: ["Rejuvenate", "Brighten", "Renews", "Protects"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -315,7 +315,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Magnesium", "Calcium", "Sodium", "Potassium"],
-        benefits: ["Hydrating", "Rejuvinating"],
+        benefits: ["Hydrating", "Rejuvenating"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -329,7 +329,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true, 
         components: ["Vitamin C", "Vitamin A", "Vitamin B6", "Copper", "Potassium", "Magnesium", "Vitamin E", "Vitamin K"],
-        benefits: ["Combats Acne", "Soothes", "Renews", "Rejuvinates", "Exfoliates"],
+        benefits: ["Combats Acne", "Soothes", "Renews", "Rejuvenates", "Exfoliates"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -357,7 +357,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true,
         components: ["Sodium Bicarbonate"],
-        benefits: ["Rejuvinating", "Acne Control", "Refreshes"],
+        benefits: ["Rejuvenating", "Acne Control", "Refreshes"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -385,7 +385,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Vitamin C", "Potassium"],
-        benefits: ["Renews", "Rejuvinate", "Brighten", "Protect"],
+        benefits: ["Renew", "Rejuvenate", "Brighten", "Protect"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -398,7 +398,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: false, 
         components: ["Lysozymes", "Amino Acids", "Potassium"],
-        benefits: ["Combats Acne", "Brighten", "Balances"],
+        benefits: ["Combat Acne", "Brighten", "Balance"],
         category: "novo",
         home_remedy: [],
         date: new Date(Date.now())
@@ -411,7 +411,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Stearic Acid", "Oleic Acid"],
-        benefits: ["Renews", "Rejuvinates", "Brightens", "Hydrates"],
+        benefits: ["Renews", "Rejuvenate", "Brighten", "Hydrate"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -424,7 +424,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Lycopene", "Magnesium", "Potassium", "Biotin"],
-        benefits: ["Hydrates", "Brightens"],
+        benefits: ["Hydrate", "Brighten"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -437,7 +437,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: false, 
         components: ["Vitamin B2", "Vitamin B3", "Vitamin B5", "Vitamin B6", "Vitamin C", "Potassium"],
-        benefits: ["Combats Acne", "Hydrates", "Sensitive Skin", "Brightens"],
+        benefits: ["Combat Acne", "Hydrate", "Sensitive Skin", "Brighten"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -450,7 +450,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: false, 
         components: ["Lactic Acid", "Zinc"],
-        benefits: ["Rejuvinates", "Combats Acne", "Brightens"],
+        benefits: ["Rejuvenate", "Combat Acne", "Brightens"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -463,7 +463,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true, 
         components: ["Lauric Acid", "Medium Chain Triglycerides"],
-        benefits: ["Hydrates", "Rejuvinates"],
+        benefits: ["Hydrates", "Rejuvenates"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -502,7 +502,7 @@ const elementSeed = [
         hypoallergenic: true,
         vegan: true,
         components: ["Salicylic Acid", "Ligin", "Amino Acids"],
-        benefits: ["Renews", "Hydrates", "Rejuvinates"],
+        benefits: ["Renews", "Hydrates", "Rejuvenates"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
@@ -515,7 +515,7 @@ const elementSeed = [
         hypoallergenic: false,
         vegan: true, 
         components: ["Vitamin C", "Vitamin A", "Vitamin E", "Vitamin K"],
-        benefits: ["Hydrates", "Renews", "Rejuvinates", "Protects"],
+        benefits: ["Hydrates", "Renews", "Rejuvenates", "Protects"],
         category: "bibe",
         home_remedy: [],
         date: new Date(Date.now())
