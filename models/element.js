@@ -4,13 +4,12 @@ const Schema = mongoose.Schema;
 //commented this out during troubleshooting - not sure if it needs to be seperated out this way based on how you are organizing, so I left it
 //element schema
 
-// const productSchema = new Schema({
-//     name: String,
-//     src: String,
-//     price: String,
-//     tags: String
-// })
-
+const productSchema = new Schema({
+    name: String,
+    src: String,
+    price: String,
+    tags: String
+})
 
 const elementSchema = new Schema({
     name: { type: String, required: true },
