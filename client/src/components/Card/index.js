@@ -8,15 +8,18 @@ export function Cards({ children }) {
 }
 
 export function Card(props) {
+  console.log(props.image)
   return (
     <>
     <div 
       className="item" 
       style={{
         backgroundImage: 
-        `url('./assets/images/elements/acai.png')` 
-        ? `url('https://via.placeholder.com/400')` 
-        : "none"
+        // `url('/assets/images/elements/almond.png')` 
+        // ? `url('/assets/images/elements/almond.png')` 
+        `${props.image}`
+        ? `url('${props.image}')`
+        : `url('https://via.placeholder.com/400')` 
       }}>
       <div className="itemDetails">
         {/* Props.description will appear when image is hovered over. */}

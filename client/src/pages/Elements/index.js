@@ -42,7 +42,7 @@ class Elements extends Component {
               name={element.name} 
               descripton={element.description} 
               category={element.category}
-              image={element.image} 
+              image="/assets/images/elements/almond.png"
             />
           ))}
         </Cards>
