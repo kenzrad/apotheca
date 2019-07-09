@@ -1,28 +1,34 @@
 import React from "react";
-import CardBtn from "../CardBtn";
 import "./style.css";
 
-function Card(props) {
+export function Cards({ children }) {
   return (
-    <div
-      className="card"
-      style={{
-        backgroundImage: props.image ? `url(${props.image})` : "none"
-      }}
-    >
-      {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-      <CardBtn
-        style={{ opacity: props.image ? 1 : 0 }}
-        onClick={props.handleBtnClick}
-        data-value="pass"
-      />
-      <CardBtn
-        style={{ opacity: props.image ? 1 : 0 }}
-        onClick={props.handleBtnClick}
-        data-value="pick"
-      />
-    </div>
+  <div className="items">{children}</div>
   );
 }
 
-export default Card;
+export function Card(props) {
+  console.log(props.image)
+  return (
+    <>
+    <div 
+      className="item" 
+      style={{
+        backgroundImage: 
+        // `url('/assets/images/elements/almond.png')` 
+        // ? `url('/assets/images/elements/almond.png')` 
+        `${props.image}`
+        ? `url('${props.image}')`
+        : `url('https://via.placeholder.com/400')` 
+      }}>
+      <div className="itemDetails">
+        {/* Props.description will appear when image is hovered over. */}
+        <h2 className="itemName">{props.name}</h2>
+        <p className="itemDescription">{props.description}</p>
+      </div>
+    </div>
+    </>
+  );
+}
+
+export default Card ;
