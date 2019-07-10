@@ -5,13 +5,12 @@ const db = require("../models");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
-    "mongodb://localhost/apothecaDB"
+    "mongodb://localhost/apothecadb"
 );
 
 const userSeed = [
     {
-        id: 1,
-        firstName: "Anna",
+        
         userName: "bananawarner",
         password: "bootcamp2019",
         libraScore: [""],
@@ -24,9 +23,9 @@ const userSeed = [
 
 
 
-db.Apotheca
+db.User
     .remove({})
-    .then(() => db.Apotheca.collection.insertMany(userSeed))
+    .then(() => db.User.collection.insertMany(userSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

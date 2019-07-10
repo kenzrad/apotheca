@@ -3,12 +3,11 @@ const Schema = mongoose.Schema;
 
 //user schema
 const userSchema = new Schema({
-    firstName: { type: String, required: true },
-    userName: { type: String, required: true },
-    password: { type: String, required: true },
-    libraScore: String,
-    allergins: Array
-
+  userName: { type: String, required: true },
+  password: { type: String, required: true },
+  firstName: { type: String, required: true },
+  vegan: { type: Boolean },
+  hypoallergenic: { type: Boolean }
 });
 
 const User = mongoose.model("User", userSchema);
