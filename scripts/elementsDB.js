@@ -7,7 +7,7 @@ mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/apothecadb"
 );
-
+ 
 const elementSeed = [
     {
         id: 1,
