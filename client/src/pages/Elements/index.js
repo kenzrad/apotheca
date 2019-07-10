@@ -40,9 +40,9 @@ class Elements extends Component {
             <Card 
               key={element._id} 
               name={element.name} 
-              descripton={element.description} 
+              benefits={element.benefits} 
               category={element.category}
-              image="/assets/images/elements/almond.png"
+              image={element.image}
             />
           ))}
         </Cards>
