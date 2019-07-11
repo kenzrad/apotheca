@@ -1,0 +1,54 @@
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.options p {
+    display: inline-block;
+    border: 3px solid rgb(152, 163, 152);
+    max-width: 200px;
+    padding: 5px 10px;
+    margin: 10px 10px;
+    border-radius: 15px;
+    transition: background-color 200ms;
+}
+
+.options p:hover {
+    background-color: #6bb869;
+    transform: scale(1.08);
+}
+
+.chosen {
+    background-color: #6bb869!important;
+    border-color: #6bb869!important;
+}
+
+.hiddenOption {
+    overflow: hidden;
+
+    animation-name: shrink;
+    animation-duration: 500ms;
+}
+
+@keyframes shrink {
+    from {max-width: 220;
+        padding: 5px 10px;}
+    to {max-width: 0px;
+        padding: 5px 0px;}
+}
+
+
+.showOption {
+    overflow: hidden;
+
+    animation-name: grow;
+    animation-duration: 500ms;
+}
+
+@keyframes grow {
+    from {max-width: 0;
+        padding: 5px 0px;}
+    to {max-width: 220px;
+        padding: 5px 10px;}
+}
