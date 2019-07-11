@@ -7,7 +7,7 @@ mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/apothecadb"
 );
-
+ 
 const elementSeed = [
     {
         id: 1,
@@ -103,7 +103,7 @@ const elementSeed = [
     {
         id: 8,
         name: "Almond Oil",
-        image:"/assets/images/elements/acai.png",
+        image:"/assets/images/elements/almond.png",
         hypoallergenic: false,
         vegan: true,
         components: ["Vitamin E", "Vitamin A", "Protein", "Potassium", "Zinc"],
@@ -194,7 +194,7 @@ const elementSeed = [
     {
         id: 15,
         name: "Turmeric",
-        image:"/assets/images/elements/tumeric.png",
+        image:"/assets/images/elements/turmeric.png",
         hypoallergenic: true,
         vegan: true, 
         components: ["Potassium", "Vitamin C", "Vitamin B"],
@@ -260,6 +260,9 @@ const elementSeed = [
     {
         id: 20,
         name: "Holy Basil",
+        image:"/assets/images/elements/holybasil.png",
+        hypoallergenic: true,
+        vegan: true, 
         components: ["Vitamin K", "Vitamin A", "Copper", "Tulsi"],
         benefits: ["Combat Acne", "Soothe"],
         category: "elavo",
@@ -524,6 +527,9 @@ const elementSeed = [
     {
         id: 40,
         name: "Olive Oil",
+        image:"/assets/images/elements/oliveoil.png",
+        hypoallergenic: true,
+        vegan: true, 
         components: ["Oleic Acid", "Linoleic Acid"],
         benefits: ["Hydrate", "Protect", "Rejuvenate"],
         category: "bibe",
