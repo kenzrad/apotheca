@@ -117,7 +117,7 @@ class Quiz extends Component {
                     <p data-answer="D">Not sensitive.</p>
                 </div>
 
-                <h3>Current living environment:</h3>
+                <h3>What best describes your current living environment:</h3>
                 <div className="options" data-question="7" onClick={this.optionClickHandler}>
                     <p data-answer="A">Rural Location</p>
                     <p data-answer="B">City Life</p>
