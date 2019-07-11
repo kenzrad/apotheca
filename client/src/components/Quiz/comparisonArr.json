@@ -1,0 +1,62 @@
+{
+    "1": {
+        "A": "elavo",
+        "B": "novo",
+        "C": "bibe",
+        "D": "kalon"
+    },
+    "2": {
+        "A": "elavo",
+        "B": "novo",
+        "C": "bibe",
+        "D": "kalon"
+    },
+    "3": {
+        "A": "novo",
+        "B": "bibe",
+        "C": "kalon",
+        "D": "elavo"
+    },
+    "4": {
+        "A": "bibe",
+        "B": "kalon",
+        "C": "elavo",
+        "D": "novo"
+    },
+    "5": {
+        "A": "kalon",
+        "B": "bibe",
+        "C": "novo",
+        "D": "elavo"
+    },
+    "6": {
+        "A": "bibe",
+        "B": "elavo",
+        "C": "novo",
+        "D": "kalon"
+    },
+    "7": {
+        "A": "kalon",
+        "B": "elavo",
+        "C": "novo",
+        "D": "bibe"
+    },
+    "8": {
+        "A": "bibe",
+        "B": "novo",
+        "C": "elavo",
+        "D": "kalon"
+    },
+    "9": {
+        "A": "elavo",
+        "B": "kalon",
+        "C": "bibe",
+        "D": "novo"
+    },
+    "10": {
+        "A": "kalon",
+        "B": "bibe",
+        "C": "novo",
+        "D": "elavo"
+    }
+}
