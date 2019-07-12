@@ -1,0 +1,36 @@
+#loginAndSignup {
+    display: flex;
+    justify-content: center;
+}
+
+#loginAndSignup input {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(132, 141, 132);
+    color: rgb(132, 141, 132);
+    padding-left: 5px;
+    font-size: 24px;
+    margin: 0px 10px 10px 10px;
+    transition: 300ms ease-out;
+}
+
+#loginAndSignup input[type="checkbox"] {
+    display: inline-block;
+}
+
+#loginAndSignup input:focus {
+    outline: transparent;
+    border-color: #7ed685;
+    border-width: 3px;
+    margin-bottom: 8px;
+}
+
+@keyframes fade {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+.hidden {
+    display: none;
+}
