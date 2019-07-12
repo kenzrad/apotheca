@@ -53,7 +53,7 @@ class Quiz extends Component {
                 break;
             }
         }
-        
+
         if (incomplete === false) {
             for (let n = 0; n <= 9; n++) {
                 choices[n] = comparisonArr[n + 1][choices[n]];
