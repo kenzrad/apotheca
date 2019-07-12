@@ -44,7 +44,7 @@ class App extends Component {
               exact path="/" 
               render={() => <Login handleCheckbox = {this.handleCheckbox} handleInputChange={this.handleInputChange} />} />
             <Route exact path="/Main" component={Main} />
-            <Route exact path="/Profile/:username" component={Profile} /> 
+            <Route exact path="/Profile/:login" component={Profile} /> 
             <Route exact path="/Elements" component={Elements} />
             <Route exact path="/Elements/:id" component={Elements} />
             <Route component={NoMatch} />
