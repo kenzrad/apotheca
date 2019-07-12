@@ -25,8 +25,9 @@ function Navbar() {
               Elements
             </Link>
           </li>
+        {/*wrap in check username*/}
           <li className="nav-item">
-            <Link to="/Libra" className={window.location.pathname === "/Libra" ? "nav-link active" : "nav-link"}>
+            <Link to={`/Profile/${username}`} className={window.location.pathname === `/Profile/${username}` ? "nav-link active" : "nav-link"}>
               Libra
             </Link>
           </li>
