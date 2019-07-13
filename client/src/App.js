@@ -5,7 +5,6 @@ import Main from "./pages/Main";
 import Profile from "./pages/Profile";
 import Elements from "./pages/Elements";
 import NoMatch from "./pages/NoMatch";
-import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
@@ -38,7 +37,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar />
           <Switch>
             <Route 
               exact path="/" 

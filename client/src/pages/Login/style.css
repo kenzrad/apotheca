@@ -4,19 +4,19 @@
 }
 
 #loginAndSignup input {
-    display: block;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgb(132, 141, 132);
-    color: rgb(132, 141, 132);
     padding-left: 5px;
-    font-size: 24px;
-    margin: 0px 10px 10px 10px;
+    padding-bottom: 5px;
+    margin: 10px 10px 30px 5px;
     transition: 300ms ease-out;
+    display: block;
 }
 
 #loginAndSignup input[type="checkbox"] {
     display: inline-block;
+    margin: 0px 10px 10px 5px;
 }
 
 #loginAndSignup input:focus {
@@ -33,4 +33,63 @@
 
 .hidden {
     display: none;
+}
+
+.login-backdrop {
+    background-image: linear-gradient(to top, rgba(139,142,82, 1),  rgba(175, 145, 145 ,.5),  rgba(236,243,236,1), rgba(236,243,236,1)); 
+    height: 100vh
+}
+
+.login-btn {
+    color: rgba(73, 64, 64, .5);
+    cursor: pointer;
+}
+
+#loginAndSignup {
+    margin-top: 40px;
+}
+
+.login-link {
+    margin: 0px 10px 10px 0px;
+    padding: 10px;
+    font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    color: rgb(73, 64, 64);
+    cursor: pointer
+}
+
+.login-link:hover {
+    color: goldenrod
+}
+
+.login-link-divider {
+    cursor: default
+}
+
+.login-text {
+    font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    color: rgb(73, 64, 64);
+}
+tr {
+    vertical-align: top;
+}
+
+.signup-td {
+    min-width: 300px;
+}
+
+.login-td {
+    padding-left: 10px;
+}
+
+.chevrons {
+    text-align: center;
+    margin: 20px;
+}
+
+.chevrons a {
+    margin: 40px;
 }
