@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //user schema
-const userSchema = new Schema({
+const loginSchema = new Schema({
   userName: { type: String, required: true },
   password: { type: String, required: true },
   firstName: { type: String, required: true },
@@ -10,6 +10,6 @@ const userSchema = new Schema({
   hypoallergenic: { type: Boolean }
 });
 
-const User = mongoose.model("User", userSchema);
+const Login = mongoose.model("Login", loginSchema);
 
-module.exports = User;
+module.exports = Login;

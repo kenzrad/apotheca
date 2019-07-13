@@ -8,24 +8,22 @@ mongoose.connect(
     "mongodb://localhost/apothecadb"
 );
 
-const userSeed = [
+const loginSeed = [
     {
-        
+
         userName: "bananawarner",
         password: "bootcamp2019",
-        libraScore: [""],
-        allergins: [""]
+        firstName: "Anna",
+        vegan: false,
+        hypoallergenic: false
     }
 ]
 
 
 
-
-
-
-db.User
+db.Login
     .remove({})
-    .then(() => db.User.collection.insertMany(userSeed))
+    .then(() => db.Login.collection.insertMany(loginSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

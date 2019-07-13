@@ -7,49 +7,50 @@ import Wrapper from "../../components/Wrapper";
 import Libra from "../../components/Libra";
 
 class Profile extends Component {
+
   state = {
     userId: "",
     userProfile: ""
-  };
 
-  // NEED TO GET USER ID HERE
-  componentDidMount() {
-    this.loadUserProfile(this.state.userId);
-  }
 
-  loadUserProfile = (id) => {
-    API.getUserProfile(id)
-      .then(res =>
-        this.setState({ userProfile: res.data })
-      )
-      .catch(err => console.log(err));
-  };
+    // NEED TO GET USER ID HERE
+    componentDidMount() {
+        this.loadUserProfile(this.state.userId);
+    }
 
-  render() {
-    return (
-      <Wrapper>
-        {this.state.userProfile.map(userDatum => (
-          <Libra
-            key={userDatum._id}
-            username={userDatum.username}
-            libra={userDatum.libra}
-          >
-          </Libra>
-        ))}
-        <Cards>
-          {this.state.userProfile.map(element => (
-            <Card 
-              key={element._id} 
-              name={element.name} 
-              benefits={element.benefits} 
-              category={element.category}
-              image={element.image}
-            />
-          ))}
-        </Cards>
-      </Wrapper>
-    );
-  }
+    loadUserProfile = (id) => {
+        API.getUserProfile(id)
+            .then(res =>
+                this.setState({ userProfile: res.data })
+            )
+            .catch(err => console.log(err));
+    };
+
+    render() {
+        return (
+            <Wrapper>
+                {this.state.userProfile.map(userDatum => (
+                    <Libra
+                        key={userDatum._id}
+                        username={userDatum.username}
+                        libra={userDatum.libra}
+                    >
+                    </Libra>
+                ))}
+                <Cards>
+                    {this.state.userProfile.map(element => (
+                        <Card
+                            key={element._id}
+                            name={element.name}
+                            benefits={element.benefits}
+                            category={element.category}
+                            image={element.image}
+                        />
+                    ))}
+                </Cards>
+            </Wrapper>
+        );
+    }
 }
 
 export default Profile;
