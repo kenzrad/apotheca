@@ -7,7 +7,7 @@ export default {
   },
   // Gets the element with the given id
   getUserProfile: function (id) {
-    return axios.get("/api/profile/" + id);
+    return axios.get("/api/user/" + id);
   },
   getUserLogin: function (login) {
     return axios.post("/api/login/login", login)
