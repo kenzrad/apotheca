@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Cards, Card } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
+import Navbar from "../../components/Navbar";
 
 
 class Elements extends Component {
@@ -32,21 +33,21 @@ class Elements extends Component {
 
   render() {
     return (
-      //this will be a grid of images and text
-      <Wrapper>
-        {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
-        <Cards>
-          {this.state.elements.map(element => (
-            <Card 
-              key={element._id} 
-              name={element.name} 
-              benefits={element.benefits} 
-              category={element.category}
-              image={element.image}
-            />
-          ))}
-        </Cards>
-      </Wrapper>
+        <Wrapper>
+        <Navbar />
+          {/* list of all the elements in the person profile. This view will have the elements name, picture, and a brief description. The user can click (or hover) to get more details */}
+          <Cards>
+            {this.state.elements.map(element => (
+              <Card 
+                key={element._id} 
+                name={element.name} 
+                benefits={element.benefits} 
+                category={element.category}
+                image={element.image}
+              />
+            ))}
+          </Cards>
+        </Wrapper>
     );
   }
 };

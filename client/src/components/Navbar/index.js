@@ -18,7 +18,7 @@ function Navbar() {
         {/* TOGGLE PLACEHOLDER --> maybe doing the mortar here */}
         <ul className="horizontal-list">
           <li className="nav-item">
-            <Link to="/" className={window.location.pathname === "/" || window.location.pathname === "/Main" ? "nav-link active" : "nav-link"}>
+            <Link to="/Main" className={window.location.pathname === "/Main" ? "nav-link active" : "nav-link"}>
               Home
             </Link>
           </li>
@@ -36,7 +36,7 @@ function Navbar() {
           <li>
             <div className="nav-search-container">
               <input className="nav-search" type="search" aria-label="Search" />
-              <a href="#"><i className="nav-search fas fa-search"></i></a>
+              <a><i className="nav-search fas fa-search"></i></a>
             </div>
           </li>
           </ul>

@@ -3,3 +3,7 @@ body {
     padding: 0;
     background-color: rgba(236,243,236,1)
 }
+
+#root {
+    overflow-y: scroll;
+}
