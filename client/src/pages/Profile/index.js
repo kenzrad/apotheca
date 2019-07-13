@@ -2,13 +2,14 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Card from "../../components/Card";
+import { Card, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
+import Libra from "../../components/Libra";
 
 class Profile extends Component {
   state = {
     userId: "",
-    userProfile,
+    userProfile: ""
   };
 
   // NEED TO GET USER ID HERE
