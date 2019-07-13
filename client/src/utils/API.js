@@ -10,6 +10,6 @@ export default {
     return axios.get("/api/profile/" + id);
   },
   getUserLogin: function (login) {
-    return axios.post("/api/login/", login)
+    return axios.post("/api/login/login", login)
   }
 };
