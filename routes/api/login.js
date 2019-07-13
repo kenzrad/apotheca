@@ -6,7 +6,7 @@ router.route("/")
   .get(loginController.findAll)
   .post(loginController.create)
 
-
+//Matches with "/api/login/login"
 router.route("/login")
   .post(loginController.login)
 
