@@ -13,7 +13,7 @@ class Profile extends Component {
     userProfile: ""
   }
 
-
+    };
     // NEED TO GET USER ID HERE
     componentDidMount() {
         this.loadUserProfile(this.state.userId);
