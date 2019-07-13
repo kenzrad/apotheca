@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
 
+
+.brand {
+  font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
+  font-size: 5em;
+  color: rgb(73, 64, 64);
+  letter-spacing: 0.25em;
+  text-align: center;
+  margin: 100px;
+}
+
 ul,
 li
 {
