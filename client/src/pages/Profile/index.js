@@ -11,6 +11,7 @@ class Profile extends Component {
   state = {
     userId: "",
     userProfile: ""
+  }
 
 
     // NEED TO GET USER ID HERE

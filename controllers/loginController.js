@@ -12,10 +12,10 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     login: function (req, res) {
-        console.log("hiiiiii")
         db.Login
-            .findOne({ Loginname: req.body.Loginname, password: req.body.password })
+            .findOne({ userName: req.body.Loginname, password: req.body.password })
             .then(Login => res.json(Login))
+            .catch(err => res.status(422).status(422).json(err));
     },
     findById: function (req, res) {
         db.Login

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import API from "./utils/API";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
@@ -14,7 +15,8 @@ class App extends Component {
     password: "",
     firstName: "",
     vegan: false,
-    hypoallergenic: false
+    hypoallergenic: false,
+    quizResults: ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
   }
 
   handleInputChange = event => {
@@ -32,6 +34,35 @@ class App extends Component {
       [name]: checked
     });
   }
+
+  handleQuiz = choices => {
+    this.setState({
+      quizResults: choices
+    });
+  }
+
+  login = e => {
+    e.preventDefault();
+    let login = {
+      Loginname: this.state.loginUsername,
+      password: this.state.loginPassword
+    }
+
+    API.getUserLogin(login)
+    .then(result => {
+      if (result.data === null) {
+        alert("No user found.");
+      } else {
+        sessionStorage.setItem('userData', JSON.stringify(result.data));
+        alert("userData set");
+      }
+    });
+  }
+
+  signup = e => {
+    e.preventDefault();
+    console.log(this.state);
+  }
   
   render() {
     return (
@@ -40,7 +71,7 @@ class App extends Component {
           <Switch>
             <Route 
               exact path="/" 
-              render={() => <Login handleCheckbox = {this.handleCheckbox} handleInputChange={this.handleInputChange} />} />
+              render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange} handleQuiz={this.handleQuiz} login={this.login} signup={this.signup}/>} />
             <Route exact path="/Main" component={Main} />
             <Route exact path="/Profile/:login" component={Profile} /> 
             <Route exact path="/Elements" component={Elements} />
