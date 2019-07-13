@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import comparisonArr from './comparisonArr.json';
 
-let choices = [];
+let choices = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"];
 
 class Quiz extends Component {
     optionClickHandler = e => {
@@ -12,6 +12,7 @@ class Quiz extends Component {
         if (e.target.classList.contains("options") === false) {
             if (!e.target.classList.contains("chosen")) {
                 choices[currQuestion] = val;
+                this.props.handleQuiz(choices);
                 e.target.classList.add("chosen");
 
                 for (let child of e.currentTarget.childNodes) {
@@ -41,28 +42,6 @@ class Quiz extends Component {
                 }
             }
 
-        }
-    }
-
-    submitQuiz = () => {
-        let incomplete = false;
-
-        for (let i = 0; i <= 9; i++) {
-            if (choices[i] === undefined) {
-                incomplete = true;
-                break;
-            }
-        }
-
-        if (incomplete === false) {
-            for (let n = 0; n <= 9; n++) {
-                choices[n] = comparisonArr[n + 1][choices[n]];
-            }
-
-            console.log(choices);
-        } else {
-            //Show modal asking to finish quiz or something.
-            console.log("Please answer all questions");
         }
     }
 
@@ -149,7 +128,7 @@ class Quiz extends Component {
                     <p data-answer="D">Irritated/sensitve skin</p>
                 </div>
 
-                <button onClick={this.submitQuiz}>Submit</button>
+                <button onClick={this.props.signup}>Submit</button>
             </>
         );
     }
