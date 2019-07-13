@@ -8,11 +8,11 @@ import Libra from "../../components/Libra";
 
 class Profile extends Component {
 
-  state = {
-    userId: "",
-    userProfile: ""
+    state = {
+        userId: "",
+        userProfile: ""
 
-
+    };
     // NEED TO GET USER ID HERE
     componentDidMount() {
         this.loadUserProfile(this.state.userId);

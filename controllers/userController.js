@@ -1,44 +1,36 @@
 const db = require("../models");
-//Defining methods for the Login Controller
 
+//Defining methods for the API Controller
 module.exports = {
     findAll: function (req, res) {
-        db.Login
+        db.User
             .find(req.query)
             .sort({ date: -1 })
             .then(dbModel => {
-                res.json(dbModel);
+                res.json(dbModel)
             })
             .catch(err => res.status(422).json(err));
     },
-    login: function (req, res) {
-        console.log("hiiiiii")
-        db.Login
-            .findOne({ Loginname: req.body.Loginname, password: req.body.password })
-            .then(Login => res.json(Login))
-            .catch(err => res.status(422).status(422).json(err));
-    },
     findById: function (req, res) {
-        db.Login
+        db.User
             .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-
     create: function (req, res) {
-        db.Login
+        db.User
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     update: function (req, res) {
-        db.Login
+        db.User
             .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     remove: function (req, res) {
-        db.Login
+        db.User
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
