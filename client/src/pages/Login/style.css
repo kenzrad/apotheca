@@ -78,7 +78,7 @@ tr {
 }
 
 .signup-td {
-    min-width: 300px;
+    min-width: 00px;
 }
 
 .login-td {
@@ -92,4 +92,9 @@ tr {
 
 .chevrons a {
     margin: 40px;
+}
+
+.quizDiv {
+    overflow-y: auto;
+    height: 80vh;
 }
