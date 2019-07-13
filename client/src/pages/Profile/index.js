@@ -30,6 +30,7 @@ class Profile extends Component {
     render() {
         return (
             <Wrapper>
+                <Navbar />
                 {this.state.userProfile.map(userDatum => (
                     <Libra
                         key={userDatum._id}
