@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import API from "./utils/API";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
@@ -41,22 +40,13 @@ class App extends Component {
     });
   }
 
-  login = e => {
-    e.preventDefault();
+  login = () => {
     let login = {
       Loginname: this.state.loginUsername,
       password: this.state.loginPassword
     }
 
-    API.getUserLogin(login)
-    .then(result => {
-      if (result.data === null) {
-        alert("No user found.");
-      } else {
-        sessionStorage.setItem('userData', JSON.stringify(result.data));
-        alert("userData set");
-      }
-    });
+    return login;
   }
 
   signup = e => {

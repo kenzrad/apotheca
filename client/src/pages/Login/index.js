@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router';
+import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
 import Brand from "../../components/Brand"
 import "./style.css";
@@ -33,6 +35,21 @@ class Login extends Component {
     e.currentTarget.parentElement.parentElement.nextSibling.nextSibling.classList.remove("hidden");
   }
 
+  finalizeLogin = e => {
+    e.preventDefault();
+
+    API.getUserLogin(this.props.login())
+    .then(result => {
+      if (result.data === null) {
+        alert("No user found.");
+      } else {
+        sessionStorage.setItem('userData', JSON.stringify(result.data));
+        // this.props.history.push("/profile/" + result.data.userName);
+        this.props.history.push("/main");
+      }
+    });
+  }
+
   render() {
     return (
       <div className="login-backdrop">
@@ -51,7 +68,7 @@ class Login extends Component {
               <input className="login-text" onChange={this.props.handleInputChange} type="text" name="loginUsername" placeholder="username"></input>
               <input className="login-text" onChange={this.props.handleInputChange} type="password" name="loginPassword" placeholder="password"></input>
 
-              <button onClick={this.props.login}>Log In</button>
+              <button onClick={this.finalizeLogin}>Log In</button>
             </form>
 
             <div className="chevrons">
@@ -94,4 +111,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
