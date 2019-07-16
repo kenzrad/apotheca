@@ -3,5 +3,6 @@ module.exports = {
   Component: require("./component"),
   Remedy: require("./remedy"),
   Login: require("./login"),
-  Quiz: require("./quiz")
+  Quiz: require("./quiz"),
+  User: require("./user")
 };
