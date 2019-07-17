@@ -9,8 +9,8 @@
     border-bottom: 1px solid rgb(132, 141, 132);
     padding-left: 5px;
     padding-bottom: 5px;
-    margin: 10px 10px 30px 5px;
-    transition: 300ms ease-out;
+    margin: 10px 10px 20px 5px;
+    transition: 200ms ease-out;
     display: block;
 }
 
@@ -19,25 +19,21 @@
     margin: 0px 10px 10px 5px;
 }
 
-#loginAndSignup input:focus {
+#loginAndSignup input[type="text"]:focus, #loginAndSignup input[type="password"]:focus {
     outline: transparent;
     border-color: #7ed685;
     border-width: 3px;
-    margin-bottom: 8px;
-}
-
-@keyframes fade {
-    from {opacity: 1}
-    to {opacity: 0}
-}
-
-.hidden {
-    display: none;
+    margin-bottom: 18px;
 }
 
 .login-backdrop {
     background-image: linear-gradient(to top, rgba(139,142,82, 1),  rgba(175, 145, 145 ,.5),  rgba(236,243,236,1), rgba(236,243,236,1)); 
     height: 100vh
+}
+
+.login-backdrop button {
+    background-color: transparent;
+    border: none;
 }
 
 .login-btn {
@@ -73,9 +69,6 @@
     letter-spacing: 0.1em;
     color: rgb(73, 64, 64);
 }
-tr {
-    vertical-align: top;
-}
 
 .signup-td {
     min-width: 00px;
@@ -97,4 +90,79 @@ tr {
 .quizDiv {
     overflow-y: auto;
     height: 80vh;
+    min-width: 70%;
+}
+
+
+/* 
+/   KEYFRAMES & ANIMATIONS
+*/
+/* SLIDE OUT */
+.slideOutRight {
+    position: relative;
+    overflow: hidden;
+    animation: slideOutRight 1s;
+}
+
+@keyframes slideOutRight {
+    from { 
+        left: 0;
+        opacity: 1;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.slideOutLeft {
+    position: relative;
+    overflow: hidden;
+    animation: slideOutLeft 1s;
+}
+
+@keyframes slideOutLeft {
+    from {
+        right: 0;
+        opacity: 1;
+    }
+    to {
+        right: 100%;
+        opacity: 0;
+    }
+}
+
+/* SLIDE IN */
+.slideInRight {
+    position: relative;
+    overflow: hidden;
+    animation: slideInRight 300ms;
+}
+
+@keyframes slideInRight {
+    from { 
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.slideInLeft {
+    position: relative;
+    overflow: hidden;
+    animation: slideInLeft 300ms;
+}
+
+@keyframes slideInLeft {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
 }

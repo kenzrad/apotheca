@@ -5,5 +5,9 @@ body {
 }
 
 #root {
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none!important;
 }

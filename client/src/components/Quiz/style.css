@@ -26,6 +26,27 @@
     border-color: #6bb869!important;
 }
 
+/* INDICATORS */
+#indicators svg {
+    margin-left: 5px;
+}
+
+#indicators svg:hover {
+    transform: scale(1.3);
+}
+
+#indicators circle{
+    fill: lightblue;
+}
+
+.indicatorChosen {
+    fill: #6bb869!important;
+}
+
+
+/* 
+/   ANIMATIONS
+ */
 .hiddenOption {
     overflow: hidden;
 
@@ -34,12 +55,17 @@
 }
 
 @keyframes shrink {
-    from {max-width: 220;
-        padding: 5px 10px;}
-    to {max-width: 0px;
-        padding: 5px 0px;}
+    from {
+        max-width: 220px;
+        opacity: 1;
+        padding: 5px 10px;
+    }
+    to {
+        max-width: 0px;
+        opacity: 0;
+        padding: 5px 0px;
+    }
 }
-
 
 .showOption {
     overflow: hidden;
