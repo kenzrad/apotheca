@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import { Cards, Card } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import Navbar from "../../components/Navbar";
-
+import './style.css';
 
 class Elements extends Component {
   state = {

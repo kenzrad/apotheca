@@ -5,13 +5,13 @@ import API from "../../utils/API";
 import { Card, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import Libra from "../../components/Libra";
+import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
 
   state = {
     userId: "",
     userProfile: ""
-  }
 
     };
     // NEED TO GET USER ID HERE
