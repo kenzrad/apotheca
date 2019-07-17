@@ -18,7 +18,7 @@ class Main extends Component {
               title="13 big beauty trends for 2019"
             />
             {/* lots of white space between these */}
-            <aside class="sideArticles">
+            <aside className="sideArticles">
               <SideArticle 
                 image="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1080,h_675/https://www.naomiwhittel.com/wp-content/uploads/2019/07/Five-Ways-to-Detox-Your-Skin.jpg"
                 title="Five Ways to Detox Your Skin"

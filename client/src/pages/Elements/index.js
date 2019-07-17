@@ -12,7 +12,6 @@ class Elements extends Component {
   };
   // When this component mounts, get all element data
   componentDidMount() {
-    console.log("1. i am in the componentDidMount Function")
     this.loadElements();
   }
 
@@ -21,8 +20,6 @@ class Elements extends Component {
     API.getElements()
       .then(res => {
         this.setState({ elements: res.data })
-        console.log("3. i am in the loadElements function")
-        console.log(res.data);
       }
       )
 

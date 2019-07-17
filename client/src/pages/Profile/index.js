@@ -1,6 +1,7 @@
 //this page will be the users profile page, where they can explore their libra bullshit
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
+import { withRouter } from "react-router";
 import API from "../../utils/API";
 import { Card, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
@@ -9,13 +10,20 @@ import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
 
-  state = {
-    userId: "",
-    userProfile: ""
+    userData = JSON.parse(sessionStorage.userData)
 
     // NEED TO GET USER ID HERE
     componentDidMount() {
-        this.loadUserProfile(this.state.userId);
+        this.checkLoginStatus();
+    }
+
+    checkLoginStatus() {
+        if (!this.userData) {
+            console.log("I'm going to redirect your ass")
+        }
+        else {
+            console.log (this.userData)
+        }
     }
 
     loadUserProfile = (id) => {
@@ -30,16 +38,17 @@ class Profile extends Component {
         return (
             <Wrapper>
                 <Navbar />
-                {this.state.userProfile.map(userDatum => (
                     <Libra
-                        key={userDatum._id}
-                        username={userDatum.username}
-                        libra={userDatum.libra}
+                    id={this.userData._id}
+                    username={this.userData.userName}
+                    name={this.userData.firstName}
+                    vegan={this.userData.vegan}
+                    hypoallergenic={this.userData.hypoallergenic}
+                    libra={this.userData.libra}
                     >
                     </Libra>
-                ))}
-                <Cards>
-                    {this.state.userProfile.map(element => (
+                {/* <Cards>
+                    {this.userData.map(element => (
                         <Card
                             key={element._id}
                             name={element.name}
@@ -48,10 +57,11 @@ class Profile extends Component {
                             image={element.image}
                         />
                     ))}
-                </Cards>
+                </Cards> */}
             </Wrapper>
         );
     }
 }
 
-export default Profile;
+
+export default withRouter(Profile);
