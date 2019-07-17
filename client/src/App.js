@@ -14,7 +14,8 @@ class App extends Component {
     password: "",
     firstName: "",
     vegan: false,
-    hypoallergenic: false
+    hypoallergenic: false,
+    quizResults: ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
   }
 
   handleInputChange = event => {
@@ -32,6 +33,26 @@ class App extends Component {
       [name]: checked
     });
   }
+
+  handleQuiz = choices => {
+    this.setState({
+      quizResults: choices
+    });
+  }
+
+  login = () => {
+    let login = {
+      Loginname: this.state.loginUsername,
+      password: this.state.loginPassword
+    }
+
+    return login;
+  }
+
+  signup = e => {
+    e.preventDefault();
+    console.log(this.state);
+  }
   
   render() {
     return (
@@ -40,7 +61,7 @@ class App extends Component {
           <Switch>
             <Route 
               exact path="/" 
-              render={() => <Login handleCheckbox = {this.handleCheckbox} handleInputChange={this.handleInputChange} />} />
+              render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange} handleQuiz={this.handleQuiz} login={this.login} signup={this.signup}/>} />
             <Route exact path="/Main" component={Main} />
             <Route exact path="/Profile/:login" component={Profile} /> 
             <Route exact path="/Elements" component={Elements} />
