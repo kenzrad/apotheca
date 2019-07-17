@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
+import Navbar from "../../components/Navbar";
 import Brand from "../../components/Brand"
 import "./style.css";
 
 
 class Login extends Component {
+<<<<<<< HEAD
   moveLeft = (e, num) => {
+=======
+
+  // componentDidMount() {
+  //   window.location.reload();
+  // }
+
+  moveTwoLeft = e => {
+>>>>>>> fedb6ba1cc2b600aa0de9bb07b0b308a45ce1013
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement;
     let nextTarget = e.currentTarget.parentElement.parentElement;
@@ -85,6 +95,7 @@ class Login extends Component {
   render() {
     return (
       <div className="login-backdrop">
+        <Navbar display="hide"/>
         <Brand />
         <div id="loginAndSignup">
           <div>

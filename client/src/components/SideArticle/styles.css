@@ -1,0 +1,39 @@
+
+
+
+.sideArticleDiv {
+    margin-bottom: 30px;
+    justify-content: center;
+    min-height: 200px;
+    width: 100%;
+    /* padding: 0% 7%; */
+    text-align: justify;
+}
+
+.sideImage {
+    width: 90%
+}
+
+.sideText {
+    font-family: 'Cormorant', 'Garamond', serif;
+    line-height: 1.5em;
+    width: 90%;
+}
+
+.sideTitle {
+    letter-spacing: 0.05em;
+    font-family: 'Cormorant', 'Garamond', serif;
+
+}
+
+.sideLink {
+    color: goldenrod;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sideLink:hover {
+    color: goldenrod;
+    text-decoration: none;
+    cursor: pointer;
+}
