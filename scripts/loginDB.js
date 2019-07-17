@@ -15,7 +15,15 @@ const loginSeed = [
         password: "bootcamp2019",
         firstName: "Anna",
         vegan: false,
-        hypoallergenic: false
+        hypoallergenic: false,
+        libraOverall: "Kalon",
+        libraCategories: [{
+            kalon: 4,
+            novo: 1,
+            elavo: 2,
+            bibe: 1
+        }],
+        elements: []
     }
 ]
 
