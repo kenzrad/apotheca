@@ -2,11 +2,17 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
+import Navbar from "../../components/Navbar";
 import Brand from "../../components/Brand"
 import "./style.css";
 
 
 class Login extends Component {
+
+  // componentDidMount() {
+  //   window.location.reload();
+  // }
+
   moveTwoLeft = e => {
     e.preventDefault();
 
@@ -53,6 +59,7 @@ class Login extends Component {
   render() {
     return (
       <div className="login-backdrop">
+        <Navbar display="hide"/>
         <Brand />
         <div id="loginAndSignup">
           <div>

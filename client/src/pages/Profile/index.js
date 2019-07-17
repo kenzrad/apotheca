@@ -10,29 +10,15 @@ import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
 
-    userData = JSON.parse(sessionStorage.userData)
+    userData = (sessionStorage.userData ? JSON.parse(sessionStorage.userData) : "no data")
 
     // NEED TO GET USER ID HERE
     componentDidMount() {
-        this.checkLoginStatus();
-    }
-
-    checkLoginStatus() {
-        if (!this.userData) {
-            console.log("I'm going to redirect your ass")
-        }
-        else {
-            console.log (this.userData)
+        if (!this.userData || this.userData === "no data") {
+            this.props.history.push('/')
+            window.location.reload();
         }
     }
-
-    loadUserProfile = (id) => {
-        API.getUserProfile(id)
-            .then(res =>
-                this.setState({ userProfile: res.data })
-            )
-            .catch(err => console.log(err));
-    };
 
     render() {
         return (

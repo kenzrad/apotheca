@@ -5,9 +5,9 @@ import "./style.css";
 var login = "dummy";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Navbar() {
+function Navbar(props) {
   return (
-    <>
+    <div className={ props.display ? "hide-nav" : ""}>
       <div className="line-one" />
       <div className="line-two" />
       <div className="line-three" />
@@ -41,7 +41,7 @@ function Navbar() {
           </li>
           </ul>
         </nav>
-    </>
+    </div>
   );
 }
 
