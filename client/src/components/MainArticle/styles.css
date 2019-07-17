@@ -1,0 +1,59 @@
+.mainFirstP {
+    margin-bottom: 20px !important;
+}
+
+.mainImage {
+    width: 60vw;
+    height: auto;
+    margin-bottom: 10px
+}
+
+.mainTitle {
+    font-family: 'Cormorant', 'Garamond', serif;
+    margin: 0;
+    font-size: 3em;
+}
+
+.mainText  {
+    width: 60vw;
+    margin-left: 0
+}
+
+.mainLastP {
+    margin-bottom: 20px !important;
+}
+
+.mainText p {
+    font-family: 'Cormorant', 'Garamond', serif;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+.mainText h5 {
+    font-family: 'Cormorant', 'Garamond', serif;
+    text-align: justify;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+.mainText a {
+    color: goldenrod;
+    font-size: 1em;
+    font-family: 'Cormorant', 'Garamond', serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .mainImage {
+        width: 95vw;
+    }
+
+    .mainText  {
+        width: 95vw;
+    }
+} 
