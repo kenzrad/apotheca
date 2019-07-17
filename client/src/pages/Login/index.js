@@ -8,16 +8,7 @@ import "./style.css";
 
 
 class Login extends Component {
-<<<<<<< HEAD
   moveLeft = (e, num) => {
-=======
-
-  // componentDidMount() {
-  //   window.location.reload();
-  // }
-
-  moveTwoLeft = e => {
->>>>>>> fedb6ba1cc2b600aa0de9bb07b0b308a45ce1013
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement;
     let nextTarget = e.currentTarget.parentElement.parentElement;
