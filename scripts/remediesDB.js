@@ -200,7 +200,111 @@ const remedySeed = [
         consistency: "Twice Weekly",
         works: ["The nutrients in bananas have the power to significantly reduce the appearance of wrinkles and make the skin look more supple and youthful. In this particular face mask, we are going to going to add other wrinkle-busting ingredients as well to form a powerful combination. Yogurt reduces the appearance of large pores, which make skin look aged. Tightens skin pores. Lemon oil refreshes skin cells and softens harsh lines and wrinkles."],
         source: "https://bellatory.com/skin/DIY-Banana-Face-Mask-Recipes"
+    },
+    {
+        id: 19,
+        title: ["Hydrating Mask"],
+        ingredients: ["4 - 5 Apricots", "3 Tablespoons Yogurt", "1 Teaspoon Honey"],
+        instructions: ["Place apricots into boiling water for 60 seconds, then remove apricots and plunge them into icy water for 1 - 2 minutes, remove and place onto cutting board.", "Slice through the skin lengthwise and remove the peel off the skin.", "Place all ingredients in blender and mix until creamy."],
+        time: ["~30 Minutes"],
+        consistency: "Twice Weekly",
+        works: ["Apricots provide excellent moisture to the skin which promotes soft, supple skin.They also help maintain skin clarity and elasticity.Yogurt can help with premature aging and reduce discoloration.And honey is a great anti - aging agent and helps keep skin hydrated."],
+        source: "https://shwinandshwin.com/2014/05/diy-hydrating-apricot-mask.html"
+    },
+
+    {
+        id: 20,
+        title: ["Oil Smash Mask"],
+        ingredients: ["1 / 2 Apricot", "1 Strawberry", "3 Tablespoons Water"],
+        instructions: ["Puree the apricot and strawberry together and mix with the water.", "Massage onto face, and leave on for 10 minutes.", "Wash off with cold water."],
+        time: ["~15 Minutes"],
+        consistency: "Once Weekly",
+        works: ["Apricots are high in skin - strengthening and damage - fighting antioxidants, while strawberries help battle oil control."],
+        source: "https://www.simplecareproducts.com/blog/diy-apricot-face-mask"
+    },
+
+    {
+        id: 21,
+        title: ["Rejuvenating Mask"],
+        ingredients: ["4 Tablespoons Blended Papaya", "1 Tablespoon Honey"],
+        instructions: ["Mix the ingredients together.", "Massage onto face and leave for 10 minutes.", "Wash off with cold water."],
+        time: ["~15 Minutes"],
+        consistency: "Twice Weekly",
+        works: ["The mixture of papaya and honey will rejuvenate dull skin, as well has hydrating the skin to make it brighter."],
+        source: "https://www.blueosa.com/how-to-make-a-homemade-papaya-facial-mask/"
+    },
+
+    {
+        id: 22,
+        title: ["Face Mask"],
+        ingredients: ["1 / 2 Cup Papaya", "1 / 2 Teaspoon Turmeric Powder"],
+        instructions: ["Blend the papaya and turmeric together to make a puree.", "Apply a this layer to your face and let the mask dry for 15 minutes.", "Gently wash off the mask with lukewarm water and a washcloth"],
+        time: ["~20 Minutes"],
+        consistency: "Once Weekly",
+        works: ["The turmeric in this papaya face mask recipe adds a dash of antimicrobial properties to the mix to keep your skin healthy, clear, and wrinkle - free."],
+        source: "https://www.siobeauty.com/blogs/news/papaya-face-masks"
+    },
+    {
+        id: 23,
+        title: ["Face Mask"],
+        ingredients: ["1 / 2 Unpeeled Cucumber", "1 / 4 Cup Banana", "1 / 4 Cup Papaya"],
+        instructions: ["Blend ingredients together until a paste is made.", "Apply the mixture to your face and wait 15 Minutes.", "Gently wash off the mask with lukewarm water and a washcloth"],
+        time: ["~20 Minutes"],
+        consistency: "Once Weekly",
+        works: ["This mask is hydrating for dull and dried out skin.This will help with any inflammation and soothe irritated skin, plus will give it a boost of moisture."],
+        source: "https://www.siobeauty.com/blogs/news/papaya-face-masks"
+    },
+    {
+        id: 24,
+        title: ["Spot Treatment"],
+        ingredients: ["5 Drops Tea Tree Oil", "30 Drops Witch Hazel"],
+        instructions: ["Gently mix the two ingredients in a bottle.", "Use a cotton swab to apply to spots on the face"],
+        time: ["~5 Minutes"],
+        consistency: "Daily",
+        works: ["These ingredients will act as a drying agent to acne to help reduce the spread of a breakout and even hinder the beginning of a breakout."],
+        source: "https://australian-bodycare.com/uk/tea-tree-oil-face/"
+    },
+    {
+        id: 26,
+        title: ["Facial Cleanser"],
+        ingredients: ["1 / 4 Cup Castor Oil", "1 / 4 Cup Jojoba Oil", "15 Drops Tea Tree Oil"],
+        instructions: ["Add all four ingredients into a clean bowl and whisk together.", "Store in a clean glass jar with a lid.", "Wet your fingertips in the oil and gently massage into the skin then clean with water"],
+        time: ["~10"],
+        consistency: "Every Other Day",
+        works: ["This cleanser will have powerful anti - inflammatory, cleansing, and healing properties.It will also moisturize which will be great for dry or irritable skin.It will clear away any bacteria and be perfect for fighting acne."],
+        source: "https://www.onesweetmess.com/2013/07/02/homemade-tea-tree-oil-facial-cleanser/"
+    },
+    {
+        id: 27,
+        title: ["Face Toner"],
+        ingredients: ["1.5 Ounce Apple Cider Vinegar", "1.5 Ounce Water", "6 Drops Tea Tree Oil"],
+        instructions: ["Mix ingredients into a spray bottle.", "Spritz on to face or onto a cotton pad to swipe on face for a toner.", "Moisturize after."],
+        time: ["~10"],
+        consistency: "Every Other Day",
+        works: ["Skin toner is an essential part of beauty treatment, but many women skip it without knowing its importance.Toning of the skin is necessary for removing the bit of dirt or oil that your cleanser may have missed along with nourishing, hydrating and restoring the pH balance of the skin.Combined with neutralizing apple cider vinegar, tea tree oil which has amazing antiseptic and anti - inflammatory properties makes a fantastic skin toner that is completely natural."],
+        source: "http://www.womensok.com/5-homemade-skin-care-products-with-tea-tree-oil/"
+    },
+    {
+        id: 28,
+        title: ["Exfoliation Mask"],
+        ingredients: ["1 / 4 White Onion", "Small Handful of Holy Basil", "3 Tablespoon Water", "2 Tablespoon Honey"],
+        instructions: ["Blend all ingredients together and chill mixture overnight", "Once 12 hours have passed, massage mixture onto face.", "Wait for 20 minutes, and wash off with lukewarm water"],
+        time: ["~12 Hours"],
+        consistency: "Twice Weekly",
+        works: ["This mask works to hydrate your skin, but also has great anti - inflammatory and acne fighting properties.This mask should only be used after the mixture has been chilled.This mask is made for people with acne prone skin."],
+        source: "https://www.vivawoman.net/2009/02/diy-beauty-onion-mask-for-a-bad-breakout/"
+    },
+    {
+        id: 29,
+        title: ["Cooling Toner"],
+        ingredients: ["1 / 4 Cup Cooled Green Tea", "2 Tablespoon Cucumber Juice", "1 Tablespoon Aloe Vera"],
+        instructions: ["Blend all ingredients thoroughly.", "Apply to face as a toner."],
+        time: ["~10 Minutes"],
+        consistency: "Daily",
+        works: ["Cooling, Soothing toner for every skin tone."],
+        source: "https://www.youbeauty.com/beauty/green-tea-beauty-recipes/"
     }
+
 
 
 ];

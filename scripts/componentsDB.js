@@ -230,7 +230,65 @@ const componentSeed = [
         component: "Lycopene",
         description: "this component is known for it’s ability to combat acne. It is a powerful antioxidant and anti-inflammatory that helps protect skin from environmental agents that can contribute to clogged pores and breakouts.",
         source: "https://www.refinery29.com/en-us/lycopene"
+    },
+    {
+        id: 37,
+        component: "Vitamin D",
+        description: "also known as calcitriol, contributes to skin cell growth, repair, and metabolism. It optimizes the skin’s immune system and helps destroy free radicals that can cause premature aging.",
+        source: "https://www.lifeextension.com/magazine/2010/6/optimal-skin-protection-with-vitamin-d/page-01"
+    },
+    {
+        id: 38,
+        component: "lauric acid",
+        description: "having antibacterial properties, it has been found to effectively combat acne. Lauric acid also could reduce inflammation and the number of bacteria present",
+        source: "https://www.healthline.com/health/beauty-skin-care/what-is-lauric-acid"
+    },
+    {
+        id: 39,
+        component: "terpinen-4-ol",
+        description: "appears to increase the activity of your white blood cells, which help fight germs and other foreign invaders",
+        source: "https://www.healthline.com/nutrition/tea-tree-oil"
+    },
+    {
+        id: 40,
+        component: "folic acid",
+        description: "also known as vitamin B9, plays a vital role in helping to maintain the skin’s natural beauty. May also provide increased hydration by bolstering skin - barrier function.This can improve moisture - retention and alleviate skin dryness",
+        source: "https://www.lorealparisusa.com/ingredient-library/folic-acid.aspx"
+    },
+    {
+        id: 41,
+        component: "caffeine",
+        description: "caffeine in skin products claims that it will improve the look of cellulite or puffy eyes. Applied to skin, caffeine may have soothing and antioxidant properties, especially when skin is exposed to UV light",
+        source: "https://www.paulaschoice.com/ingredient-dictionary/antioxidants/caffeine.html"
+    },
+    {
+        id: 42,
+        component: "oleic acid",
+        description: "is a godsend for dry, aging skin since it penetrates easily and deeply into the skin’s surface, replenishing lost moisture that naturally comes with age, also helps the moisture from evaporating.",
+        source: "https://luxebotanics.com/blogs/luxe-botanics/facial-oils-are-you-using-the-correct-percentage-of-oleic-and-linoleic-acids"
+    },
+    {
+        id: 43,
+        component: "linoliec acid",
+        description: "helps makes the skin’s barrier stronger so it can effectively keep water in and irritants out.Topical use can also help reduce acne breakouts.",
+        source: "https://www.beginswithskin.com/linoleic"
+    },
+    {
+        id: 44,
+        component: "gallic acid",
+        description: "it is an antifungal agent, antiviral, astringent and antioxidant. Some studies have indicated that it has anticancer activity and that it can relax blood vessels.",
+        source: "https://personalcaretruth.com/2010/07/gallic-acid-chemistry/"
+    },
+    {
+        id: 45,
+        component: "acetic acid",
+        description: "has been shown to be effective in inhibiting bacterial growth and destroying bacterial biofilms",
+        source: "https://www.healthline.com/health/apple-cider-vinegar-for-face"
     }
+
+
+
+
 
 ];
 
