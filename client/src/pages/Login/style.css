@@ -46,7 +46,6 @@
 }
 
 .login-link {
-    margin: 0px 10px 10px 0px;
     padding: 10px;
     font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
     font-size: 0.75em;
@@ -70,10 +69,6 @@
     color: rgb(73, 64, 64);
 }
 
-.signup-td {
-    min-width: 00px;
-}
-
 .login-td {
     padding-left: 10px;
 }
@@ -83,14 +78,14 @@
     margin: 20px;
 }
 
-.chevrons a {
-    margin: 40px;
+.chevrons button {
+    margin: 40px 40px 0px 40px;
 }
 
 .quizDiv {
     overflow-y: auto;
     height: 80vh;
-    min-width: 70%;
+    width: 70%;
 }
 
 
