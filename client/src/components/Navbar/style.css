@@ -103,3 +103,7 @@ i.nav-search {
   margin-right: 5px;
   color: rgb(73, 64, 64, 0.5);
 }
+
+.hide-nav {
+  display: none;
+}

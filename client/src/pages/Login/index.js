@@ -2,69 +2,104 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
+import Navbar from "../../components/Navbar";
 import Brand from "../../components/Brand"
 import "./style.css";
 
 
 class Login extends Component {
-  moveTwoLeft = e => {
-    e.preventDefault();
 
-    e.currentTarget.parentElement.parentElement.classList.add("hidden");
-    e.currentTarget.parentElement.parentElement.previousSibling.previousSibling.classList.remove("hidden");
+  moveLeft = (e, num) => {
+    e.preventDefault();
+    let target = e.currentTarget.parentElement.parentElement;
+    let nextTarget = e.currentTarget.parentElement.parentElement;
+
+    for (let i = 0; i < num; i++) {
+      nextTarget = nextTarget.previousSibling;
+    }
+
+    this.transition(target, "right", "out");
+    setTimeout(() => {
+      target.classList.add("hidden");
+      target.classList.remove("slideOutRight");
+
+      nextTarget.classList.remove("hidden");
+      this.transition(nextTarget, "right", "in");
+      setTimeout(() => {
+        nextTarget.classList.remove("slideInRight");
+      }, 250);
+    }, 250);
   }
 
-  moveLeft = e => {
+  moveRight = (e, num) => {
     e.preventDefault();
+    let target = e.currentTarget.parentElement.parentElement;
+    let nextTarget = e.currentTarget.parentElement.parentElement;
 
-    e.currentTarget.parentElement.parentElement.classList.add("hidden");
-    e.currentTarget.parentElement.parentElement.previousSibling.classList.remove("hidden");
+    for (let i = 0; i < num; i++) {
+      nextTarget = nextTarget.nextSibling;
+    }
+
+    this.transition(target, "left", "out");
+    setTimeout(() => {
+      target.classList.add("hidden");
+      target.classList.remove("slideOutLeft");
+
+      nextTarget.classList.remove("hidden");
+      this.transition(nextTarget, "left", "in");
+      setTimeout(() => {
+        nextTarget.classList.remove("slideInLeft");
+      }, 250);
+    }, 250);
   }
 
-  moveRight = e => {
-    e.preventDefault();
-
-    e.currentTarget.parentElement.parentElement.classList.add("hidden");
-    e.currentTarget.parentElement.parentElement.nextSibling.classList.remove("hidden");
-  }
-
-  moveTwoRight = e => {
-    e.preventDefault();
-
-    e.currentTarget.parentElement.parentElement.classList.add("hidden");
-    e.currentTarget.parentElement.parentElement.nextSibling.nextSibling.classList.remove("hidden");
+  transition = (target, direction, inOut) => {
+    if (inOut === "in") {
+      if (direction === "right") {
+        target.classList.add("slideInRight");
+      } else if (direction === "left") {
+        target.classList.add("slideInLeft")
+      }
+    } else if (inOut === "out") {
+      if (direction === "right") {
+        target.classList.add("slideOutRight");
+      } else if (direction === "left") {
+        target.classList.add("slideOutLeft")
+      }
+    }
   }
 
   finalizeLogin = e => {
     e.preventDefault();
 
     API.getUserLogin(this.props.login())
-    .then(result => {
-      if (result.data === null) {
-        alert("No user found.");
-      } else {
-        sessionStorage.setItem('userData', JSON.stringify(result.data));
-        // this.props.history.push("/profile/" + result.data.userName);
-        this.props.history.push("/main");
-      }
-    });
+      .then(result => {
+        if (result.data === null) {
+          alert("No user found.");
+        } else {
+          sessionStorage.setItem('userData', JSON.stringify(result.data));
+          // this.props.history.push("/profile/" + result.data.userName);
+          this.props.history.push("/main");
+        }
+      });
   }
 
   render() {
     return (
       <div className="login-backdrop">
+        <Navbar display="hide"/>
         <Brand />
         <div id="loginAndSignup">
-          <div>
+          <div id="loginSignupLinks">
             <div>
-              <a className="login-link" onClick={this.moveRight}>Log In</a>
-              <a className="login-link-divider">|</a>
-              <a className="login-link" onClick={this.moveTwoRight}>Sign Up</a>
+              <button className="login-link" onClick={e => { this.moveRight(e, 1) }}>Log In</button>
+              <span>|</span>
+              <button className="login-link" onClick={e => { this.moveRight(e, 2) }}>Sign Up</button>
             </div>
           </div>
 
           <div className="loginDiv hidden">
-            <form>
+            <form id="loginForm">
               <input className="login-text" onChange={this.props.handleInputChange} type="text" name="loginUsername" placeholder="username"></input>
               <input className="login-text" onChange={this.props.handleInputChange} type="password" name="loginPassword" placeholder="password"></input>
 
@@ -72,37 +107,36 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <a onClick={this.moveLeft}><i className="fas fa-chevron-left"></i></a>
-
-              <a onClick={this.moveRight}><i className="fas fa-chevron-right"></i></a>
+              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); }}>Return</button>
             </div>
 
           </div>
 
           <div className="signupDiv hidden">
-            <form className="signupForm">
-              <input onChange={this.props.handleInputChange} name="firstName" type="firstName" placeholder="First Name"></input>
+            <form id="signupForm">
+              <input onChange={this.props.handleInputChange} name="firstName" type="text" placeholder="First Name"></input>
               <input onChange={this.props.handleInputChange} name="username" type="text" placeholder="Username"></input>
               <input onChange={this.props.handleInputChange} name="password" type="password" placeholder="Password"></input>
               <label className="login-text">Product Preference:</label>
               <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="vegan"></input>
-              <label className="login-text" for="vegan">Vegan</label><br />
+              <label className="login-text" htmlFor="vegan">Vegan</label><br />
               <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="hypoallergenic"></input>
-              <label className="login-text" for="hypoallergenic">Hypoallergenic</label>
+              <label className="login-text" htmlFor="hypoallergenic">Hypoallergenic</label>
             </form>
 
             <div className="chevrons">
-              <a onClick={this.moveTwoLeft}><i className="fas fa-chevron-left"></i></a>
+              <button onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); }}><i className="fas fa-chevron-left"></i></button>
 
-              <a onClick={this.moveRight}><i className="fas fa-chevron-right"></i></a>
+              <button onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
 
           </div >
 
           <div className="quizDiv hidden">
             <div>
-              <Quiz handleQuiz={this.props.handleQuiz} signup={this.props.signup} />
-              <button onClick={this.moveLeft}><i className="fas fa-chevron-left"></i></button>
+              <Quiz handleQuiz={this.props.handleQuiz} transition={this.transition} />
+              <button onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
+              <button onClick={this.props.signup}>Submit</button>
             </div>
           </div>
         </div >
