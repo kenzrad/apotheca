@@ -7,12 +7,19 @@ export function Cards({ children }) {
   );
 }
 
+export function Benefits(props) {
+  return (
+    <p className="itemDescription">{props.benefit}</p>
+  )
+}
+
+
 export function Card(props) {
-  console.log(props.image)
   return (
     <>
     <div 
       className="item" 
+      key={props.key + "-first"}
       style={{
         backgroundImage: 
         // `url('/assets/images/elements/almond.png')` 
@@ -21,10 +28,13 @@ export function Card(props) {
         ? `url('${props.image}')`
         : `url('https://via.placeholder.com/400')` 
       }}>
-      <div className="itemDetails">
+      <div className="itemDetails" key={props.key + "-second"}>
         {/* Props.description will appear when image is hovered over. */}
-        <h2 className="itemName">{props.name}</h2>
-        <p className="itemDescription">{props.description}</p>
+        <h2 className="itemName" key={props.key + "-third"}>{props.name}</h2>
+        <h3 className="itmeCat" key={props.key + "-fourth"}>{props.category}</h3>
+        {props.benefits.map(benefit => (
+          <p key={props.key + benefit}>{benefit}</p>
+        ))}
       </div>
     </div>
     </>

@@ -2,8 +2,8 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import API from "../../utils/API";
-import { Card, Cards } from "../../components/Card";
+// import API from "../../utils/API";
+// import { Card, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import Libra from "../../components/Libra";
 import Navbar from "../../components/Navbar";
