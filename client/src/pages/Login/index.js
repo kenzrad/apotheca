@@ -8,6 +8,7 @@ import "./style.css";
 
 
 class Login extends Component {
+
   moveLeft = (e, num) => {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement;

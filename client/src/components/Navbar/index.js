@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-var login = "dummy";
+//this needed to be updated once we have login shibangadangwangthankma'am
+var login = "killme"
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar(props) {
@@ -36,7 +37,7 @@ function Navbar(props) {
           <li>
             <div className="nav-search-container">
               <input className="nav-search" type="search" aria-label="Search" />
-              <a><i className="nav-search fas fa-search"></i></a>
+              <button><i className="nav-search fas fa-search"></i></button>
             </div>
           </li>
           </ul>
