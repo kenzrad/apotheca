@@ -89,16 +89,16 @@ class Login extends Component {
         <Navbar display="hide"/>
         <Brand />
         <div id="loginAndSignup">
-          <div>
+          <div id="loginSignupLinks">
             <div>
               <button className="login-link" onClick={e => { this.moveRight(e, 1) }}>Log In</button>
-              <button className="login-link-divider">|</button>
+              <span>|</span>
               <button className="login-link" onClick={e => { this.moveRight(e, 2) }}>Sign Up</button>
             </div>
           </div>
 
           <div className="loginDiv hidden">
-            <form>
+            <form id="loginForm">
               <input className="login-text" onChange={this.props.handleInputChange} type="text" name="loginUsername" placeholder="username"></input>
               <input className="login-text" onChange={this.props.handleInputChange} type="password" name="loginPassword" placeholder="password"></input>
 
@@ -106,13 +106,13 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 1) }}>Return</button>
+              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); }}>Return</button>
             </div>
 
           </div>
 
           <div className="signupDiv hidden">
-            <form className="signupForm">
+            <form id="signupForm">
               <input onChange={this.props.handleInputChange} name="firstName" type="text" placeholder="First Name"></input>
               <input onChange={this.props.handleInputChange} name="username" type="text" placeholder="Username"></input>
               <input onChange={this.props.handleInputChange} name="password" type="password" placeholder="Password"></input>
@@ -124,7 +124,7 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 2) }}><i className="fas fa-chevron-left"></i></button>
+              <button onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); }}><i className="fas fa-chevron-left"></i></button>
 
               <button onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
@@ -133,8 +133,9 @@ class Login extends Component {
 
           <div className="quizDiv hidden">
             <div>
-              <Quiz handleQuiz={this.props.handleQuiz} signup={this.props.signup} />
+              <Quiz handleQuiz={this.props.handleQuiz} transition={this.transition} />
               <button onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
+              <button onClick={this.props.signup}>Submit</button>
             </div>
           </div>
         </div >
