@@ -2,8 +2,9 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import { withRouter } from "react-router";
+import { RemedySmallCard, RemedyCards } from "../../components/RemedyCard"
 // import API from "../../utils/API";
-// import { Card, Cards } from "../../components/Card";
+import { SmallCard, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import Libra from "../../components/Libra";
 import Navbar from "../../components/Navbar";
@@ -33,9 +34,9 @@ class Profile extends Component {
                     libra={this.userData.libra}
                     >
                     </Libra>
-                {/* <Cards>
-                    {this.userData.map(element => (
-                        <Card
+                <Cards>
+                    {this.userData.elements.map(element => (
+                        <SmallCard
                             key={element._id}
                             name={element.name}
                             benefits={element.benefits}
@@ -43,7 +44,21 @@ class Profile extends Component {
                             image={element.image}
                         />
                     ))}
-                </Cards> */}
+                </Cards>
+                <RemedyCards>
+                    {this.userData.remedies.map(remedy => (
+                        <RemedySmallCard 
+                            key={remedy._id} 
+                            title={remedy.title}
+                            ingredients={remedy.ingredients}
+                            instructions={remedy.instructions}
+                            time={remedy.time}
+                            consistency={remedy.consistency}
+                            works={remedy.works}
+                            source={remedy.source}
+                        />
+                    ))}
+                </RemedyCards>
             </Wrapper>
         );
     }
