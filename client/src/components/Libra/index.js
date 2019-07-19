@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-console.log(JSON.parse(sessionStorage.userData))
+// console.log(JSON.parse(sessionStorage.userData))
 
 export function Cards({ children }) {
   return (
