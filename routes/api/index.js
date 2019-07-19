@@ -6,7 +6,6 @@ const loginRoutes = require("./login");
 
 
 // Component, element, remedy, user routes
-
 router.use("/component", componentRoutes);
 router.use("/element", elementRoutes);
 router.use("/remedy", remedyRoutes);

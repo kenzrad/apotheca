@@ -96,10 +96,20 @@ a.navbar-search-container {
   border: none;
   margin-right: 0;
   margin-left: 10px;
+  color:  rgb(73, 64, 64);
   
 }
 
 i.nav-search {
   margin-right: 5px;
   color: rgb(73, 64, 64, 0.5);
+}
+
+.hide-nav {
+  display: none;
+}
+
+.nav-search-btn {
+  border: none;
+  background: transparent;
 }

@@ -5,7 +5,7 @@ function MainArticle( props, {children} ) {
   return (
     <>
       <div>
-        <img className="mainImage" alt="Main Article Image" src={props.image}></img>
+        <img className="mainImage" alt="Main Article" src={props.image}></img>
         <h3 className="mainTitle">{props.title}</h3>
         <div className="mainText">
           <p className="mainFirstP">With innovative indie brands born daily, non-stop product drops and an endless stream of trends taking over social media, the beauty industry thrives on newness - but among all the buzz some movements are more significant than others. This year, conversations around sustainability in the beauty industry boomed, while commitments to greater diversity and inclusion were cemented. So what’s next? Here are the 13 biggest trends to have on your radar for 2019.</p>
@@ -20,7 +20,7 @@ function MainArticle( props, {children} ) {
           <p className="mainLastP">Payne adds that this results-driven routine has both a genderless and ageless appeal, and, thankfully, “it doesn’t clutter up the bathroom” – or your recycling bin.</p>
           <h5>3. Diversity and inclusion conversations will further be heard</h5>
           <p>The last two years have seen the industry’s late move towards demonstrating greater diversity. While we hope that by this time next year it will seem unbelievable that mainstream cosmetic brands didn’t always cater for all, with extensive colour ranges and ethnicity/gender/age-inclusive marketing, there is still a lot to be done. 
-            <a href="https://www.harpersbazaar.com/uk/beauty/skincare/a25568595/beauty-trends-2019/"> (read more)</a>
+            <a alt="main-article" href="https://www.harpersbazaar.com/uk/beauty/skincare/a25568595/beauty-trends-2019/"> (read more)</a>
           </p>
           
           

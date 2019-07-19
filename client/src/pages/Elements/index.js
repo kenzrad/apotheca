@@ -38,7 +38,7 @@ class Elements extends Component {
               <Card 
                 key={element._id} 
                 name={element.name} 
-                benefits={element.benefits} 
+                benefits={element.benefits}
                 category={element.category}
                 image={element.image}
               />
