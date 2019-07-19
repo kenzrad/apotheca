@@ -2,7 +2,7 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import { RemedySmallCard, RemedyCards } from "../../components/RemedyCard"
+import { RemedySmallCard, RemedySmallCards, RemedySectionTitle } from "../../components/RemedyCard"
 // import API from "../../utils/API";
 import { SmallCard, Cards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
@@ -11,7 +11,8 @@ import Navbar from "../../components/Navbar";
 
 class Profile extends Component {
 
-    userData = (sessionStorage.userData ? JSON.parse(sessionStorage.userData) : "no data")
+    userData = (sessionStorage.userData ? JSON.parse(sessionStorage.userData) : "no data");
+    
 
     // NEED TO GET USER ID HERE
     componentDidMount() {
@@ -25,16 +26,15 @@ class Profile extends Component {
         return (
             <Wrapper>
                 <Navbar />
-                    <Libra
-                    id={this.userData._id}
-                    username={this.userData.userName}
-                    name={this.userData.firstName}
-                    vegan={this.userData.vegan}
-                    hypoallergenic={this.userData.hypoallergenic}
-                    libra={this.userData.libra}
-                    >
-                    </Libra>
-                <Cards>
+                <Libra
+                id={this.userData._id}
+                username={this.userData.userName}
+                name={this.userData.firstName}
+                vegan={this.userData.vegan}
+                hypoallergenic={this.userData.hypoallergenic}
+                libra={this.userData.libra}
+                />
+                {/* <Cards>
                     {this.userData.elements.map(element => (
                         <SmallCard
                             key={element._id}
@@ -44,8 +44,9 @@ class Profile extends Component {
                             image={element.image}
                         />
                     ))}
-                </Cards>
-                <RemedyCards>
+                </Cards> */}
+                <RemedySmallCards>
+                    <RemedySectionTitle name={this.userData.firstName}/>
                     {this.userData.remedies.map(remedy => (
                         <RemedySmallCard 
                             key={remedy._id} 
@@ -58,7 +59,7 @@ class Profile extends Component {
                             source={remedy.source}
                         />
                     ))}
-                </RemedyCards>
+                </RemedySmallCards>
             </Wrapper>
         );
     }

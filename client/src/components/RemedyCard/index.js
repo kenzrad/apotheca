@@ -34,13 +34,29 @@ export function RemedyCard(props) {
   );
 }
 
+export function RemedySmallCards({ children }) {
+
+  return (
+    <div className="smallRemedies"> 
+      { children }
+    </div>
+  );
+}
+
+export function RemedySectionTitle(props) {
+  return (
+    <h1 className="remedySectionTitle">{props.name.toUpperCase()}'S HOME REMEDIES</h1>
+  )
+}
+
+
 export function RemedySmallCard(props) {
   return (
     <>
-      <div className="remedy" key={props._id}>
-        <h1 className="remedyTitle">{props.title}</h1>
-        <div className="remedyInstructions">
-          <h3 className="remedyHeader">Ingredients</h3>
+      <div className="smallRemedy" key={props._id}>
+        <h2 className="smallRemedyTitle">{props.title}</h2>
+        <div className="smallRemedyInstructions">
+          <p className="remedyHeader">Ingredients</p>
           <ul className="remedyList">{props.ingredients.map(ingredient => (
               <li key={props.key + ingredient}>{ingredient}</li>
             ))}
