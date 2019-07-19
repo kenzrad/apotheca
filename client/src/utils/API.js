@@ -6,6 +6,11 @@ export default {
     return axios.get("/api/element");
   },
 
+  // Gets all remedies
+  getRemedies: function () {
+    return axios.get("/api/remedy");
+  },
+
   //check the userName and password to login
   getUserLogin: function (login) {
     return axios.post("/api/login/login", login)
@@ -35,4 +40,6 @@ export default {
   createLoginUser: function (newUser) {
     return axios.put("/api/login/create", newUser)
   }
+
+  
 };
