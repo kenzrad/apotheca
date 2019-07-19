@@ -12,6 +12,12 @@ module.exports = {
             })
             .catch(err => res.status(422).json(err));
     },
+    restrictions: function (req, res) {
+        db.Element
+            .find({ vegan: req.body.vegan, hypoallergenic: req.body.hypoallergenic })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).status(422).json(err));
+    },
     findById: function (req, res) {
         db.Element
             .findById(req.params.id)
