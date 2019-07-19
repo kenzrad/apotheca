@@ -1,0 +1,9 @@
+.modal {
+    position: absolute;
+    width: 250px;
+    /* 50% screen width - [ half width(125px) + padding(20px) + border(0px) + margin(0px) ]  */
+    left: calc(50% - 147px);
+    top: 20%;
+    padding: 20px;
+    background-color: white;
+}

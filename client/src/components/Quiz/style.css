@@ -1,7 +1,25 @@
+#questions {
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .options {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .options p {
@@ -25,6 +43,12 @@
 }
 
 /* INDICATORS */
+#indicators {
+    display: flex;
+    justify-content: center;
+    margin-top  : 10px;
+}
+
 #indicators svg {
     margin-left: 5px;
 }

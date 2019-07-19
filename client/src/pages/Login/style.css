@@ -82,11 +82,54 @@
     margin: 40px 40px 0px 40px;
 }
 
-.quizDiv {
-    overflow-y: auto;
-    height: 80vh;
-    width: 70%;
+
+/* 
+/   LOGIN FORM
+*/
+#loginForm {
+    display: flex;
+    flex-direction: column;
 }
+
+
+/* 
+/   SIGNUP FORM
+*/
+#signupForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#signupForm .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin: 10px!important;
+}
+
+/* 
+/   QUIZ DIV
+*/
+.quizDiv {
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz {
+    width: 70%;
+    height: 30%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 
 
 /* 
