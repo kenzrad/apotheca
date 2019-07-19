@@ -29,7 +29,7 @@ function Navbar(props) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Elements" className={window.location.pathname === "/Elements" ? "nav-link active" : "nav-link"}>
+            <Link to="/Remedies" className={window.location.pathname === "/Remedies" ? "nav-link active" : "nav-link"}>
               Remedies
             </Link>
           </li>

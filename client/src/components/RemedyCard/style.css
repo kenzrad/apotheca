@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
+
+.remedies {
+  width: 100vw;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.remedy {
+  border-bottom: solid 5px;
+  border-bottom-color: rgba(175, 145, 145 , 0.3);
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(140, 157, 173, 1), 0 3px 6px rgba(140,157,173 1);
+  font-family: "cormorant";
+  margin: 20px;
+  padding: 0 20px;
+  max-width: 600px;
+  color: rgb(73, 64, 64);
+  
+}
+
+.remedyTitle {
+  border-bottom: solid 1px;
+  border-bottom-color: rgba(175, 145, 145,0.5);
+  padding-bottom: 20px;
+  letter-spacing: 0.02em;
+  color: rgb(73, 64, 64);
+}
+
+.remedyInstructions {
+  padding: 0px 20px 20px 10px;
+  border-bottom: solid 1px;
+  border-bottom-color: rgba(175, 145, 145,0.5);
+  letter-spacing: 0.02em;
+}
+
+.remedyInfo {
+  padding: 0px 20px 20px 10px;
+  letter-spacing: 0.02em;
+  text-align: justify;
+}
+
+.remedyHeader {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  color: rgba(175, 145, 145,1);
+}
+
+.remedyList {
+  margin-top: 0px;
+  list-style: none;
+}
+
+.remedyLink {
+  color: rgba(175, 145, 145,1);
+  text-decoration: none;
+}
+
+.remedyLink:hover {
+  color: goldenrod;
+  
+}
