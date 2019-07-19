@@ -7,13 +7,6 @@ export function Cards({ children }) {
   );
 }
 
-export function Benefits(props) {
-  return (
-    <p className="itemDescription">{props.benefit}</p>
-  )
-}
-
-
 export function Card(props) {
   return (
     <>

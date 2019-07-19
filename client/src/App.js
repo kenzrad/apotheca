@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
 import Elements from "./pages/Elements";
+import Remedies from "./pages/Remedies";
 import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
@@ -64,6 +65,7 @@ class App extends Component {
               render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange} handleQuiz={this.handleQuiz} login={this.login} signup={this.signup}/>} />
             <Route exact path="/Main" component={Main} />
             <Route exact path="/Profile/:login" component={Profile} /> 
+            <Route exact path="/Remedies" component={Remedies} />
             <Route exact path="/Elements" component={Elements} />
             <Route exact path="/Elements/:id" component={Elements} />
             <Route component={NoMatch} />

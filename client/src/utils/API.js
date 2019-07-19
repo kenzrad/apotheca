@@ -5,10 +5,13 @@ export default {
   getElements: function () {
     return axios.get("/api/element");
   },
-
   // Gets all remedies
   getRemedies: function () {
     return axios.get("/api/remedy");
+  },
+  // Gets the element with the given id
+  getUserProfile: function (id) {
+    return axios.get("/api/user/" + id);
   },
 
   //check the userName and password to login
