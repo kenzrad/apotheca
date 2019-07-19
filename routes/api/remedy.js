@@ -6,10 +6,13 @@ router.route("/")
   .get(remedyController.findAll)
   .post(remedyController.create);
 
+router
+  .route("/remedyid")
+  .post(remedyController.remedyId);
+
 // Matches with "/api/remedy/:id"
 router
   .route("/:id")
-  .get(remedyController.findById)
   .put(remedyController.update)
   .delete(remedyController.remove);
 

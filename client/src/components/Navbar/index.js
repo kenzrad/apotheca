@@ -28,6 +28,11 @@ function Navbar(props) {
               Elements
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/Remedies" className={window.location.pathname === "/Remedies" ? "nav-link active" : "nav-link"}>
+              Remedies
+            </Link>
+          </li>
         {/*wrap in check username*/}
           <li className="nav-item">
             <Link to={`/Profile/${login}`} className={window.location.pathname === `/Profile/${login}` ? "nav-link active" : "nav-link"}>
@@ -37,7 +42,7 @@ function Navbar(props) {
           <li>
             <div className="nav-search-container">
               <input className="nav-search" type="search" aria-label="Search" />
-              <button><i className="nav-search fas fa-search"></i></button>
+              <button className="nav-search-btn"><i className="nav-search fas fa-search"></i></button>
             </div>
           </li>
           </ul>

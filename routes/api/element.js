@@ -8,6 +8,10 @@ router.route("/")
   .get(elementController.findAll)
   .post(elementController.create);
 
+router
+  .route("/userelements")
+  .post(elementController.restrictions)
+
 // Matches with "/api/element/:id"
 router
   .route("/:id")

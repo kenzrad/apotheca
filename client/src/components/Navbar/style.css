@@ -96,6 +96,7 @@ a.navbar-search-container {
   border: none;
   margin-right: 0;
   margin-left: 10px;
+  color:  rgb(73, 64, 64);
   
 }
 
@@ -106,4 +107,9 @@ i.nav-search {
 
 .hide-nav {
   display: none;
+}
+
+.nav-search-btn {
+  border: none;
+  background: transparent;
 }

@@ -8,7 +8,10 @@ router.route("/")
 
 //Matches with "/api/login/login"
 router.route("/login")
-  .post(loginController.login)
+  .post(loginController.login);
+
+router.route("/username")
+  .post(loginController.userName);
 
 // Matches with "/api/login/:id"
 router

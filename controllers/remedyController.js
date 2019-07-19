@@ -12,12 +12,20 @@ module.exports = {
             })
             .catch(err => res.status(422).json(err));
     },
+    remedyId: function (req, res) {
+        db.Remedy
+            .find({ id: req.body.id })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).status(422).json(err));
+    },
     findById: function (req, res) {
         db.Remedy
             .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+
+
     create: function (req, res) {
         db.Remedy
             .create(req.body)
