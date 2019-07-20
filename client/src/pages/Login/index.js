@@ -133,7 +133,7 @@ class Login extends Component {
             <div className="chevrons">
               <button title="Go back" onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); this.props.resetSignup(); }}><i className="fas fa-chevron-left"></i></button>
 
-              <button title="Sign up" onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
+              <button title="Sign up" type="submit" onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
 
           </div>
@@ -145,7 +145,7 @@ class Login extends Component {
 
             <div className="chevrons">
               <button title="Go back" onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
-              <button title="Submit" onClick={this.props.signup}>Submit</button>
+              <button title="Submit" type="submit" onClick={this.props.signup}>Submit</button>
             </div>
           </div>
         </div>

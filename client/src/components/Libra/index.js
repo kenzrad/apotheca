@@ -2,13 +2,38 @@ import React from "react";
 import "./style.css";
 
 export function Libra(props) {
+
+  let considerations = "All products";
+  if(props.vegan===true && props.hypoallergenic===true) {
+    considerations = "Vegan & Hypoallergenic Products"
+  }
+  else if(props.vegan===true && props.hypoallergenic===false) {
+    considerations = "Vegan Products"
+  }
+  else if(props.vegan===false && props.hypoallergenic===true) {
+    considerations = "Hypoallergenic Products"
+  }
+
   return (
     <>
-    <div className="libra-div">
       {/*libra info will go here*/}
-      <h1></h1>
+      <h1 className="libraMainTitle">{props.name.toUpperCase()}'S LIBRA PROFILE</h1>
+      <div className="libraDiv">
+        <div className="libraImage"></div>
+        <div className="libraTable">
+          <div className="libraTableCategories">
+            <p className="libraTableCategory">Username</p>
+            <p className="libraTableCategory">Your Libra</p>
+            <p className="libraTableCategory">Preferences</p>
+          </div>
+          <div className="libraTableResults">
+            <p className="libraTableText">{props.username}</p>
+            <p className="libraTableText">{props.libra}</p>
+            <p className="libraTableText">{considerations}</p>
+          </div>
+        </div>
     </div>
-    </>
+  </>
   );
 }
 
