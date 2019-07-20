@@ -78,9 +78,9 @@ class Login extends Component {
         if (result.data === null) {
           document.getElementsByName("loginError")[0].classList.remove("hidden");
         } else {
+          sessionStorage.clear();
           sessionStorage.setItem('userData', JSON.stringify(result.data));
-          // this.props.history.push("/profile/" + result.data.userName);
-          this.props.history.push("/main");
+          this.props.history.push("/Profile/" + result.data.userName);
         }
       });
   }
@@ -184,6 +184,7 @@ class Login extends Component {
                   API.createLoginUser(newUser)
                     .then(result => {
                       // console.log(newUser)
+                      sessionStorage.clear();
                       sessionStorage.setItem('userData', JSON.stringify(newUser));
                       this.props.history.push("/Profile/" + newUser.userName);
                     });
