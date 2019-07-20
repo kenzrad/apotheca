@@ -14,7 +14,7 @@ module.exports = {
     },
     restrictions: function (req, res) {
         db.Element
-            .find({ vegan: req.body.vegan, hypoallergenic: req.body.hypoallergenic })
+            .find(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).status(422).json(err));
     },
