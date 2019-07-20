@@ -3,7 +3,7 @@ import "./style.css";
 
 export function RemedyCards({ children }) {
   return (
-  <div className="remedies">{children}</div>
+    <div className="remedies">{children}</div>
   );
 }
 
@@ -15,13 +15,13 @@ export function RemedyCard(props) {
         <div className="remedyInstructions">
           <h3 className="remedyHeader">Ingredients</h3>
           <ul className="remedyList">{props.ingredients.map(ingredient => (
-              <li key={props.key + ingredient}>{ingredient}</li>
-            ))}
+            <li key={props.key + ingredient}>{ingredient}</li>
+          ))}
           </ul>
           <h3 className="remedyHeader">Instructions</h3>
           <ul className="remedyList">{props.instructions.map(instruction => (
-              <li key={props.key + instruction}>{instruction}</li>
-            ))}
+            <li key={props.key + instruction}>{instruction}</li>
+          ))}
           </ul>
         </div>
         <div className="remedyInfo">
@@ -37,8 +37,8 @@ export function RemedyCard(props) {
 export function RemedySmallCards({ children }) {
 
   return (
-    <div className="smallRemedies"> 
-      { children }
+    <div className="smallRemedies">
+      {children}
     </div>
   );
 }
@@ -57,13 +57,13 @@ export function RemedySmallCard(props) {
       <div className="smallRemedyInstructions">
         <p className="remedyHeader">Ingredients</p>
         <ul className="remedyList">{props.ingredients.map(ingredient => (
-            <li key={props.key + ingredient}>{ingredient}</li>
-          ))}
+          <li key={props.key + ingredient}>{ingredient}</li>
+        ))}
         </ul>
         <p className="remedyHeader">Instructions</p>
         <ul className="remedyList">{props.instructions.map(instruction => (
-            <li key={props.key + instruction}>{instruction}</li>
-          ))}
+          <li key={props.key + instruction}>{instruction}</li>
+        ))}
         </ul>
       </div>
       <div className="remedyInfo">
@@ -75,4 +75,4 @@ export function RemedySmallCard(props) {
   );
 }
 
-export default RemedyCard ;
+export default RemedyCard;
