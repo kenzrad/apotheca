@@ -4,11 +4,11 @@ import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
 import Navbar from "../../components/Navbar";
 import Brand from "../../components/Brand";
+import Modal from "../../components/Modal";
 import "./style.css";
 
 
 class Login extends Component {
-
   moveLeft = (e, num) => {
     e.preventDefault();
     let target = e.currentTarget.parentElement.parentElement;
@@ -75,7 +75,7 @@ class Login extends Component {
     API.getUserLogin(this.props.login())
       .then(result => {
         if (result.data === null) {
-          alert("No user found.");
+          document.getElementsByName("loginError")[0].classList.remove("hidden");
         } else {
           sessionStorage.setItem('userData', JSON.stringify(result.data));
           // this.props.history.push("/profile/" + result.data.userName);
@@ -107,7 +107,7 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); }}><i className="fas fa-chevron-left"></i></button>
+              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); this.props.resetLogin(); }}><i className="fas fa-chevron-left"></i></button>
             </div>
           </div>
 
@@ -116,6 +116,7 @@ class Login extends Component {
               <input onChange={this.props.handleInputChange} name="firstName" type="text" placeholder="First Name"></input>
               <input onChange={this.props.handleInputChange} name="username" type="text" placeholder="Username"></input>
               <input onChange={this.props.handleInputChange} name="password" type="password" placeholder="Password"></input>
+              <input onChange={this.props.handleConfirmPasswordChange} name="confirmPassword" type="password" placeholder="Confirm Password"></input>
               <label className="login-text">Product Preference:</label>
               <div className="checkbox">
                 <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="vegan"></input>
@@ -129,7 +130,7 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); }}><i className="fas fa-chevron-left"></i></button>
+              <button onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); this.props.resetSignup(); }}><i className="fas fa-chevron-left"></i></button>
 
               <button onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
@@ -147,6 +148,11 @@ class Login extends Component {
             </div>
           </div>
         </div>
+        {/* MODALS */}
+        <Modal name="loginError">
+          <h3>No user found.</h3>
+          <p>Did you use the correct username and password?</p>
+        </Modal>
       </div>
     )
   }

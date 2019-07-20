@@ -6,6 +6,7 @@ import Profile from "./pages/Profile";
 import Elements from "./pages/Elements";
 import Remedies from "./pages/Remedies";
 import NoMatch from "./pages/NoMatch";
+import comparisonArr from './components/Quiz/comparisonArr.json';
 
 class App extends Component {
   state = {
@@ -13,6 +14,7 @@ class App extends Component {
     loginPassword: "",
     username: "",
     password: "",
+    confirmPassword: "",
     firstName: "",
     vegan: false,
     hypoallergenic: false,
@@ -24,6 +26,24 @@ class App extends Component {
 
     this.setState({
       [name]: value
+    });
+  };
+
+  handleConfirmPasswordChange = event => {
+    let { value, name } = event.target;
+
+    this.setState({
+      [name]: value
+    }, () => {
+      if (this.state.confirmPassword !== "" && this.state.confirmPassword !== this.state.password) {
+        document.getElementsByName("confirmPassword")[0].classList = "";
+        document.getElementsByName("confirmPassword")[0].classList.add("passwordMismatch");
+      } else if (this.state.confirmPassword !== "" && this.state.confirmPassword === this.state.password) {
+        document.getElementsByName("confirmPassword")[0].classList = "";
+        document.getElementsByName("confirmPassword")[0].classList.add("passwordMatch");
+      } else if (this.state.confirmPassword === "") {
+        document.getElementsByName("confirmPassword")[0].removeAttribute("class");
+      }
     });
   };
 
@@ -50,21 +70,54 @@ class App extends Component {
     return login;
   }
 
+  resetLogin = () => {
+    this.setState({
+      loginUsername: "",
+      loginPassword: ""
+    });
+  }
+
   signup = e => {
     e.preventDefault();
     console.log(this.state);
   }
-  
+
+  resetSignup = () => {
+    this.setState({
+      username: "",
+      password: "",
+      confirmPassword: "",
+      firstName: "",
+      vegan: false,
+      hypoallergenic: false,
+      quizResults: ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
+    });
+  }
+
+  convertQuizResults = () => {
+    let newResults = [];
+
+    for (let question in this.state.quizResults) {
+      newResults.push(comparisonArr[Number(question) + 1][this.state.quizResults[question]]);
+    }
+
+    return newResults;
+  }
+
+
+
   render() {
     return (
       <Router>
         <div>
           <Switch>
-            <Route 
-              exact path="/" 
-              render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange} handleQuiz={this.handleQuiz} login={this.login} signup={this.signup}/>} />
+            <Route
+              exact path="/"
+              render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange} 
+              handleConfirmPasswordChange={this.handleConfirmPasswordChange} handleQuiz={this.handleQuiz} 
+              login={this.login} resetLogin={this.resetLogin} signup={this.signup} resetSignup={this.resetSignup} />} />
             <Route exact path="/Main" component={Main} />
-            <Route exact path="/Profile/:login" component={Profile} /> 
+            <Route exact path="/Profile/:login" component={Profile} />
             <Route exact path="/Remedies" component={Remedies} />
             <Route exact path="/Elements" component={Elements} />
             <Route exact path="/Elements/:id" component={Elements} />
