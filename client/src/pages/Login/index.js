@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
 import Navbar from "../../components/Navbar";
-import Brand from "../../components/Brand"
+import Brand from "../../components/Brand";
 import "./style.css";
 
 
@@ -87,7 +87,7 @@ class Login extends Component {
   render() {
     return (
       <div className="login-backdrop">
-        <Navbar display="hide"/>
+        <Navbar display="hide" />
         <Brand />
         <div id="loginAndSignup">
           <div id="loginSignupLinks">
@@ -107,9 +107,8 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); }}>Return</button>
+              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); }}><i className="fas fa-chevron-left"></i></button>
             </div>
-
           </div>
 
           <div className="signupDiv hidden">
@@ -118,10 +117,15 @@ class Login extends Component {
               <input onChange={this.props.handleInputChange} name="username" type="text" placeholder="Username"></input>
               <input onChange={this.props.handleInputChange} name="password" type="password" placeholder="Password"></input>
               <label className="login-text">Product Preference:</label>
-              <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="vegan"></input>
-              <label className="login-text" htmlFor="vegan">Vegan</label><br />
-              <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="hypoallergenic"></input>
-              <label className="login-text" htmlFor="hypoallergenic">Hypoallergenic</label>
+              <div className="checkbox">
+                <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="vegan"></input>
+                <label className="login-text" htmlFor="vegan">Vegan</label>
+              </div>
+
+              <div className="checkbox">
+                <input className="login-text login-td" onChange={this.props.handleCheckbox} type="checkbox" name="hypoallergenic"></input>
+                <label className="login-text" htmlFor="hypoallergenic">Hypoallergenic</label>
+              </div>
             </form>
 
             <div className="chevrons">
@@ -130,17 +134,20 @@ class Login extends Component {
               <button onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
 
-          </div >
+          </div>
 
           <div className="quizDiv hidden">
-            <div>
+            <div id="quiz">
               <Quiz handleQuiz={this.props.handleQuiz} transition={this.transition} />
+            </div>
+
+            <div className="chevrons">
               <button onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
               <button onClick={this.props.signup}>Submit</button>
             </div>
           </div>
-        </div >
-      </div >
+        </div>
+      </div>
     )
   }
 }

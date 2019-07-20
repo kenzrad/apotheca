@@ -39,6 +39,11 @@ class Quiz extends Component {
                         if (currQuestion !== 9) {
                             this.props.transition(target, "left", "out");
                             setTimeout(() => {
+                                running = false;
+                                console.log("RUNNING FALSE");
+                            }, 510);
+
+                            setTimeout(() => {
                                 target.classList.add("hidden");
                                 target.classList.remove("slideOutLeft");
 
@@ -49,7 +54,6 @@ class Quiz extends Component {
                                 }, 250);
                             }, 250);
                         }
-                        running = false;
                     }, 800)
                 } else {
                     choices[currQuestion] = "empty";
@@ -76,6 +80,7 @@ class Quiz extends Component {
 
     indicatorClickHandler = e => {
         if (running === false) {
+            console.log("INDICATOR RUNNING");
             running = true;
 
             let currQuestionIndex;
@@ -100,7 +105,10 @@ class Quiz extends Component {
                     this.props.transition(nextQuestion, "left", "in");
                     setTimeout(() => {
                         nextQuestion.classList.remove("slideInLeft");
-                        running = false;
+
+                        setTimeout(() => {
+                            running = false;
+                        }, 500);
                     }, 250);
                 }, 250);
             } else if (nextQuestionIndex < currQuestionIndex) {
@@ -113,11 +121,15 @@ class Quiz extends Component {
                     this.props.transition(nextQuestion, "right", "in");
                     setTimeout(() => {
                         nextQuestion.classList.remove("slideInRight");
-                        running = false;
+
+                        setTimeout(() => {
+                            running = false;
+                        }, 500);
                     }, 250);
                 }, 250);
             } else {
                 running = false;
+                console.log("???");
             }
         }
     }
