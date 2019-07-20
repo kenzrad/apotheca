@@ -265,7 +265,7 @@ const remedySeed = [
         source: "https://australian-bodycare.com/uk/tea-tree-oil-face/"
     },
     {
-        id: 26,
+        id: 25,
         title: ["Facial Cleanser"],
         ingredients: ["1 / 4 Cup Castor Oil", "1 / 4 Cup Jojoba Oil", "15 Drops Tea Tree Oil"],
         instructions: ["Add all four ingredients into a clean bowl and whisk together.", "Store in a clean glass jar with a lid.", "Wet your fingertips in the oil and gently massage into the skin then clean with water"],
@@ -275,7 +275,7 @@ const remedySeed = [
         source: "https://www.onesweetmess.com/2013/07/02/homemade-tea-tree-oil-facial-cleanser/"
     },
     {
-        id: 27,
+        id: 26,
         title: ["Face Toner"],
         ingredients: ["1.5 Ounce Apple Cider Vinegar", "1.5 Ounce Water", "6 Drops Tea Tree Oil"],
         instructions: ["Mix ingredients into a spray bottle.", "Spritz on to face or onto a cotton pad to swipe on face for a toner.", "Moisturize after."],
@@ -285,7 +285,7 @@ const remedySeed = [
         source: "http://www.womensok.com/5-homemade-skin-care-products-with-tea-tree-oil/"
     },
     {
-        id: 28,
+        id: 27,
         title: ["Exfoliation Mask"],
         ingredients: ["1 / 4 White Onion", "Small Handful of Holy Basil", "3 Tablespoon Water", "2 Tablespoon Honey"],
         instructions: ["Blend all ingredients together and chill mixture overnight", "Once 12 hours have passed, massage mixture onto face.", "Wait for 20 minutes, and wash off with lukewarm water"],
@@ -295,7 +295,7 @@ const remedySeed = [
         source: "https://www.vivawoman.net/2009/02/diy-beauty-onion-mask-for-a-bad-breakout/"
     },
     {
-        id: 29,
+        id: 28,
         title: ["Cooling Toner"],
         ingredients: ["1 / 4 Cup Cooled Green Tea", "2 Tablespoon Cucumber Juice", "1 Tablespoon Aloe Vera"],
         instructions: ["Blend all ingredients thoroughly.", "Apply to face as a toner."],
@@ -303,7 +303,89 @@ const remedySeed = [
         consistency: "Daily",
         works: ["Cooling, Soothing toner for every skin tone."],
         source: "https://www.youbeauty.com/beauty/green-tea-beauty-recipes/"
+    },
+    {
+        id: 29,
+        title: ["Hydration Mask"],
+        ingredients: ["2 Tablespoons Watermelon Juice", "1 Tablespoon Lemon Juice", "1 Teaspoon Honey"],
+        instructions: ["Mix all ingredients together.", "Apply to face and neck, leave on for 15 minutes, then wash off with water."],
+        time: ["~20"],
+        consistency: "Three Times Weekly",
+        works: ["If you have a dry skin, then bring this face mask to your rescue. Lemon will gently exfoliate your dry, dead skin cells, whereas honey and watermelon juice will moisturise and hydrate your rough skin."],
+        source: "https://food.ndtv.com/food-drinks/summer-care-4-diy-watermelon-juice-face-masks-for-a-flawless-skin-1833253"
+    },
+    {
+        id: 30,
+        title: ["Blackhead Buster"],
+        ingredients: ["2 Cloves Garlic", "1 Tablespoon Ground Oatmeal", "1 Drop Tea Tree", "3 Drops Lemon Juice", "1 Tablespoon Honey"],
+        instructions: ["Mix all ingredients except honey in a small bowl, then slowly add in the honey until the consistency is viscous.", "Spread a thin layer of paste onto clean skin. After letting it sit for two minutes, gently exfoliate your face for one minute, then rinse with warm water."],
+        time: ["~15"],
+        consistency: "Three Times Weekly",
+        works: ["These ingredients together will help fight blackheads and reduce breakouts."],
+        source: "https://www.beautylish.com/a/vpqzj/diy-garlic-beauty-recipes"
+    },
+    {
+        id: 31,
+        title: ["Pore Purifier"],
+        ingredients: ["1 Tomato", "1 Clove Garlic"],
+        instructions: ["Combine mashed tomato and garlic, then spread a thin layer onto your face.", " After 20 minutes, wash your face with lukewarm water and seal your pores with a final splash of cold water."],
+        time: ["~25 Minutes"],
+        consistency: "Twice Weekly",
+        works: ["Tomato and garlic both have fantastic antiseptic qualities, making them appropriate ingredients for clogged skin."],
+        source: "https://www.beautylish.com/a/vpqzj/diy-garlic-beauty-recipes"
+    },
+    {
+        id: 32,
+        title: ["Balancing Mask"],
+        ingredients: ["2 Teaspoons Sea Salt", "4 Teaspoons Honey"],
+        instructions: ["Mix ingredients together.", "Apply evenly to clean, dry skin, avoiding eye area. Let stand for 10 to 15 minutes. Before rinsing, soak a washcloth in very warm water, and gently wring out.", "Lay the warm washcloth on your face for 30 seconds. Use your fingers to gently exfoliate in a circular motion while rinsing your skin thoroughly with tepid water."],
+        time: ["~25"],
+        consistency: "Three Times Weekly",
+        works: ["Both salt and honey have anti-inflammatory properties to soothe skin and calm breakouts and irritation. They also help to balance oil production and retain hydration in the layers of skin where it's needed most."],
+        source: "https://www.womenshealthmag.com/beauty/a19953014/salt-beauty-uses/"
+    },
+    {
+        id: 33,
+        title: ["Extra Hydration Mask"],
+        ingredients: ["1 Ripe Mango", "2 Tablespoons Avocado", "2 Tablespoons Honey"],
+        instructions: ["Cut the mango into pieces and then mash them thoroughly.", "Add avocado and honey to this and blend well.", "Spread it evenly on your face and neck. Let it dry. Once completely dry, wash off with water."],
+        time: ["~30"],
+        consistency: "Three Times Weekly",
+        works: ["This mask keeps your skin hydrated and soft. Honey helps in lightening blemishes and scars. Avocado and mango calm sensitive skin and unclog the skin pores."],
+        source: "https://www.stylecraze.com/articles/mango-face-packs-that-work-wonders-for-your-skin/#gref"
+    },
+    {
+        id: 34,
+        title: ["Hyssop Toner"],
+        ingredients: ["1 Tablespoon Hyssop", "1 Cup Water"],
+        instructions: ["Boil water with hyssop for 10 minutes, then strain.", "Let mixture cool.", "After cleansing your skin apply the toner with a cotton ball."],
+        time: ["~15 Minutes"],
+        consistency: "Daily",
+        works: ["Hyssop, a member of the mint family, also makes an excellent herbal toner. In folk medicine it’s considered good for the complexion."],
+        source: "https://www.besthealthmag.ca/best-you/home-remedies/natural-home-remedies-oily-skin/"
+    },
+    {
+        id: 35,
+        title: ["Wrinkle Cream"],
+        ingredients: ["2 Tablespoon Coconut Oil", "1/4 Cup Almond Oil", "1 Tablespoon Shea Butter", "3 Drops Rosehip Oil"],
+        instructions: ["Take a jar and put the ingredients in them.",
+            "In a pan, heat water till it starts boiling. Place the jar inside the pan. Do not cover the jar. Let the jar remain there till the ingredients are melted completely. Keep stirring occasionally.", "After the melting process is over and the mixture is suitably mixed, pour it into a small jar.Let it cool down so that the cream starts hardening."],
+        time: ["~30"],
+        consistency: "Twice Daily",
+        works: ["The sweet almond oil makes the skin soft and revitalizes it. It also improves the complexion and the tone of the skin. The coconut oil has antioxidant properties, which is really effective for anti-aging. The Shea butter has anti-inflammatory properties, which work wonders on the skin."],
+        source: "https://stylenrich.com/diy-wrinkle-cream/"
+    },
+    {
+        id: 36,
+        title: ["Hydrating Mask"],
+        ingredients: ["15 Cranberries", "2 Tablespoons Honey", "2 Tablespoons Jojoba Oil"],
+        instructions: ["Rinse the cranberries well. Puree the cranberries with honey in a blender to form a paste.", "Once you have a thick paste, get the mixture out and add the oil.", "Apply the mask on your face and neck. Leave it on for 10 mins and relax.", "Massage in circular motions on the cheeks and the chin.Follow by massaging onto your nose and the forehead to gently exfoliate dead skin cells.", "Rinse it off with cold water and dab the skin with a clean towel"],
+        time: ["~15 Minutes"],
+        consistency: "Daily",
+        works: ["The cranberries will keep your skin healthy and cleanse the skin without stripping away any natural oils. A little honey to the mixture is good for reducing spots and redness and the argan oil will keep your skin moisturised in the dry weather. "],
+        source: "https://www.femina.in/beauty/skin/diy-cranberry-facial-mask-for-winter-skincare-70826.html"
     }
+
 
 
 

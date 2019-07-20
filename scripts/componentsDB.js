@@ -119,7 +119,7 @@ const componentSeed = [
     id: 16,
     component: "Polyphenols",
     description:
-      "this vitamin contains chemo preventive properties that possess anti-inflammatory, immunomodulatory and antioxidant properties to prevent UV-induced skin photodamage. This component can help improve our skin’s natural defense against oxidative stress, preventing skin from aging and could inhibit skin cancer.",
+      "This vitamin contains chemo preventive properties that possess anti-inflammatory, immunomodulatory and antioxidant properties to prevent UV-induced skin photodamage. This component can help improve our skin’s natural defense against oxidative stress, preventing skin from aging and could inhibit skin cancer.",
     source: "https://www.dermstore.com/blog/top_ten/antioxidants-in-skin-care/"
   },
   {
@@ -229,91 +229,131 @@ const componentSeed = [
     id: 31,
     component: "Lycopene",
     description:
-      "this component is known for it’s ability to combat acne. It is a powerful antioxidant and anti-inflammatory that helps protect skin from environmental agents that can contribute to clogged pores and breakouts.",
+      "This component is known for it’s ability to combat acne. It is a powerful antioxidant and anti-inflammatory that helps protect skin from environmental agents that can contribute to clogged pores and breakouts.",
     source: "https://www.refinery29.com/en-us/lycopene"
   },
   {
     id: 32,
     component: "Vitamin D",
     description:
-      "also known as calcitriol, contributes to skin cell growth, repair, and metabolism. It optimizes the skin’s immune system and helps destroy free radicals that can cause premature aging.",
+      "Also known as calcitriol, contributes to skin cell growth, repair, and metabolism. It optimizes the skin’s immune system and helps destroy free radicals that can cause premature aging.",
     source:
       "https://www.lifeextension.com/magazine/2010/6/optimal-skin-protection-with-vitamin-d/page-01"
   },
   {
     id: 33,
-    component: "terpinen-4-ol",
+    component: "Terpinen-4-ol",
     description:
       "appears to increase the activity of your white blood cells, which help fight germs and other foreign invaders",
     source: "https://www.healthline.com/nutrition/tea-tree-oil"
   },
   {
     id: 34,
-    component: "folic acid",
+    component: "Folic Acid",
     description:
-      "also known as vitamin B9, plays a vital role in helping to maintain the skin’s natural beauty. May also provide increased hydration by bolstering skin - barrier function.This can improve moisture - retention and alleviate skin dryness",
+      "Also known as vitamin B9, plays a vital role in helping to maintain the skin’s natural beauty. May also provide increased hydration by bolstering skin - barrier function.This can improve moisture - retention and alleviate skin dryness",
     source: "https://www.lorealparisusa.com/ingredient-library/folic-acid.aspx"
   },
   {
     id: 35,
-    component: "caffeine",
+    component: "Caffeine",
     description:
-      "caffeine in skin products claims that it will improve the look of cellulite or puffy eyes. Applied to skin, caffeine may have soothing and antioxidant properties, especially when skin is exposed to UV light",
+      "Caffeine in skin products claims that it will improve the look of cellulite or puffy eyes. Applied to skin, caffeine may have soothing and antioxidant properties, especially when skin is exposed to UV light",
     source:
       "https://www.paulaschoice.com/ingredient-dictionary/antioxidants/caffeine.html"
   },
   {
     id: 36,
-    component: "oleic acid",
+    component: "Oleic Acid",
     description:
-      "is a godsend for dry, aging skin since it penetrates easily and deeply into the skin’s surface, replenishing lost moisture that naturally comes with age, also helps the moisture from evaporating.",
+      "Is a godsend for dry, aging skin since it penetrates easily and deeply into the skin’s surface, replenishing lost moisture that naturally comes with age, also helps the moisture from evaporating.",
     source:
       "https://luxebotanics.com/blogs/luxe-botanics/facial-oils-are-you-using-the-correct-percentage-of-oleic-and-linoleic-acids"
   },
   {
     id: 37,
-    component: "linoliec acid",
+    component: "Linoliec Acid",
     description:
-      "helps makes the skin’s barrier stronger so it can effectively keep water in and irritants out.Topical use can also help reduce acne breakouts.",
+      "Helps makes the skin’s barrier stronger so it can effectively keep water in and irritants out.Topical use can also help reduce acne breakouts.",
     source: "https://www.beginswithskin.com/linoleic"
   },
   {
     id: 38,
-    component: "gallic acid",
+    component: "Gallic Acid",
     description:
-      "it is an antifungal agent, antiviral, astringent and antioxidant. Some studies have indicated that it has anticancer activity and that it can relax blood vessels.",
+      "It is an antifungal agent, antiviral, astringent and antioxidant. Some studies have indicated that it has anticancer activity and that it can relax blood vessels.",
     source: "https://personalcaretruth.com/2010/07/gallic-acid-chemistry/"
   },
   {
     id: 39,
-    component: "acetic acid",
+    component: "Acetic Acid",
     description:
-      "has been shown to be effective in inhibiting bacterial growth and destroying bacterial biofilms",
+      "Has been shown to be effective in inhibiting bacterial growth and destroying bacterial biofilms",
     source: "https://www.healthline.com/health/apple-cider-vinegar-for-face"
   },
   {
     id: 40,
-    component: "limonene",
-    description:
-      "Like most volatile fragrance components, limonene also has strong antioxidant benefits and has also been shown to calm skin",
-    source:
-      "https://www.paulaschoice.com/ingredient-dictionary/fragrance-synthetic-and-fragrant-plant-extracts/limonene.html"
+    component: "Limonene",
+    description: "This component has the ability to reduce inflammation through numerous mechanisms. One-way limonene reduces inflammation is through the inhibition of angiogenesis. Angiogenesis is the formation of new blood vessels, which is an inherent component of inflammation. Thus, by inhibiting this process, limonene can help to reduce inflammation and improve wound healing. Limonene has strong antioxidant benefits, which are able to limit oxidative damage cause by free radicals.",
+    source: "https://thedermreview.com/limonene/"
   },
   {
     id: 41,
-    component: "sodium bicarbonate",
-    description:
-      "can remove the skin's protective oil barrier, alter its pH, and disrupt the natural bacteria on the surface that help to prevent infection and acne",
-    source: "https://www.healthline.com/health/baking-soda-for-face#1"
+    component: "Sodium Bicarbonate",
+    description: "Since this component is alkaline in nature, it balances the pH levels of your skin to make it glow with radiance. It also helps in exfoliating the dead skin cells to reveal new freshness. This can help reduce scarring cause by acne. It also has anti-inflammatory and antibacterial properties.",
+    source: "https://cosmeticsinfo.org/ingredient/sodium-bicarbonate"
   },
   {
     id: 42,
-    component: "lauric acid",
+    component: "Lauric Acid",
     description:
-      "having antibacterial properties, it has been found to effectively combat acne. Lauric acid also could reduce inflammation and the number of bacteria present",
+      "Having antibacterial properties, it has been found to effectively combat acne. Lauric acid also could reduce inflammation and the number of bacteria present",
     source:
       "https://www.healthline.com/health/beauty-skin-care/what-is-lauric-acid"
+  },
+  {
+    id: 43,
+    component: "Lignin",
+    description: "Lignin is a substance which means it can penetrate. In fact Aloe Vera is the only known substance which can penetrate the dermis layer of the skin. This means when used in skin care these properties used with Aloe Vera will become more beneficial.",
+    source: "http://aloeverapage.blogspot.com/2012/08/a-focus-on-aloe-vera-ingredient-lignin.html"
+  },
+  {
+    id: 44,
+    component: "Salicylic Acid",
+    description: "This component is one of the best for combating acne. Once it penetrates the skin the acid can dissolve skin debris that can clog pores. This will act as an anti-inflammatory and help red inflamed pimples. The breaking down of debris in the skin will also promote exfoliation. Salicylic acid can directly dissolve the keratin plugs and regulate the skin cells, which is effective for helping get rid of blackheads and whiteheads.",
+    source: "https://www.allure.com/story/what-does-salicylic-acid-do"
+  },
+  {
+    id: 45,
+    component: "Medium Chain Triglycerides",
+    description: "This component is naturally rich in antioxidants and antibacterial properties. It provides lightweight moisture and conditioning to the skin. This is great for areas of the body that have low or no oil glands and tend to get dry and chapped (i.e. the lips). MCT are great for providing a barrier against drying effects and will gently moisturize to make skin softer.",
+    source: "https://www.skincarebyalana.com/blog/mct-oil-come/"
+  },
+  {
+    id: 46,
+    component: "Lactic Acid",
+    description: "This component exfoliate the skins by dissolving the bonds that hold the older, dull cells together and remove them on the surface. This will help speed up cell turnover and stimulate cell renewal. Lactic acid will also help brighten complexion as well as create smoother and softer skin. It will also help the skin’s natural moisture factor, keeping skin more hydrated.",
+    source: "https://www.verywellhealth.com/lactic-acid-skin-care-4178819"
+  },
+  {
+    id: 47,
+    component: "Biotin",
+    description: "Biotin produces fatty acids that nourish the skin to maintain a clear complexion. When the protective outer layer of skin is unbalanced, dry and dehydrated skin can manifest. It assists in the production of new cells and helps oil glands function properly, resulting in the healthy condition of skin. ",
+    source: "https://www.dermstore.com/blog/top_ten/biotin-benefits-hair-skin-nails/"
+  },
+  {
+    id: 48,
+    component: "Stearic Acid",
+    description: "Stearic acid functions mainly as a surfactant, emulsifier, and thickener when added to cosmetics and personal care products. Surfactants attract the oil, dirt, and other impurities that have accumulated on your skin during the day and wash them away. Stearic acid reduces the surface tension by positioning itself at the oil/water or air/water interface, which has a stabilizing effect on the emulsion. This component has been shown to protect skin’s surface against water loss and help shore up skin’s protective barrier.",
+    source: "https://thedermreview.com/stearic-acid/"
+  },
+  {
+    id: 49,
+    component: "Lysozyme",
+    description: "Lysozyme kills both gram positive and gram negative bacteria. This can help skin that is prone to acne and will purify oily and blemished skin. This component stimulates natural skin defenses to detoxify oily skin. It can protect the skin from over cleansing and over exfoliation.",
+    source: "https://skinforlife.com/shop/antibac-essentials-lysozyme-protection-lss-delivery-oily-troubled-skins/"
   }
+
 ];
 
 db.Component.remove({})
