@@ -172,7 +172,7 @@ class App extends Component {
               for (let id of remediesList) {
                 API.getUserRemedies({ remedyId: parseInt(id) })
                   .then(result => {
-                    newUser.remedies.push(result.data);
+                    newUser.remedies.push(result.data[0]);
                     if (id === remediesList[remediesList.length - 1]) {
                       finished.remedies = true;
                     }
