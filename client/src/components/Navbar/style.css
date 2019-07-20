@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
 
-
-.brand {
-  font-family: 'Italiana', 'Cinzel', 'Garamond', serif;
-  font-size: 5em;
-  color: rgb(73, 64, 64);
-  letter-spacing: 0.25em;
-  text-align: center;
-  margin: 100px;
-}
-
 .nav-item {
   font-family: 'Cormorant', 'Garamond', serif;
   letter-spacing: 0.2em;
@@ -53,9 +43,9 @@ a.navbar-search-container {
 }
 
 .navbar {
-  /* border-bottom: solid;
-  border-bottom-color: rgb(73, 64, 64);
-  border-bottom-width: 1px; */
+  border-bottom: solid;
+  border-bottom-color:rgba(139,142,82, 0.5);
+  border-bottom-width: 1px;
   background-color: white;
   height: 80px; 
 

@@ -66,35 +66,35 @@
   border-bottom: solid 5px;
   border-bottom-color: rgba(175, 145, 145 , 0.3);
   background-color: white;
-  box-shadow: 0 3px 6px rgba(140, 157, 173, 1), 0 3px 6px rgba(140,157,173 1);
   font-family: "cormorant";
-  margin: 20px;
   padding: 0 20px;
   color: rgb(73, 64, 64);
-  width: 100%;
 }
 
 .smallRemedies {
-  width: 100vw;
+  overflow-y: scroll;
+  height: 500px;
 }
 
 .remedySectionTitle {
   font-family: "Italiana";
+  color: rgb(73, 64, 64);
   letter-spacing: 0.1em;
-  margin-left: 20px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-bottom: solid 5px;
-  border-bottom-color: rgba(175, 145, 145 , 0.3);
+  margin: 0px;
+  padding: 20px;
+  border-bottom: solid 1px;
+  border-bottom-color: rgba(175, 145, 145, 0.4);
+  background-color: rgba(175, 145, 145 , 0.3);
 }
 
 .smallRemedyInstructions {
-  padding: 0px 20px 20px 10px;
+  padding: 0px 20px 5px 10px;
+  margin-bottom: 0;
   letter-spacing: 0.02em;
 }
 
 .smallRemedyTitle {
-  padding-bottom: 20px;
+  margin: 5px;
   letter-spacing: 0.02em;
   color: rgb(73, 64, 64);
 }

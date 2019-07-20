@@ -4,10 +4,11 @@ import React, { Component } from "react";
 import { withRouter } from "react-router";
 import { RemedySmallCard, RemedySmallCards, RemedySectionTitle } from "../../components/RemedyCard"
 // import API from "../../utils/API";
-import { SmallCard, Cards } from "../../components/Card";
+import { SmallCard, SmallCards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
-import Libra from "../../components/Libra";
+import { Libra, LibraSectionHeader } from "../../components/Libra";
 import Navbar from "../../components/Navbar";
+import "./style.css";
 
 class Profile extends Component {
 
@@ -34,32 +35,41 @@ class Profile extends Component {
                 hypoallergenic={this.userData.hypoallergenic}
                 libra={this.userData.libra}
                 />
-                {/* <Cards>
-                    {this.userData.elements.map(element => (
-                        <SmallCard
-                            key={element._id}
-                            name={element.name}
-                            benefits={element.benefits}
-                            category={element.category}
-                            image={element.image}
-                        />
-                    ))}
-                </Cards> */}
-                <RemedySmallCards>
-                    <RemedySectionTitle name={this.userData.firstName}/>
-                    {this.userData.remedies.map(remedy => (
-                        <RemedySmallCard 
-                            key={remedy._id} 
-                            title={remedy.title}
-                            ingredients={remedy.ingredients}
-                            instructions={remedy.instructions}
-                            time={remedy.time}
-                            consistency={remedy.consistency}
-                            works={remedy.works}
-                            source={remedy.source}
-                        />
-                    ))}
-                </RemedySmallCards>
+                <div className="libraDashboard">
+                    <div className="libraElements">
+                    <LibraSectionHeader name={this.userData.firstName} sectionName="ELEMENTS"/>
+                        <SmallCards>
+                            {this.userData.elements.map(element => (
+                                <SmallCard
+                                    key={element._id}
+                                    name={element.name}
+                                    benefits={element.benefits}
+                                    category={element.category}
+                                    image={element.image}
+                                    hypoallergenic={element.hypoallergenic}
+                                    vegan={element.vegan}
+                                />
+                            ))}
+                        </SmallCards>
+                    </div>
+                    <div className="libraRemedies">
+                        <LibraSectionHeader name={this.userData.firstName} sectionName="HOME REMEDIES"/>
+                        <RemedySmallCards>
+                            {this.userData.remedies.map(remedy => (
+                                <RemedySmallCard 
+                                    key={remedy._id} 
+                                    title={remedy.title}
+                                    ingredients={remedy.ingredients}
+                                    instructions={remedy.instructions}
+                                    time={remedy.time}
+                                    consistency={remedy.consistency}
+                                    works={remedy.works}
+                                    source={remedy.source}
+                                />
+                            ))}
+                        </RemedySmallCards>
+                    </div>
+                </div>
             </Wrapper>
         );
     }

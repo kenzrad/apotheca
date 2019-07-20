@@ -1,40 +1,14 @@
-.libras {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  flex-wrap: wrap;
-  padding: 50px;
-}
-
-.libra {
-  display: flex;
-  box-shadow: 0 3px 6px rgba(175, 145, 145,0.16), 0 3px 6px rgba(175, 145, 145, 0.23);
-  border: 6px solid white;
-  height: 400px;
-  width: 400px;
-  background-size: cover;
-  margin: 10px;
-  background-color: white;
-}
-
-.libraDetails {
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  opacity: 0;
-  height: 100%;
+.libra-div {
   width: 100%;
 }
 
-.libraDetails > div {
-  background-color: white;
-  height: 90%;
-  width: 90%;
-  
+.libraSectionTitle{
+  font-family: "Italiana";
+  color: rgb(73, 64, 64);
+  letter-spacing: 0.1em;
+  margin: 0px;
+  padding: 20px;
+  border-bottom: solid 1px;
+  border-bottom-color: rgba(175, 145, 145, 0.4);
+  background-color: rgba(175, 145, 145 , 0.3);
 }
-
-.libraDetails:hover {
-  opacity: 0.80;
-  transition-duration: 1s;
-}
-
