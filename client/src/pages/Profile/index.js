@@ -2,7 +2,7 @@
 //I'm not sure how I want to style this for now...I think I will need to see how the data looks and get some ideas
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import { RemedySmallCard, RemedySmallCards, RemedySectionTitle } from "../../components/RemedyCard"
+import { RemedySmallCard, RemedySmallCards } from "../../components/RemedyCard"
 import { SmallCard, SmallCards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import { Libra, LibraSectionHeader } from "../../components/Libra";
