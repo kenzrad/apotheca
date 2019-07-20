@@ -151,8 +151,8 @@ class Login extends Component {
         </div>
         {/* MODALS */}
         <Modal name="loginError">
-          <h3>No user found.</h3>
-          <p>Did you use the correct username and password?</p>
+          <h3 className="loginModalText">Username/Password Not Found</h3>
+          <p className="loginModalSubtext">Did you use the correct username and password combination?</p>
         </Modal>
       </div>
     )
