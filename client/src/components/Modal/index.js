@@ -48,7 +48,7 @@ class Modal extends Component {
 
     render() {
         return (
-            <div className="modal" {...this.props} />
+            <div className="modal hidden" {...this.props} />
         );
     }
 }
