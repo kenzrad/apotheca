@@ -15,7 +15,7 @@ const elementSeed = [
     components: [3, 1, 12, 13, 14, 16, 19],
     benefits: ["Hydrate", "Combat Acne", "Protect", "Renew"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [1, 2, 3, 4],
     date: new Date(Date.now())
   },
   {
@@ -27,7 +27,7 @@ const elementSeed = [
     components: [35, 2],
     benefits: ["Soothe", "Combat Acne", "Rejuvenate", "Renew"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [5],
     date: new Date(Date.now())
   },
   {
@@ -39,7 +39,7 @@ const elementSeed = [
     components: [13, 10, 12, 14, 15],
     benefits: ["Protect", "Renew", "Exfoliate", "Senstive Skin"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [6],
     date: new Date(Date.now())
   },
   {
@@ -48,10 +48,10 @@ const elementSeed = [
     image: "/assets/images/elements/rosehip.png",
     hypoallergenic: true,
     vegan: true,
-    components: [1, 4, 36, 5],
+    components: [1, 4, 36, 5, 37],
     benefits: ["Protect", "Renew", "Combat Acne", "Brighten"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [7, 8, 35],
     date: new Date(Date.now())
   },
   {
@@ -63,7 +63,7 @@ const elementSeed = [
     components: [4, 1, 6, 20, 15, 14, 13],
     benefits: ["Renew", "Rejuvenate", "Hydrate", "Protect"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [9, 10],
     date: new Date(Date.now())
   },
   {
@@ -75,7 +75,7 @@ const elementSeed = [
     components: [21],
     benefits: ["Protect", "Renew"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [11, 12],
     date: new Date(Date.now())
   },
   {
@@ -87,7 +87,7 @@ const elementSeed = [
     components: [8, 1, 2, 22],
     benefits: ["Renew", "Protect", "Rejuvenate"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [13],
     date: new Date(Date.now())
   },
   {
@@ -99,7 +99,7 @@ const elementSeed = [
     components: [2, 4, 23, 12, 14],
     benefits: ["Protect", "Renew", "Brighten"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [14, 15, 35],
     date: new Date(Date.now())
   },
   {
@@ -111,7 +111,7 @@ const elementSeed = [
     components: [12, 8, 15, 2, 14, 24],
     benefits: ["Hydrate", "Renew", "Rejuvenate", "Protect", "Combat Acne"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [16, 17, 18, 23],
     date: new Date(Date.now())
   },
   {
@@ -123,7 +123,7 @@ const elementSeed = [
     components: [4, 1, 31],
     benefits: ["Hydrate", "Renew"],
     category: "kalon",
-    home_remedy: [],
+    home_remedy: [29],
     date: new Date(Date.now())
   },
   {
@@ -135,7 +135,7 @@ const elementSeed = [
     components: [1, 4, 2, 3],
     benefits: ["Combat Acne"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [19, 20],
     date: new Date(Date.now())
   },
   {
@@ -147,7 +147,7 @@ const elementSeed = [
     components: [1, 4, 2, 15, 12, 26],
     benefits: ["Exfoliating", "Hydrating", "Combat Acne", "Renew"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [21, 22, 23],
     date: new Date(Date.now())
   },
   {
@@ -159,7 +159,7 @@ const elementSeed = [
     components: [27],
     benefits: ["Combat Acne", "Sensitive Skin"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [24, 25, 26],
     date: new Date(Date.now())
   },
   {
@@ -171,7 +171,7 @@ const elementSeed = [
     components: [19, 1, 34],
     benefits: ["Renew", "Protect", "Combat Acne"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [20],
     date: new Date(Date.now())
   },
   {
@@ -183,7 +183,7 @@ const elementSeed = [
     components: [12, 1, 7],
     benefits: ["Brighten", "Combat Acne", "Protect"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [17, 22],
     date: new Date(Date.now())
   },
   {
@@ -195,7 +195,7 @@ const elementSeed = [
     components: [17, 4, 1, 2],
     benefits: ["Rejuvenate", "Protect", "Combat Acne", "Exfoliate"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [27],
     date: new Date(Date.now())
   },
   {
@@ -207,7 +207,7 @@ const elementSeed = [
     components: [28],
     benefits: ["Sensitive Skin", "Combat Acne", "Hydrate", "Soothe"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [25],
     date: new Date(Date.now())
   },
   {
@@ -219,7 +219,7 @@ const elementSeed = [
     components: [6, 2, 35, 29],
     benefits: ["Protect", "Combat Acne", "Renew"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [2, 3, 28],
     date: new Date(Date.now())
   },
 
@@ -232,7 +232,7 @@ const elementSeed = [
     components: [1, 8, 13, 14],
     benefits: ["Sensitive Skin", "Refreshe", "Combat Acne", "Soothe"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [30, 31],
     date: new Date(Date.now())
   },
   {
@@ -244,7 +244,7 @@ const elementSeed = [
     components: [3, 4, 13, 30],
     benefits: ["Combat Acne", "Soothe"],
     category: "elavo",
-    home_remedy: [],
+    home_remedy: [27],
     date: new Date(Date.now())
   },
   {
@@ -256,7 +256,7 @@ const elementSeed = [
     components: [31, 1, 12],
     benefits: ["Rejuvenate", "Brighten", "Renew", "Protect"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [31],
     date: new Date(Date.now())
   },
   {
@@ -268,7 +268,7 @@ const elementSeed = [
     components: [2, 13, 14],
     benefits: ["Protect", "Hydrate", "Balance"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [7, 12, 25, 36],
     date: new Date(Date.now())
   },
 
@@ -281,7 +281,7 @@ const elementSeed = [
     components: [39, 12, 15],
     benefits: ["Combat Acne"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [26],
     date: new Date(Date.now())
   },
 
@@ -294,7 +294,7 @@ const elementSeed = [
     components: [15, 20, 12],
     benefits: ["Hydrate", "Rejuvenate"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [32],
     date: new Date(Date.now())
   },
 
@@ -307,7 +307,7 @@ const elementSeed = [
     components: [1, 4, 8, 13, 12, 15, 2, 3],
     benefits: ["Combat Acne", "Soothe", "Renew", "Rejuvenate", "Exfoliate"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [33],
     date: new Date(Date.now())
   },
 
@@ -320,7 +320,7 @@ const elementSeed = [
     components: [40],
     benefits: ["Refresh", "Balance", "Sensitive Skin"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [34],
     date: new Date(Date.now())
   },
 
@@ -333,7 +333,7 @@ const elementSeed = [
     components: [41],
     benefits: ["Rejuvenate", "Acne Control", "Refresh"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [17],
     date: new Date(Date.now())
   },
 
@@ -346,7 +346,7 @@ const elementSeed = [
     components: [38],
     benefits: ["Combat Acne", "Soothe", "Protect"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [24],
     date: new Date(Date.now())
   },
 
@@ -359,7 +359,7 @@ const elementSeed = [
     components: [1, 12],
     benefits: ["Renew", "Rejuvenate", "Brighten", "Protect"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [12, 16, 18, 29, 30],
     date: new Date(Date.now())
   },
   {
@@ -368,10 +368,10 @@ const elementSeed = [
     image: "/assets/images/elements/eggs.png",
     hypoallergenic: false,
     vegan: false,
-    components: [24, 12],
+    components: [24, 12, 49],
     benefits: ["Combat Acne", "Brighten", "Balance"],
     category: "novo",
-    home_remedy: [],
+    home_remedy: [15],
     date: new Date(Date.now())
   },
   {
@@ -380,10 +380,10 @@ const elementSeed = [
     image: "/assets/images/elements/sheabutter.png",
     hypoallergenic: true,
     vegan: true,
-    components: [36],
+    components: [36, 48],
     benefits: ["Renew", "Rejuvenate", "Brighten", "Hydrate"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [35],
     date: new Date(Date.now())
   },
   {
@@ -392,10 +392,10 @@ const elementSeed = [
     image: "/assets/images/elements/cucumber.png",
     hypoallergenic: true,
     vegan: true,
-    components: [31, 15, 12],
+    components: [31, 15, 12, 47],
     benefits: ["Hydrate", "Brighten"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [23, 28],
     date: new Date(Date.now())
   },
   {
@@ -407,7 +407,7 @@ const elementSeed = [
     components: [6, 7, 8, 1, 12],
     benefits: ["Combat Acne", "Hydrate", "Sensitive Skin", "Brighten"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [1, 2, 9, 13, 15, 16, 19, 21, 27, 29, 30, 32, 33, 36],
     date: new Date(Date.now())
   },
   {
@@ -416,10 +416,10 @@ const elementSeed = [
     image: "/assets/images/elements/yogurt.png",
     hypoallergenic: false,
     vegan: false,
-    components: [14],
+    components: [14, 46],
     benefits: ["Rejuvenate", "Combat Acne", "Brighten"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [2, 18, 19],
     date: new Date(Date.now())
   },
   {
@@ -428,10 +428,10 @@ const elementSeed = [
     image: "/assets/images/elements/coconut.png",
     hypoallergenic: true,
     vegan: true,
-    components: [42],
+    components: [42, 45],
     benefits: ["Hydrate", "Rejuvenate"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [35],
     date: new Date(Date.now())
   },
   {
@@ -443,7 +443,7 @@ const elementSeed = [
     components: [4, 32, 2],
     benefits: ["Hydrate", "Brighten"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [33],
     date: new Date(Date.now())
   },
   {
@@ -455,7 +455,7 @@ const elementSeed = [
     components: [14],
     benefits: ["Balance", "Hydrate", "Protect", "Combat Acne"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [4, 13, 30],
     date: new Date(Date.now())
   },
   {
@@ -464,10 +464,10 @@ const elementSeed = [
     image: "/assets/images/elements/aloe.png",
     hypoallergenic: true,
     vegan: true,
-    components: [24],
+    components: [43, 44, 24],
     benefits: ["Renew", "Hydrate", "Rejuvenate"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [11, 13, 28],
     date: new Date(Date.now())
   },
   {
@@ -479,7 +479,7 @@ const elementSeed = [
     components: [1, 4, 2, 3],
     benefits: ["Hydrate", "Renew", "Rejuvenate", "Protect"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [36],
     date: new Date(Date.now())
   },
   {
@@ -488,10 +488,10 @@ const elementSeed = [
     image: "/assets/images/elements/oliveoil.png",
     hypoallergenic: true,
     vegan: true,
-    components: [36],
+    components: [36, 37],
     benefits: ["Hydrate", "Protect", "Rejuvenate"],
     category: "bibe",
-    home_remedy: [],
+    home_remedy: [9, 13],
     date: new Date(Date.now())
   }
 ];
