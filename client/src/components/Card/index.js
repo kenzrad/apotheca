@@ -28,10 +28,10 @@ export function SmallCard(props) {
 
   return (
     <>
-      <div className ="smallItem">
+      <div key={props.key + "-main"} className ="smallItem">
         <div 
           className="smallItemImage" 
-          key={props.key + "-first"}
+          key={props.key + "-firsts"}
           style={{
             backgroundImage: 
             `${props.image}`
@@ -39,9 +39,9 @@ export function SmallCard(props) {
             : `url('https://via.placeholder.com/400')` 
           }}>
         </div>
-        <div className="smallItemDetails">
-          <h1 className="smallItemName" key={props.key + "-third"}>{props.name}</h1>
-          <p className="smallItemText">{newBenefits}</p>
+        <div className="smallItemDetails" key={props.key + "-seconds"}>
+          <h1 className="smallItemName" key={props.key + "-thirds"}>{props.name}</h1>
+          <p className="smallItemText" key={props.key + "-fourths"}>{newBenefits}</p>
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ export function RemedyCard(props) {
   return (
     <>
       <div className="remedy" key={props._id}>
-        <h1 className="remedyTitle">{props.title}</h1>
+        <h1 className="remedyTitle" key={props._id + "heyokay"}>{props.title}</h1>
         <div className="remedyInstructions">
           <h3 className="remedyHeader">Ingredients</h3>
           <ul className="remedyList">{props.ingredients.map(ingredient => (
