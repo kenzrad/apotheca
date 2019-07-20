@@ -14,7 +14,7 @@ module.exports = {
     },
     componentId: function (req, res) {
         db.Component
-            .find({ id: req.body.id })
+            .find({ id: req.body.componentId })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).status(422).json(err));
     },

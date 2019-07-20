@@ -41,8 +41,9 @@ export default {
 
   //putLoginUser
   createLoginUser: function (newUser) {
+    console.log(newUser)
     return axios.put("/api/login/create", newUser)
   }
 
-  
+
 };
