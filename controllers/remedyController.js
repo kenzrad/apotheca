@@ -14,7 +14,7 @@ module.exports = {
     },
     remedyId: function (req, res) {
         db.Remedy
-            .find({ id: req.body.id })
+            .find({ id: req.body.remedyId })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).status(422).json(err));
     },
