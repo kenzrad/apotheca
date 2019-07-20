@@ -103,11 +103,12 @@ class Login extends Component {
               <input className="login-text" onChange={this.props.handleInputChange} type="text" name="loginUsername" placeholder="username"></input>
               <input className="login-text" onChange={this.props.handleInputChange} type="password" name="loginPassword" placeholder="password"></input>
 
-              <button onClick={this.finalizeLogin}>Log In</button>
+              
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); this.props.resetLogin(); }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Go back" onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); this.props.resetLogin(); }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Log in" onClick={this.finalizeLogin}><i className="fas fa-chevron-right"></i></button>
             </div>
           </div>
 
@@ -130,9 +131,9 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); this.props.resetSignup(); }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Go back" onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); this.props.resetSignup(); }}><i className="fas fa-chevron-left"></i></button>
 
-              <button onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
+              <button title="Sign up" onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
             </div>
 
           </div>
@@ -143,8 +144,8 @@ class Login extends Component {
             </div>
 
             <div className="chevrons">
-              <button onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
-              <button onClick={this.props.signup}>Submit</button>
+              <button title="Go back" onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Submit" onClick={this.props.signup}>Submit</button>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
   width: 400px;
   margin: 10px;
   background-color: white;
-  font-family: "cormorant"
+  font-family: "cormorant";
 }
 
 .itemImage {
@@ -40,7 +40,7 @@
 }
 
 .itemDetails:hover{
-  opacity: 0.8
+  opacity: 0.8;
 }
 
 .itemDetails > div {
