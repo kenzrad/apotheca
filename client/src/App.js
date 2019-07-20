@@ -103,7 +103,16 @@ class App extends Component {
         if (result.data) {
           //show modal that their username sucks
         } else {
-          API.getUserElements({ vegan: this.state.vegan, hypoallergenic: this.state.hypoallergenic })
+          
+          let variable = {};
+          if(this.state.vegan) {
+            variable.vegan = this.state.vegan;
+          }
+          if(this.state.hypoallergenc) {
+            variable.hypoallergenic = this.state.hypoallergenic;
+          }
+
+          API.getUserElements(variable)
             .then(result => {
               let resultArr = result.data;
               let componentList = [];
