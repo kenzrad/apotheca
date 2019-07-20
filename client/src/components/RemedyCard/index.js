@@ -52,28 +52,26 @@ export function RemedySectionTitle(props) {
 
 export function RemedySmallCard(props) {
   return (
-    <>
-      <div className="smallRemedy" key={props._id}>
-        <h2 className="smallRemedyTitle">{props.title}</h2>
-        <div className="smallRemedyInstructions">
-          <p className="remedyHeader">Ingredients</p>
-          <ul className="remedyList">{props.ingredients.map(ingredient => (
-              <li key={props.key + ingredient}>{ingredient}</li>
-            ))}
-          </ul>
-          <h3 className="remedyHeader">Instructions</h3>
-          <ul className="remedyList">{props.instructions.map(instruction => (
-              <li key={props.key + instruction}>{instruction}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="remedyInfo">
-          <p>Prep time: {props.time}</p>
-          <p>Frequency: {props.consistency}</p>
-          <p>How it works: {props.works} <a className="remedyLink" target="_target" href={props.source}>(read more)</a></p>
-        </div>
+    <div className="smallRemedy" key={props._id}>
+      <h2 className="smallRemedyTitle">{props.title}</h2>
+      <div className="smallRemedyInstructions">
+        <p className="remedyHeader">Ingredients</p>
+        <ul className="remedyList">{props.ingredients.map(ingredient => (
+            <li key={props.key + ingredient}>{ingredient}</li>
+          ))}
+        </ul>
+        <p className="remedyHeader">Instructions</p>
+        <ul className="remedyList">{props.instructions.map(instruction => (
+            <li key={props.key + instruction}>{instruction}</li>
+          ))}
+        </ul>
       </div>
-    </>
+      <div className="remedyInfo">
+        <p>Prep time: {props.time}</p>
+        <p>Frequency: {props.consistency}</p>
+        <p>How it works: {props.works} <a className="remedyLink" target="_target" href={props.source}>(read more)</a></p>
+      </div>
+    </div>
   );
 }
 

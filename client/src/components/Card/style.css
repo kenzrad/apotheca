@@ -69,3 +69,43 @@
   font-size: 1.5em;
   letter-spacing: 0.02em;
 }
+
+/* SMALL */
+
+.smallItems {
+  padding: 0;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.smallItem {
+  width: auto;
+  margin: 0;
+  background-color: white;
+  font-family: "cormorant";
+  display: flex;
+}
+
+.smallItemImage {
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  border: solid 2px;
+  margin: 20px;
+  border-color: rgba(175, 145, 145, 0.4);
+}
+
+.smallItemName {
+  font-family: "italiana";
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.smallItemText {
+  text-align: left;
+  font-family: "cormorant";
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  margin: 0;
+}

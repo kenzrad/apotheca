@@ -1,23 +1,21 @@
 import React from "react";
 import "./style.css";
 
-// console.log(JSON.parse(sessionStorage.userData))
-
-export function Cards({ children }) {
-  return (
-  <div className="items">{children}</div>
-  );
-}
-
 export function Libra(props) {
   return (
     <>
     <div className="libra-div">
-      <h1>{props.username}</h1>
-      <h1>{props.libra}</h1>
+      {/*libra info will go here*/}
+      <h1></h1>
     </div>
     </>
   );
+}
+
+export function LibraSectionHeader(props) {
+  return (
+    <h1 className="libraSectionTitle">{props.name.toUpperCase()}'S {props.sectionName}</h1>
+  )
 }
 
 export default Libra ;
