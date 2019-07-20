@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./style.css";
-// import comparisonArr from './comparisonArr.json';
 
 let choices = ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"];
 let running = false;
@@ -40,7 +39,6 @@ class Quiz extends Component {
                             this.props.transition(target, "left", "out");
                             setTimeout(() => {
                                 running = false;
-                                console.log("RUNNING FALSE");
                             }, 510);
 
                             setTimeout(() => {
@@ -80,7 +78,6 @@ class Quiz extends Component {
 
     indicatorClickHandler = e => {
         if (running === false) {
-            console.log("INDICATOR RUNNING");
             running = true;
 
             let currQuestionIndex;
@@ -129,7 +126,6 @@ class Quiz extends Component {
                 }, 250);
             } else {
                 running = false;
-                console.log("???");
             }
         }
     }
