@@ -9,8 +9,7 @@ import NoMatch from "./pages/NoMatch";
 import comparisonArr from './components/Quiz/comparisonArr.json';
 import API from "./utils/API";
 
-let convertedQuiz = [];
-let talliedQuiz = {};
+
 
 class App extends Component {
   state = {
@@ -82,120 +81,7 @@ class App extends Component {
   }
 
   signup = e => {
-    e.preventDefault();
-
-    let newUser = {
-      userName: this.state.username,
-      password: this.state.password,
-      firstName: this.state.firstName,
-      vegan: this.state.vegan,
-      hypoallergenic: this.state.hypoallergenic,
-      libraOverall: "",
-      libraCategories: [],
-      elements: [],
-      components: [],
-      remedies: []
-    }
-
-    //Create API route that checks username
-    API.getUserNameCheck({ userName: this.state.username })
-      .then(result => {
-        if (result.data) {
-          //show modal that their username sucks
-        } else {
-          API.getUserElements({ vegan: this.state.vegan, hypoallergenic: this.state.hypoallergenic })
-            .then(result => {
-              let resultArr = result.data;
-              let componentList = [];
-              let remediesList = [];
-              let finished = {
-                components: false,
-                remedies: false
-              }
-
-              this.convertQuizResults();
-              this.countQuizResults();
-              newUser.libraCategories = talliedQuiz;
-
-              for (let item in talliedQuiz) {
-                let count = 0;
-                let goal = 0;
-                let index = 0;
-                goal = talliedQuiz[item];
-
-                while (count !== goal && index < resultArr.length) {
-                  if (resultArr[index].category === item) {
-                    newUser.elements.push(resultArr[index]);
-                    count++;
-                  }
-                  index++;
-                }
-              }
-
-              // SET UP NEWUSER COMPONENTS
-              for (let item of newUser.elements) {
-                for (let id of item.components) {
-                  if (componentList.indexOf(id) === -1) {
-                    componentList.push(id);
-                  }
-                }
-              }
-
-              for (let id of componentList) {
-                API.getUserComponents({ componentId: parseInt(id) })
-                  .then(result => {
-                    newUser.components.push(result.data);
-                    if (id === componentList[componentList.length - 1]) {
-                      finished.components = true;
-                    }
-                  });
-              }
-
-              //SET UP NEWUSER REMEDIES
-              for (let item of newUser.elements) {
-                for (let id of item.home_remedy) {
-                  if (remediesList.indexOf(id) === -1) {
-                    remediesList.push(id);
-                  }
-                }
-              }
-
-              for (let id of remediesList) {
-                API.getUserRemedies({ remedyId: parseInt(id) })
-                  .then(result => {
-                    newUser.remedies.push(result.data);
-                    if (id === remediesList[remediesList.length - 1]) {
-                      finished.remedies = true;
-                    }
-                  });
-              }
-
-              // API.createLoginUser(newUser)
-              //   .then(result => {
-              //     console.log(result, "New User Created");
-              //   });
-
-
-              let interval = setInterval(() => {
-                if (finished.remedies === false && finished.components === false) {
-                  //do nothing
-                } else {
-                  API.createLoginUser(newUser)
-                    .then(result => {
-                      console.log(result, "New User Created");
-                    });
-
-                  clearInterval(interval);
-                }
-              }, 100);
-            });
-        }
-      });
-
-    //if null API getUserElements - using vegan/hypoallergenic boolean
-    //push elements to array
-    //API getUserComponenets - 
-    // console.log(this.state);
+    return this.state;
   }
 
   resetSignup = () => {
@@ -217,10 +103,10 @@ class App extends Component {
       newResults.push(comparisonArr[Number(question) + 1][this.state.quizResults[question]]);
     }
 
-    convertedQuiz = newResults;
+    return newResults;
   }
 
-  countQuizResults = () => {
+  countQuizResults = convertedQuiz => {
     let countedResults = {};
 
     for (let answer of convertedQuiz) {
@@ -231,7 +117,7 @@ class App extends Component {
       }
     }
 
-    talliedQuiz = countedResults;
+    return countedResults;
   }
 
 
@@ -245,7 +131,8 @@ class App extends Component {
               exact path="/"
               render={() => <Login handleCheckbox={this.handleCheckbox} handleInputChange={this.handleInputChange}
                 handleConfirmPasswordChange={this.handleConfirmPasswordChange} handleQuiz={this.handleQuiz}
-                login={this.login} resetLogin={this.resetLogin} signup={this.signup} resetSignup={this.resetSignup} />} />
+                login={this.login} resetLogin={this.resetLogin} signup={this.signup} resetSignup={this.resetSignup}
+                convertQuizResults={this.convertQuizResults} countQuizResults={this.countQuizResults} />} />
             <Route exact path="/Main" component={Main} />
             <Route exact path="/Profile/:login" component={Profile} />
             <Route exact path="/Remedies" component={Remedies} />

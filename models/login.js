@@ -11,7 +11,7 @@ const loginSchema = new Schema({
   libraOverall: { type: String },
   libraCategories: { type: Object },
   elements: [{ type: Object }],
-  componenets: { type: Array },
+  components: { type: Array },
   remedies: [{ type: Array }]
 });
 

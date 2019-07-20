@@ -7,7 +7,8 @@ import Brand from "../../components/Brand";
 import Modal from "../../components/Modal";
 import "./style.css";
 
-
+let convertedQuiz = [];
+let talliedQuiz = {};
 class Login extends Component {
   moveLeft = (e, num) => {
     e.preventDefault();
@@ -84,6 +85,117 @@ class Login extends Component {
       });
   }
 
+  finalizeSignup = e => {
+    e.preventDefault();
+
+    let newState = this.props.signup();
+
+    let newUser = {
+      userName: newState.username,
+      password: newState.password,
+      firstName: newState.firstName,
+      vegan: newState.vegan,
+      hypoallergenic: newState.hypoallergenic,
+      libraOverall: "",
+      libraCategories: [],
+      elements: [],
+      components: [],
+      remedies: []
+    }
+
+    //Create API route that checks username
+    API.getUserNameCheck({ userName: newState.username })
+      .then(result => {
+        if (result.data) {
+          //show modal that their username sucks
+        } else {
+          API.getUserElements({ vegan: newState.vegan, hypoallergenic: newState.hypoallergenic })
+            .then(result => {
+              let resultArr = result.data;
+              let componentList = [];
+              let remediesList = [];
+              let finished = {
+                components: false,
+                remedies: false
+              }
+
+              convertedQuiz = this.props.convertQuizResults();
+              talliedQuiz = this.props.countQuizResults(convertedQuiz);
+              newUser.libraCategories = talliedQuiz;
+
+              for (let item in talliedQuiz) {
+                let count = 0;
+                let goal = 0;
+                let index = 0;
+                goal = talliedQuiz[item];
+
+                while (count !== goal && index < resultArr.length) {
+                  if (resultArr[index].category === item) {
+                    newUser.elements.push(resultArr[index]);
+                    count++;
+                  }
+                  index++;
+                }
+              }
+
+              // SET UP NEWUSER COMPONENTS
+              for (let item of newUser.elements) {
+                for (let id of item.components) {
+                  if (componentList.indexOf(id) === -1) {
+                    componentList.push(id);
+                  }
+                }
+              }
+
+              for (let id of componentList) {
+                API.getUserComponents({ componentId: parseInt(id) })
+                  .then(result => {
+                    newUser.components.push(result.data);
+                    if (id === componentList[componentList.length - 1]) {
+                      finished.components = true;
+                    }
+                  });
+              }
+
+              //SET UP NEWUSER REMEDIES
+              for (let item of newUser.elements) {
+                for (let id of item.home_remedy) {
+                  if (remediesList.indexOf(id) === -1) {
+                    remediesList.push(id);
+                  }
+                }
+              }
+
+              for (let id of remediesList) {
+                API.getUserRemedies({ remedyId: parseInt(id) })
+                  .then(result => {
+                    newUser.remedies.push(result.data[0]);
+                    if (id === remediesList[remediesList.length - 1]) {
+                      finished.remedies = true;
+                    }
+                  });
+              }
+
+              let interval = setInterval(() => {
+                if (finished.remedies === false && finished.components === false) {
+                  // console.log("working");
+                  //do nothing
+                } else {
+                  API.createLoginUser(newUser)
+                    .then(result => {
+                      // console.log(newUser)
+                      sessionStorage.setItem('userData', JSON.stringify(newUser));
+                      this.props.history.push("/Profile/" + newUser.userName);
+                    });
+
+                  clearInterval(interval);
+                }
+              }, 100);
+            });
+        }
+      });
+  }
+
   render() {
     return (
       <div className="login-backdrop">
@@ -145,7 +257,7 @@ class Login extends Component {
 
             <div className="chevrons">
               <button title="Go back" onClick={e => { this.moveLeft(e, 1) }}><i className="fas fa-chevron-left"></i></button>
-              <button title="Submit" type="submit" onClick={this.props.signup}>Submit</button>
+              <button title="Submit" type="submit" onClick={this.finalizeSignup}>Submit</button>
             </div>
           </div>
         </div>
