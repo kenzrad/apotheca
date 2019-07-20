@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 //this needed to be updated once we have login shibangadangwangthankma'am
-var login = "killme"
+let userData = (sessionStorage.userData ? JSON.parse(sessionStorage.userData) : "no data");
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar(props) {
@@ -35,7 +35,7 @@ function Navbar(props) {
           </li>
         {/*wrap in check username*/}
           <li className="nav-item">
-            <Link to={`/Profile/${login}`} className={window.location.pathname === `/Profile/${login}` ? "nav-link active" : "nav-link"}>
+            <Link to={`/Profile/${userData.userName ? userData.userName : "nouser"}`} className={window.location.pathname === `/Profile/${userData.userName ? userData.userName : "nouser"}` ? "nav-link active" : "nav-link"}>
               Libra
             </Link>
           </li>

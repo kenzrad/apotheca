@@ -3,7 +3,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 import { RemedySmallCard, RemedySmallCards, RemedySectionTitle } from "../../components/RemedyCard"
-// import API from "../../utils/API";
 import { SmallCard, SmallCards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import { Libra, LibraSectionHeader } from "../../components/Libra";
@@ -19,7 +18,6 @@ class Profile extends Component {
     componentDidMount() {
         if (!this.userData || this.userData === "no data") {
             this.props.history.push('/')
-            window.location.reload();
         }
     }
 
@@ -27,14 +25,16 @@ class Profile extends Component {
         return (
             <Wrapper>
                 <Navbar />
-                <Libra
-                id={this.userData._id}
-                username={this.userData.userName}
-                name={this.userData.firstName}
-                vegan={this.userData.vegan}
-                hypoallergenic={this.userData.hypoallergenic}
-                libra={this.userData.libra}
-                />
+                <div className="libraMain">
+                    <Libra
+                    id={this.userData._id}
+                    username={this.userData.userName}
+                    name={this.userData.firstName}
+                    libra={this.userData.libraOverall}
+                    vegan={this.userData.vegan}
+                    hypoallergenic={this.userData.hypoallergenic}
+                    />
+                </div>
                 <div className="libraDashboard">
                     <div className="libraElements">
                     <LibraSectionHeader name={this.userData.firstName} sectionName="ELEMENTS"/>

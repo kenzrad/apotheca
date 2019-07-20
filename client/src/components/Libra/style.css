@@ -1,5 +1,64 @@
-.libra-div {
-  width: 100%;
+.libraDiv {
+  border: solid 2px;
+  border-color:  rgba(139,142,82, 0.5);
+  display: flex;
+  background: white;
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8); 
+}
+
+.libraTable {
+  display: flex;
+  margin: 50px;
+}
+
+.libraTableCategory {
+  font-family: "Cormorant";
+  color: rgb(73, 64, 64);
+  letter-spacing: 0.1em;
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 10px;
+  text-align: right;
+  border-right: 1px solid;
+  border-color: rgba(175, 145, 145, 0.3);
+  background: none;
+}
+
+.libraTableText {
+  font-family: "Cormorant";
+  color: rgb(73, 64, 64);
+  letter-spacing: 0.1em;
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 10px;
+
+}
+
+.libraTableCategories {
+  width: 200px;
+}
+
+.libraTableResults {
+  width: 500px;
+}
+
+.libraImage {
+  background-image: url('/assets/images/libra/mortar.png');
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin: 20px 20px 20px 50px;
+}
+
+.libraMainTitle{
+  font-family: "Italiana";
+  color: rgb(73, 64, 64);
+  letter-spacing: 0.1em;
+  margin: 0px;
+  padding: 20px;
+  border: solid 1px;
+  border-color: rgba(139,142,82, 0.5);
+  background-color: rgba(139,142,82, 0.5);
 }
 
 .libraSectionTitle{

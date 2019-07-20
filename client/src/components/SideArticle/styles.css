@@ -11,7 +11,8 @@
 }
 
 .sideImage {
-    width: 90%
+    width: 90%;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8); 
 }
 
 .sideText {

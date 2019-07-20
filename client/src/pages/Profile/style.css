@@ -1,12 +1,16 @@
 .libraDashboard {
     display: flex;
+    padding: 20px;
+}
+
+.libraMain {
+    padding: 20px;
 }
 
 .libraRemedies {
     width: 50vw;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8); 
     background-color: white;
-    margin: 20px;
     border: solid 2px;
     border-color: rgba(175, 145, 145, 0.4);
 }
@@ -15,9 +19,9 @@
     width: 50vw;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8); 
     background-color: white;
-    margin: 20px;
     border: solid 2px;
     border-color: rgba(175, 145, 145 , 0.3);
+    margin-right: 20px;
 }
 
 @media only screen and (max-width: 768px) {
