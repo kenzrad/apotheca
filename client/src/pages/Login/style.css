@@ -28,7 +28,11 @@
 
 .login-backdrop {
     background-image: linear-gradient(to top, rgba(139,142,82, 1),  rgba(175, 145, 145 ,.5),  rgba(236,243,236,1), rgba(236,243,236,1)); 
-    height: 100vh
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+
 }
 
 .login-backdrop button {
