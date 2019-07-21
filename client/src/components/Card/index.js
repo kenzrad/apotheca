@@ -3,14 +3,14 @@ import "./style.css";
 
 export function Cards({ children }) {
   return (
-  <div className="items">{children}</div>
+    <div className="items">{children}</div>
   );
 }
 
 export function SmallCards({ children }) {
-  
+
   return (
-  <div className="smallItems">{children}</div>
+    <div className="smallItems">{children}</div>
   );
 }
 
@@ -18,8 +18,8 @@ export function SmallCard(props) {
   var benefits = props.benefits.toString();
   var newBenefits = "";
 
-  for(var i=0; i<benefits.length; i++) {
-    if (benefits[i]===","){
+  for (var i = 0; i < benefits.length; i++) {
+    if (benefits[i] === ",") {
       newBenefits = newBenefits + benefits[i] + " ";
     }
     else {
@@ -27,8 +27,19 @@ export function SmallCard(props) {
     }
   }
 
-  console.log("User components IDs with array:" + props.elementComponents); //elements specific array of components ids live here (this is an array)
-  console.log("User componenets objects:" + props.allComponents); //user-specific array of objects for all compoenents (all compoenent data live here)
+  var componentDetail = [];
+  //want each component object pushed to this array
+
+  for (var j = 0; j < props.elementComponents.length; j++) {
+    var currentId = props.elementComponents[j];
+    var componentArr = {};
+    for (var k = 0; k < props.allComponents.length; k++) {
+      if (parseInt(currentId) === parseInt(props.allComponents[k].id)) {
+        componentArr = props.allComponents[k];
+      }
+    }
+    componentDetail.push(componentArr)
+  }
 
   //loop through this array and create a new object that looks like this:
   // componentDetail = [{
@@ -39,22 +50,23 @@ export function SmallCard(props) {
 
   return (
     <>
-      <div key={props.key + "-main"} className ="smallItem">
-        <div 
-          className="smallItemImage" 
+      <div key={props.key + "-main"} className="smallItem">
+        <div
+          className="smallItemImage"
           key={props.key + "-firsts"}
           style={{
-            backgroundImage: 
-            `${props.image}`
-            ? `url('${props.image}')`
-            : `url('https://via.placeholder.com/400')` 
+            backgroundImage:
+              `${props.image}`
+                ? `url('${props.image}')`
+                : `url('https://via.placeholder.com/400')`
           }}>
         </div>
         <div className="smallItemDetails" key={props.key + "-seconds"}>
           <h1 className="smallItemName" key={props.key + "-thirds"}>{props.name}</h1>
           <p className="smallItemText" key={props.key + "-fourths"}>{newBenefits}</p>
-          {/* map through the componentDetail array you made and wrap the <p> tag with the function*/}
-              <p>Components</p>
+          {/* <p className="smallItemText" key={props.key + "-fifths"}>{componentDetail}</p> */}
+          {/* map through the componentDetail array you made and wrap the <p> tag with the function */}
+          <p>Components</p>
           {/* end map function here*/}
         </div>
       </div>
@@ -65,15 +77,15 @@ export function SmallCard(props) {
 export function Card(props) {
   return (
     <>
-      <div className ="item">
-        <div 
-          className="itemImage" 
+      <div className="item">
+        <div
+          className="itemImage"
           key={props.key + "-first"}
           style={{
-            backgroundImage: 
-            `${props.image}`
-            ? `url('${props.image}')`
-            : `url('https://via.placeholder.com/400')` 
+            backgroundImage:
+              `${props.image}`
+                ? `url('${props.image}')`
+                : `url('https://via.placeholder.com/400')`
           }}>
         </div>
         <div className="itemDetails" key={props.key + "-second"}>
@@ -89,4 +101,4 @@ export function Card(props) {
   );
 }
 
-export default Card ;
+export default Card;
