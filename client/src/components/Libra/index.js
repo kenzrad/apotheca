@@ -14,23 +14,28 @@ export function Libra(props) {
     considerations = "Hypoallergenic Products"
   }
 
-  let symbol = "Φ";
-  let overview = "placeholder text";
+  let symbol = "Ξ";
+  let libra = "Kalon";
+  let overview = "You are KALON. You want to sustain and rejuvinate the natural beauty already held in your skin.";
   if(props.libra.toLowerCase() === "kalon") {
     symbol = "Ξ";
     overview = "You are KALON. You want to sustain and rejuvinate the natural beauty already held in your skin.";
+    libra = "Kalon";
   }
   else if(props.libra.toLowerCase() === "bibe") {
     symbol = "Ψ";
     overview = "You are BIBE. You want to hydrate and soothe your skin to restore your beautiful, glowing complexion. ";
+    libra = "Bibe";
   }
   else if(props.libra.toLowerCase() === "novo") {
     symbol = "Δ";
     overview = "You are NOVO. You want to wash away impurities to calm and enhance your complexion, resulting in radiant skin.";
+    libra = "Novo";
   }
   else if(props.libra.toLowerCase() === "elavo") {
     symbol = "Φ";
     overview = "You are ELAVO. You want to purify and cleanse yout complexion to reveal clear and radiant skin.";
+    libra = "Elavo";
   }
 
   return (
@@ -49,7 +54,7 @@ export function Libra(props) {
           </div>
           <div className="libraTableResults">
             <p className="libraTableText">{props.username}</p>
-            <p className="libraTableText">{props.libra}</p>
+            <p className="libraTableText">{libra}</p>
             <p className="libraTableText">{considerations}</p>
           </div>
         </div>
