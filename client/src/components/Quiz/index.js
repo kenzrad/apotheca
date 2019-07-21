@@ -145,7 +145,7 @@ class Quiz extends Component {
                     </div>
 
                     <div className="question hidden">
-                        <h3>2: When you wake up how is your skin?</h3>
+                        <h3>2: When you wake up, how is your skin?</h3>
                         <div className="options" onClick={this.optionClickHandler}>
                             <p data-answer="A">Irritated, red, and blotchy.</p>
                             <p data-answer="B">Greasy, oil build up.</p>
@@ -215,7 +215,7 @@ class Quiz extends Component {
                     </div>
 
                     <div className="question hidden">
-                        <h3>9: Out of the following what is your top skin concern?</h3>
+                        <h3>9: Out of the following, what is your top skin concern?</h3>
                         <div className="options" onClick={this.optionClickHandler}>
                             <p data-answer="A">Post-breakout scarring.</p>
                             <p data-answer="B">Sun-damage</p>
@@ -225,12 +225,12 @@ class Quiz extends Component {
                     </div>
 
                     <div className="question hidden">
-                        <h3>10: Out of the following what is your top skin concern?</h3>
+                        <h3>10: Out of the following, what is your top skin concern?</h3>
                         <div className="options" onClick={this.optionClickHandler}>
                             <p data-answer="A">Wrinkles</p>
                             <p data-answer="B">Dehydrated skin</p>
                             <p data-answer="C">T-zone oil</p>
-                            <p data-answer="D">Irritated/sensitve skin</p>
+                            <p data-answer="D">Irritated/sensitive skin</p>
                         </div>
                     </div>
                 </div>
