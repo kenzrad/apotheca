@@ -178,7 +178,6 @@ class Login extends Component {
               for (let id of remediesList) {
                 API.getUserRemedies({ remedyId: parseInt(id) })
                   .then(result => {
-                    console.log("remedies" + result.data[0]);
                     newUser.remedies.push(result.data[0]);
                     if (id === remediesList[remediesList.length - 1]) {
                       finished.remedies = true;
