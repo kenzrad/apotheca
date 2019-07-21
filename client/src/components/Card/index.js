@@ -20,14 +20,14 @@ export function SmallCard(props) {
 
   for (var i = 0; i < benefits.length; i++) {
     if (benefits[i] === ",") {
-      newBenefits = newBenefits + benefits[i] + " ";
+      newBenefits += "  |  ";
     }
     else {
       newBenefits += benefits[i];
     }
   }
 
-  var componentDetail = [];
+  var componentDetails = [];
   //want each component object pushed to this array
 
   for (var j = 0; j < props.elementComponents.length; j++) {
@@ -38,7 +38,18 @@ export function SmallCard(props) {
         componentArr = props.allComponents[k];
       }
     }
-    componentDetail.push(componentArr)
+    componentDetails.push(componentArr)
+  }
+
+  var componentList = "";
+
+  for (var i = 0; i < componentDetails.length; i++) {
+    if (i < (componentDetails.length - 1)) {
+      componentList = componentList + componentDetails[i].component + ", "
+    }
+    else {
+      componentList += "and " + componentDetails[i].component
+    }
   }
 
   //loop through this array and create a new object that looks like this:
@@ -64,9 +75,7 @@ export function SmallCard(props) {
         <div className="smallItemDetails" key={props.key + "-seconds"}>
           <h1 className="smallItemName" key={props.key + "-thirds"}>{props.name}</h1>
           <p className="smallItemText" key={props.key + "-fourths"}>{newBenefits}</p>
-          {/* <p className="smallItemText" key={props.key + "-fifths"}>{componentDetail}</p> */}
-          {/* map through the componentDetail array you made and wrap the <p> tag with the function */}
-          <p>Components</p>
+          <p className="smallItemText">Components: {componentList}</p>
           {/* end map function here*/}
         </div>
       </div>
