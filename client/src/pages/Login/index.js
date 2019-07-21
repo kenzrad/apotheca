@@ -111,11 +111,11 @@ class Login extends Component {
         } else {
                    
           let variable = {};
-          if(this.state.vegan) {
-            variable.vegan = this.state.vegan;
+          if(newUser.vegan) {
+            variable.vegan = newUser.vegan;
           }
-          if(this.state.hypoallergenc) {
-            variable.hypoallergenic = this.state.hypoallergenic;
+          if(newUser.hypoallergenc) {
+            variable.hypoallergenic = newUser.hypoallergenic;
           }
 
           API.getUserElements(variable)
@@ -178,6 +178,7 @@ class Login extends Component {
               for (let id of remediesList) {
                 API.getUserRemedies({ remedyId: parseInt(id) })
                   .then(result => {
+                    console.log("remedies" + result.data[0]);
                     newUser.remedies.push(result.data[0]);
                     if (id === remediesList[remediesList.length - 1]) {
                       finished.remedies = true;
