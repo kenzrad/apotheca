@@ -27,7 +27,7 @@ const quizSeed = [
                 category: "novo"
             },
             D: {
-                optionD: "30-50",
+                optionD: "31-50",
                 categoryD: "bibe"
             }
 
@@ -161,7 +161,7 @@ const quizSeed = [
     },
     {
         id: 7,
-        question: "What is your current living environment?",
+        question: "What best describes your current living environment?",
         options: [{
             A: {
                 option: "Rural Location",
