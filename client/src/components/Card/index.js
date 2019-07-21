@@ -8,6 +8,7 @@ export function Cards({ children }) {
 }
 
 export function SmallCards({ children }) {
+  
   return (
   <div className="smallItems">{children}</div>
   );
@@ -26,6 +27,16 @@ export function SmallCard(props) {
     }
   }
 
+  console.log("User components IDs with array:" + props.elementComponents); //elements specific array of components ids live here (this is an array)
+  console.log("User componenets objects:" + props.allComponents); //user-specific array of objects for all compoenents (all compoenent data live here)
+
+  //loop through this array and create a new object that looks like this:
+  // componentDetail = [{
+  //    id: 1,
+  //    name: Vitamin C,
+  //    description = "yepeypepeyo" 
+  //}]
+
   return (
     <>
       <div key={props.key + "-main"} className ="smallItem">
@@ -42,6 +53,9 @@ export function SmallCard(props) {
         <div className="smallItemDetails" key={props.key + "-seconds"}>
           <h1 className="smallItemName" key={props.key + "-thirds"}>{props.name}</h1>
           <p className="smallItemText" key={props.key + "-fourths"}>{newBenefits}</p>
+          {/* map through the componentDetail array you made and wrap the <p> tag with the function*/}
+              <p>Components</p>
+          {/* end map function here*/}
         </div>
       </div>
     </>

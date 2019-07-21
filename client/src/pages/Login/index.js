@@ -159,7 +159,7 @@ class Login extends Component {
               for (let id of componentList) {
                 API.getUserComponents({ componentId: parseInt(id) })
                   .then(result => {
-                    newUser.components.push(result.data);
+                    newUser.components.push(result.data[0]);
                     if (id === componentList[componentList.length - 1]) {
                       finished.components = true;
                     }
