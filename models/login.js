@@ -12,7 +12,7 @@ const loginSchema = new Schema({
   libraCategories: { type: Object },
   elements: [{ type: Object }],
   components: { type: Array },
-  remedies: [{ type: Array }]
+  remedies: [{ type: Object }]
 });
 
 const Login = mongoose.model("Login", loginSchema);
