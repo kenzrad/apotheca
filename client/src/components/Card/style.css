@@ -105,7 +105,8 @@
 .smallItemText {
   text-align: left;
   font-family: "cormorant";
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   font-size: 1.2rem;
   margin: 0;
+  padding-bottom: 7px;
 }
