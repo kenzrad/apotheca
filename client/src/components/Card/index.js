@@ -27,8 +27,6 @@ export function SmallCard(props) {
     }
   }
 
-  console.log("User components IDs with array:" + props.elementComponents); //elements specific array of components ids live here (this is an array)
-  console.log("User componenets objects:" + props.allComponents); //user-specific array of objects for all compoenents (all compoenent data live here)
   var componentDetail = [];
   //want each component object pushed to this array
 
@@ -36,13 +34,11 @@ export function SmallCard(props) {
     var currentId = props.elementComponents[j];
     var componentArr = {};
     for (var k = 0; k < props.allComponents.length; k++) {
-      if (currentId === props.allComponents[k].id) {
+      if (parseInt(currentId) === parseInt(props.allComponents[k].id)) {
         componentArr = props.allComponents[k];
-
       }
     }
     componentDetail.push(componentArr)
-    console.log(componentDetail);
   }
 
   //loop through this array and create a new object that looks like this:
