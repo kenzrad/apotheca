@@ -109,7 +109,16 @@ class Login extends Component {
         if (result.data) {
           //show modal that their username sucks
         } else {
-          API.getUserElements({ vegan: newState.vegan, hypoallergenic: newState.hypoallergenic })
+                   
+          let variable = {};
+          if(newUser.vegan) {
+            variable.vegan = newUser.vegan;
+          }
+          if(newUser.hypoallergenc) {
+            variable.hypoallergenic = newUser.hypoallergenic;
+          }
+
+          API.getUserElements(variable)
             .then(result => {
               let resultArr = result.data;
               let componentList = [];
