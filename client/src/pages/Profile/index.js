@@ -48,7 +48,8 @@ class Profile extends Component {
                                     image={element.image}
                                     hypoallergenic={element.hypoallergenic}
                                     vegan={element.vegan}
-                                    userComponent={element.components}
+                                    elementComponents={element.components}
+                                    allComponents={this.userData.components}
                                 />
                             ))}
                         </SmallCards>
