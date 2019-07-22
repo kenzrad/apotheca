@@ -6,6 +6,7 @@ import { RemedySmallCard, RemedySmallCards } from "../../components/RemedyCard"
 import { SmallCard, SmallCards } from "../../components/Card";
 import Wrapper from "../../components/Wrapper";
 import { Libra, LibraSectionHeader } from "../../components/Libra";
+import { Nutrients, Nutrient } from "../../components/Nutrients";
 import Navbar from "../../components/Navbar";
 import "./style.css";
 
@@ -70,6 +71,21 @@ class Profile extends Component {
                                 />
                             ))}
                         </RemedySmallCards>
+                    </div>
+
+                </div>
+                <div className="libraNutrients">
+                    <LibraSectionHeader name={this.userData.firstName} sectionName="ESSENTIAL NUTRIENTS"/>
+                    <div className="libraNutrientsInner">
+                        <Nutrients>
+                            {this.userData.components.map(component => (
+                                <Nutrient
+                                    key={component._id}
+                                    name={component.component}
+                                    description={component.description}
+                                />
+                            ))}
+                        </Nutrients>
                     </div>
                 </div>
             </Wrapper>

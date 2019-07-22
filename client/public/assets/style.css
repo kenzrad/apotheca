@@ -1,7 +1,7 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background-color: rgb(210, 223, 210);
+    background-color:rgba(140,157,173, 0.3);
 }
 
 #root {

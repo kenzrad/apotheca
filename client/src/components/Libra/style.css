@@ -22,7 +22,7 @@
 
 .libraTable {
   display: flex;
-  margin: 50px;
+  margin: 35px;
 }
 
 .libraTableCategory {
@@ -50,7 +50,7 @@
 
 .libraSymbol {
   font-family: "Roboto", sans-serif;
-  font-size: 15rem;
+  font-size: 10rem;
   color: rgba(73, 64, 64, 0.3);
   padding: 0 10px;
   width: 200px;

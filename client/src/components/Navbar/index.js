@@ -20,7 +20,7 @@ function Navbar(props) {
         <ul className="horizontal-list">
           <li className="nav-item">
             <Link to="/Main" className={window.location.pathname === "/Main" ? "nav-link active" : "nav-link"}>
-              Home
+              Articles
             </Link>
           </li>
           <li className="nav-item">

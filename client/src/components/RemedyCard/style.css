@@ -5,6 +5,7 @@
   align-content: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .remedy {
@@ -15,9 +16,14 @@
   font-family: "cormorant";
   margin: 20px;
   padding: 0 20px;
-  max-width: 600px;
+  width: 42vw;
   color: rgb(73, 64, 64);
-  
+}
+
+@media only screen and (max-width: 1000px) {
+  .remedy {
+    width: 100%;
+  }
 }
 
 .remedyTitle {
