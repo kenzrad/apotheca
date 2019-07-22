@@ -24,6 +24,20 @@
     margin-right: 20px;
 }
 
+.libraNutrients {
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8); 
+    background-color: white;
+    border: solid 2px;
+    border-color: rgba(175, 145, 145 , 0.3);
+    margin: 20px;
+    padding: 0;
+}
+
+.libraNutrientsInner {
+    margin: 0 20px 20px 20px;
+}
+
+
 @media only screen and (max-width: 768px) {
     .libraRemedies {
         width: 100%;
@@ -35,5 +49,8 @@
         margin: 0;
     }
 
+    .libraNutrients {
+        margin: 0;
+    }
 
 }

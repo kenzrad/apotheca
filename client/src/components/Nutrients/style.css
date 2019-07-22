@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
+
+/* SMALL */
+
+.nutrients {
+  padding: 0;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+
+.nutrientName {
+  font-family: "italiana";
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.nutrientText {
+  text-align: left;
+  font-family: "cormorant";
+  letter-spacing: 0.03em;
+  font-size: 1.2rem;
+  margin: 0;
+  padding-bottom: 7px;
+}
