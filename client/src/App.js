@@ -7,7 +7,6 @@ import Elements from "./pages/Elements";
 import Remedies from "./pages/Remedies";
 import NoMatch from "./pages/NoMatch";
 import comparisonArr from './components/Quiz/comparisonArr.json';
-import API from "./utils/API";
 
 
 
@@ -40,10 +39,10 @@ class App extends Component {
     }, () => {
       if (this.state.confirmPassword !== "" && this.state.confirmPassword !== this.state.password) {
         document.getElementsByName("confirmPassword")[0].classList = "";
-        document.getElementsByName("confirmPassword")[0].classList.add("passwordMismatch");
+        document.getElementsByName("confirmPassword")[0].classList.add("error");
       } else if (this.state.confirmPassword !== "" && this.state.confirmPassword === this.state.password) {
         document.getElementsByName("confirmPassword")[0].classList = "";
-        document.getElementsByName("confirmPassword")[0].classList.add("passwordMatch");
+        document.getElementsByName("confirmPassword")[0].classList.add("noError");
       } else if (this.state.confirmPassword === "") {
         document.getElementsByName("confirmPassword")[0].removeAttribute("class");
       }

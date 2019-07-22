@@ -32,7 +32,7 @@
     width: 100%;
     position: absolute;
     z-index: 2;
-
+    overflow-x: hidden;
 }
 
 .login-backdrop button {
@@ -95,11 +95,11 @@
 /* 
 /   CONFIRM PASSWORD STYLES
 */
-.passwordMismatch {
+.error {
     border-color: #cd3236!important;
 }
 
-.passwordMatch {
+.noError {
     border-color: #7ed685!important;
 }
 
@@ -111,19 +111,6 @@
     display: flex;
     flex-direction: column;
 }
-
-/*
-/   LOGIN MODAL
-*/
-.loginModalText {
-    font-size: 1.5rem;
-    color: rgba(175, 145, 145, 1);
-}
-
-.loginModalSubtext {
-    font-size: 1rem;
-}
-
 
 
 /* 
