@@ -15,10 +15,10 @@ export function SmallCards({ children }) {
 }
 
 export function SmallCard(props) {
-  var benefits = props.benefits.toString();
-  var newBenefits = "";
+  let benefits = props.benefits.toString();
+  let newBenefits = "";
 
-  for (var i = 0; i < benefits.length; i++) {
+  for (let i = 0; i < benefits.length; i++) {
     if (benefits[i] === ",") {
       newBenefits += "  |  ";
     }
@@ -27,13 +27,13 @@ export function SmallCard(props) {
     }
   }
 
-  var componentDetails = [];
+  let componentDetails = [];
   //want each component object pushed to this array
 
-  for (var j = 0; j < props.elementComponents.length; j++) {
-    var currentId = props.elementComponents[j];
-    var componentArr = {};
-    for (var k = 0; k < props.allComponents.length; k++) {
+  for (let j = 0; j < props.elementComponents.length; j++) {
+    let currentId = props.elementComponents[j];
+    let componentArr = {};
+    for (let k = 0; k < props.allComponents.length; k++) {
       if (parseInt(currentId) === parseInt(props.allComponents[k].id)) {
         componentArr = props.allComponents[k];
       }
@@ -41,23 +41,16 @@ export function SmallCard(props) {
     componentDetails.push(componentArr)
   }
 
-  var componentList = "";
+  let componentList = "";
 
-  for (var i = 0; i < componentDetails.length; i++) {
-    if (i < (componentDetails.length - 1)) {
-      componentList = componentList + componentDetails[i].component + ", "
+  for (let l = 0; l < componentDetails.length; l++) {
+    if (l < (componentDetails.length - 1)) {
+      componentList = componentList + componentDetails[l].component + ", "
     }
     else {
-      componentList += "and " + componentDetails[i].component
+      componentList += "and " + componentDetails[l].component
     }
   }
-
-  //loop through this array and create a new object that looks like this:
-  // componentDetail = [{
-  //    id: 1,
-  //    name: Vitamin C,
-  //    description = "yepeypepeyo" 
-  //}]
 
   return (
     <>
