@@ -8,7 +8,7 @@ export function SideArticle(props) {
       <div className="sideArticleDiv">
         <img className="sideImage" alt="Side Article" src={props.image}></img>
         <h3 className="sideTitle">{props.title}</h3>
-        <p className="sideText">{props.synopsis}<a className="sideLink" target="_blank" href={props.link}> (read more)</a></p>
+        <p className="sideText">{props.synopsis}<a className="sideLink" target="_blank" rel="noopener noreferrer" href={props.link}> (read more)</a></p>
       </div>
 
     </>

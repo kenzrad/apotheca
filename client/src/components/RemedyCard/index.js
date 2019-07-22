@@ -69,7 +69,7 @@ export function RemedySmallCard(props) {
       <div className="remedyInfo">
         <p>Prep time: {props.time}</p>
         <p>Frequency: {props.consistency}</p>
-        <p>How it works: {props.works} <a className="remedyLink" target="_target" href={props.source}>(read more)</a></p>
+        <p>How it works: {props.works} <a className="remedyLink" target="_target" rel="noopener noreferrer" href={props.source}>(read more)</a></p>
       </div>
     </div>
   );

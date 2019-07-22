@@ -20,7 +20,7 @@ function MainArticle(props, { children }) {
           <p className="mainLastP">Payne adds that this results-driven routine has both a genderless and ageless appeal, and, thankfully, “it doesn’t clutter up the bathroom” – or your recycling bin.</p>
           <h5>3. Diversity and inclusion conversations will further be heard</h5>
           <p>The last two years have seen the industry’s late move towards demonstrating greater diversity. While we hope that by this time next year it will seem unbelievable that mainstream cosmetic brands didn’t always cater for all, with extensive colour ranges and ethnicity/gender/age-inclusive marketing, there is still a lot to be done.
-            <a alt="main-article" target="_blank" href="https://www.harpersbazaar.com/uk/beauty/skincare/a25568595/beauty-trends-2019/"> (read more)</a>
+            <a alt="main-article" target="_blank" rel="noopener noreferrer"  href="https://www.harpersbazaar.com/uk/beauty/skincare/a25568595/beauty-trends-2019/"> (read more)</a>
           </p>
 
 
