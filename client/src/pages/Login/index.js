@@ -1,14 +1,14 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
 import Navbar from "../../components/Navbar";
 import Brand from "../../components/Brand";
 import Modal from "../../components/Modal";
+import * as ModalContent from "../../components/ModalContent";
 import "./style.css";
 
-let convertedQuiz = [];
-let talliedQuiz = {};
 class Login extends Component {
   moveLeft = (e, num) => {
     e.preventDefault();
@@ -72,138 +72,206 @@ class Login extends Component {
 
   finalizeLogin = e => {
     e.preventDefault();
+    let loginInfo = this.props.login();
 
-    API.getUserLogin(this.props.login())
-      .then(result => {
-        if (result.data === null) {
-          document.getElementsByName("loginError")[0].classList.remove("hidden");
-        } else {
-          sessionStorage.clear();
-          sessionStorage.setItem('userData', JSON.stringify(result.data));
-          this.props.history.push("/Profile/" + result.data.userName);
-        }
-      });
+    if (!loginInfo.Loginname && loginInfo.password) {
+      ReactDOM.render(<ModalContent.LoginNoUsername />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+    } else if (loginInfo.Loginname && !loginInfo.password) {
+      ReactDOM.render(<ModalContent.LoginNoPassword />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+    } else if (!loginInfo.Loginname && !loginInfo.password) {
+      ReactDOM.render(<ModalContent.DidntPutAnything />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+    } else {
+      API.getUserLogin(this.props.login())
+        .then(result => {
+          if (result.data === null) {
+            ReactDOM.render(<ModalContent.LoginError />, document.getElementsByName("ErrorModal")[0]);
+            document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+          } else {
+            sessionStorage.clear();
+            sessionStorage.setItem('userData', JSON.stringify(result.data));
+            this.props.history.push("/Profile/" + result.data.userName);
+          }
+        });
+    }
+  }
+
+  continueToQuiz = (newState, callback) => {
+    if (!newState.firstName) {
+      ReactDOM.render(<ModalContent.NoFirstName />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+      return false;
+    } else if (!newState.username) {
+      ReactDOM.render(<ModalContent.SignupNoUsername />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+      return false;
+    } else if (!newState.password) {
+      ReactDOM.render(<ModalContent.SignupNoPassword />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+      return false;
+    } else if (newState.password !== newState.confirmPassword) {
+      ReactDOM.render(<ModalContent.PasswordMismatch />, document.getElementsByName("ErrorModal")[0]);
+      document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+      return false;
+    } else {
+      if (callback) {
+        callback();
+      }
+      return true;
+    }
   }
 
   finalizeSignup = e => {
     e.preventDefault();
 
     let newState = this.props.signup();
+    let prevFieldsOkay = this.continueToQuiz(newState);
 
-    let newUser = {
-      userName: newState.username,
-      password: newState.password,
-      firstName: newState.firstName,
-      vegan: newState.vegan,
-      hypoallergenic: newState.hypoallergenic,
-      libraOverall: "",
-      libraCategories: [],
-      elements: [],
-      components: [],
-      remedies: []
+    if (prevFieldsOkay) {
+      if (newState.quizResults.indexOf("empty") !== -1) {
+        ReactDOM.render(<ModalContent.QuizNotEmpty />, document.getElementsByName("ErrorModal")[0]);
+        document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+      } else {
+        let newUser = {
+          userName: newState.username,
+          password: newState.password,
+          firstName: newState.firstName,
+          vegan: newState.vegan,
+          hypoallergenic: newState.hypoallergenic,
+          libraOverall: "",
+          libraCategories: [],
+          elements: [],
+          components: [],
+          remedies: []
+        }
+
+        this.findOverallCategory(newUser.libraCategories);
+
+        // Create API route that checks username
+        API.getUserNameCheck({ userName: newState.username })
+          .then(result => {
+            if (result.data) {
+              ReactDOM.render(<ModalContent.UserExists />, document.getElementsByName("ErrorModal")[0]);
+              document.getElementsByName("ErrorModal")[0].classList.remove("hidden");
+            } else {
+
+              let variable = {};
+              let convertedQuiz = [];
+              let talliedQuiz = {};
+
+              if (newUser.vegan) {
+                variable.vegan = newUser.vegan;
+              }
+              if (newUser.hypoallergenc) {
+                variable.hypoallergenic = newUser.hypoallergenic;
+              }
+
+              API.getUserElements(variable)
+                .then(result => {
+                  let resultArr = result.data;
+                  let componentList = [];
+                  let remediesList = [];
+                  let finished = {
+                    components: false,
+                    remedies: false
+                  }
+
+                  convertedQuiz = this.props.convertQuizResults();
+                  talliedQuiz = this.props.countQuizResults(convertedQuiz);
+                  newUser.libraCategories = talliedQuiz;
+
+                  newUser.libraOverall = this.findOverallCategory(talliedQuiz);
+
+                  for (let item in talliedQuiz) {
+                    let count = 0;
+                    let goal = 0;
+                    let index = 0;
+                    goal = talliedQuiz[item];
+
+                    while (count !== goal && index < resultArr.length) {
+                      if (resultArr[index].category === item) {
+                        newUser.elements.push(resultArr[index]);
+                        count++;
+                      }
+                      index++;
+                    }
+                  }
+
+                  // SET UP NEWUSER COMPONENTS
+                  for (let item of newUser.elements) {
+                    for (let id of item.components) {
+                      if (componentList.indexOf(id) === -1) {
+                        componentList.push(id);
+                      }
+                    }
+                  }
+
+                  for (let id of componentList) {
+                    API.getUserComponents({ componentId: parseInt(id) })
+                      .then(result => {
+                        newUser.components.push(result.data[0]);
+                        if (id === componentList[componentList.length - 1]) {
+                          finished.components = true;
+                        }
+                      });
+                  }
+
+                  //SET UP NEWUSER REMEDIES
+                  for (let item of newUser.elements) {
+                    for (let id of item.home_remedy) {
+                      if (remediesList.indexOf(id) === -1) {
+                        remediesList.push(id);
+                      }
+                    }
+                  }
+
+                  for (let id of remediesList) {
+                    API.getUserRemedies({ remedyId: parseInt(id) })
+                      .then(result => {
+                        newUser.remedies.push(result.data[0]);
+                        if (id === remediesList[remediesList.length - 1]) {
+                          finished.remedies = true;
+                        }
+                      });
+                  }
+
+                  let interval = setInterval(() => {
+                    if (finished.remedies === false && finished.components === false) {
+                      // console.log("working");
+                      //do nothing
+                    } else {
+                      API.createLoginUser(newUser)
+                        .then(result => {
+                          // console.log(newUser)
+                          sessionStorage.clear();
+                          sessionStorage.setItem('userData', JSON.stringify(newUser));
+                          this.props.history.push("/Profile/" + newUser.userName);
+                        });
+
+                      clearInterval(interval);
+                    }
+                  }, 100);
+                });
+            }
+          });
+      }
+    }
+  }
+
+  findOverallCategory = categories => {
+    let currentOverall = "kalon";
+    let currTop = 0;
+
+    for (let key in categories) {
+      if (categories[key] > currTop) {
+        currentOverall = key;
+        currTop = categories[key];
+      }
     }
 
-    //Create API route that checks username
-    API.getUserNameCheck({ userName: newState.username })
-      .then(result => {
-        if (result.data) {
-          //show modal that their username sucks
-        } else {
-                   
-          let variable = {};
-          if(newUser.vegan) {
-            variable.vegan = newUser.vegan;
-          }
-          if(newUser.hypoallergenc) {
-            variable.hypoallergenic = newUser.hypoallergenic;
-          }
-
-          API.getUserElements(variable)
-            .then(result => {
-              let resultArr = result.data;
-              let componentList = [];
-              let remediesList = [];
-              let finished = {
-                components: false,
-                remedies: false
-              }
-
-              convertedQuiz = this.props.convertQuizResults();
-              talliedQuiz = this.props.countQuizResults(convertedQuiz);
-              newUser.libraCategories = talliedQuiz;
-
-              for (let item in talliedQuiz) {
-                let count = 0;
-                let goal = 0;
-                let index = 0;
-                goal = talliedQuiz[item];
-
-                while (count !== goal && index < resultArr.length) {
-                  if (resultArr[index].category === item) {
-                    newUser.elements.push(resultArr[index]);
-                    count++;
-                  }
-                  index++;
-                }
-              }
-
-              // SET UP NEWUSER COMPONENTS
-              for (let item of newUser.elements) {
-                for (let id of item.components) {
-                  if (componentList.indexOf(id) === -1) {
-                    componentList.push(id);
-                  }
-                }
-              }
-
-              for (let id of componentList) {
-                API.getUserComponents({ componentId: parseInt(id) })
-                  .then(result => {
-                    newUser.components.push(result.data[0]);
-                    if (id === componentList[componentList.length - 1]) {
-                      finished.components = true;
-                    }
-                  });
-              }
-
-              //SET UP NEWUSER REMEDIES
-              for (let item of newUser.elements) {
-                for (let id of item.home_remedy) {
-                  if (remediesList.indexOf(id) === -1) {
-                    remediesList.push(id);
-                  }
-                }
-              }
-
-              for (let id of remediesList) {
-                API.getUserRemedies({ remedyId: parseInt(id) })
-                  .then(result => {
-                    newUser.remedies.push(result.data[0]);
-                    if (id === remediesList[remediesList.length - 1]) {
-                      finished.remedies = true;
-                    }
-                  });
-              }
-
-              let interval = setInterval(() => {
-                if (finished.remedies === false && finished.components === false) {
-                  // console.log("working");
-                  //do nothing
-                } else {
-                  API.createLoginUser(newUser)
-                    .then(result => {
-                      // console.log(newUser)
-                      sessionStorage.clear();
-                      sessionStorage.setItem('userData', JSON.stringify(newUser));
-                      this.props.history.push("/Profile/" + newUser.userName);
-                    });
-
-                  clearInterval(interval);
-                }
-              }, 100);
-            });
-        }
-      });
+    return currentOverall;
   }
 
   render() {
@@ -225,11 +293,15 @@ class Login extends Component {
               <input className="login-text" onChange={this.props.handleInputChange} type="text" name="loginUsername" placeholder="username"></input>
               <input className="login-text" onChange={this.props.handleInputChange} type="password" name="loginPassword" placeholder="password"></input>
 
-              
+
             </form>
 
             <div className="chevrons">
-              <button title="Go back" onClick={e => { this.moveLeft(e, 1); document.getElementById("loginForm").reset(); this.props.resetLogin(); }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Go back" onClick={e => {
+                this.moveLeft(e, 1);
+                document.getElementById("loginForm").reset();
+                this.props.resetLogin();
+              }}><i className="fas fa-chevron-left"></i></button>
               <button title="Log in" onClick={this.finalizeLogin}><i className="fas fa-chevron-right"></i></button>
             </div>
           </div>
@@ -253,9 +325,15 @@ class Login extends Component {
             </form>
 
             <div className="chevrons">
-              <button title="Go back" onClick={e => { this.moveLeft(e, 2); document.getElementById("signupForm").reset(); this.props.resetSignup(); }}><i className="fas fa-chevron-left"></i></button>
+              <button title="Go back" onClick={e => {
+                this.moveLeft(e, 2);
+                document.getElementById("signupForm").reset();
+                this.props.resetSignup();
+              }}><i className="fas fa-chevron-left"></i></button>
 
-              <button title="Sign up" type="submit" onClick={e => { this.moveRight(e, 1) }}><i className="fas fa-chevron-right"></i></button>
+              <button title="Sign up" type="submit" onClick={e => {
+                this.continueToQuiz(this.props.signup(), () => { this.moveRight(e, 1) });
+              }}><i className="fas fa-chevron-right"></i></button>
             </div>
 
           </div>
@@ -272,9 +350,8 @@ class Login extends Component {
           </div>
         </div>
         {/* MODALS */}
-        <Modal name="loginError">
-          <h3 className="loginModalText">Username/Password Not Found</h3>
-          <p className="loginModalSubtext">Did you use the correct username and password combination?</p>
+        <Modal name="ErrorModal">
+          {/* ModalContent gets pushed to here. */}
         </Modal>
       </div>
     )

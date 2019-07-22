@@ -51,6 +51,8 @@ class Quiz extends Component {
                                     nextTarget.classList.remove("slideInLeft");
                                 }, 250);
                             }, 250);
+                        } else {
+                            running = false;
                         }
                     }, 800)
                 } else {
