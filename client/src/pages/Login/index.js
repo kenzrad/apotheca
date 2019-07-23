@@ -302,8 +302,8 @@ class Login extends Component {
               <button className="login-link" onClick={e => { this.moveRight(e, 1) }}>Log In</button>
               <span>|</span>
               <button className="login-link" onClick={e => { this.moveRight(e, 2) }}>Sign Up</button>
-              {/* <span>|</span> */}
-              {/* <button className="login-link" onClick={}>Learn More</button> */}
+              <span>|</span>
+              <button className="login-link" onClick={e => { document.getElementsByName("BrandStatementModal")[0].classList.remove("hidden") }}>Learn More</button>
             </div>
           </div>
 
@@ -379,7 +379,7 @@ class Login extends Component {
         <Modal className="modal modal-small hidden" name="LoadingModal" close="false">
           <ModalContent.Loading />
         </Modal>
-        <Modal name="BrandStatementModal">
+        <Modal className="modal modal-large hidden" name="BrandStatementModal">
           <BrandStatement />
         </Modal>
       </div>
