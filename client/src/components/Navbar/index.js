@@ -10,7 +10,6 @@ class Navbar extends Component {
   componentDidMount() {
     if (!this.userData || this.userData === "no data") {
       document.getElementById("libraLink").classList.add("hidden");
-      document.getElementById("signOut").classList.add("hidden");
     }
   }
   
