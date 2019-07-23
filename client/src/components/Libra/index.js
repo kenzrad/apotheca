@@ -1,7 +1,12 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export function Libra(props) {
+
+  function logOut() {
+    sessionStorage.clear();
+  };
 
   let considerations = "All products";
   if(props.vegan===true && props.hypoallergenic===true) {
@@ -41,7 +46,14 @@ export function Libra(props) {
   return (
     <>
       {/*libra info will go here*/}
-      <h1 className="libraMainTitle">{props.name.toUpperCase()}'S LIBRA PROFILE</h1>
+      <div className="titleContainer">
+        <h1 className="libraMainTitle">{props.name.toUpperCase()}'S LIBRA PROFILE</h1>      
+        <div className="signOutIcon">
+          <Link id="signOut" className="nav-item" onClick={logOut} to="/">
+            <i className="fas fa-sign-out-alt fa-2x"></i>
+          </Link>
+        </div>
+      </div>
       <div className="libraDiv">
         <div>
           <h1 className="libraSymbol">{symbol}</h1>
