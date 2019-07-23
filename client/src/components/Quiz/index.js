@@ -161,7 +161,7 @@ class Quiz extends Component {
                         <div className="options" onClick={this.optionClickHandler}>
                             <p data-answer="A">Has visible pores along t-zone and oil build up throughout the day.</p>
                             <p data-answer="B">Is tight and irritated, has dry patches along the cheeks and chin.</p>
-                            <p data-answer="C">Rarely gets and breakouts, has little pores long t-zone, and rarely any oil buildup.</p>
+                            <p data-answer="C">Rarely gets breakouts, has little pores long t-zone, and rarely any oil buildup.</p>
                             <p data-answer="D">Frequently has breakout and has irritated skin.</p>
                         </div>
                     </div>

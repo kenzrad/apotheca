@@ -92,3 +92,52 @@ export function QuizNotEmpty() {
     </>
   );
 }
+
+export function Disclaimer() {
+  return (
+    <>
+      <h3 className="loginModalText">APOTHECA DISCLAIMER</h3>
+      <p className="loginModalSubtext">
+        The content provided on this website is strictly for general
+        informational purposes and should not be considered medical
+        advice. No product/remedy information is intended to be taken as a
+        diagnoses, treatment, or preventative for any disease.
+            </p>
+      <p className="loginModalSubtext">
+        The information on this website has been accumulated from many
+        published sources and websites and should be referred to as a
+        guide. Apotheca cannot guarantee the accuracy of all the
+        information provided on this website and accepts no liability in
+        respect to omission or error.
+            </p >
+      <p className="loginModalSubtext">
+        We are not responsible for any reaction or any sensitivity our
+        practices and elements might cause to your skin. If you think you
+        might have skin sensitivities, please consult a medical doctor or
+        dermatologist before proceeding with our remedies.
+            </p >
+      <p className="loginModalSubtext">
+        The information on this site has not been reviewed, evaluated, or
+        approved by the Food and Drug Administration.
+            </p>
+      <p className="loginModalSubtext">
+        If you do proceed to test the remedies we have provided, an
+        allergy patch test is recommended if there is any concern or
+        history for skin reactions or sensitivity.
+            </p >
+      <p className="loginModalSubtext">
+        Any comments or feedback related to our website are individually
+        biased and should not be taken as a form of legitimate medical
+        advice.
+            </p >
+    </>
+  );
+}
+
+export function Loading() {
+  return (
+    <>
+      <img src={process.env.PUBLIC_URL + "/assets/images/loading.svg"} height="150" width="150" />
+    </>
+  );
+}

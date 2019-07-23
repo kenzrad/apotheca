@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana|Cinzel|Cormorant|Forum&display=swap');
 
 
-.modal {
+.modal-small, .modal-large {
     position: absolute;
     width: 300px;
     /* 50% screen width - [ half width(125px) + padding(20px) + border(0px) + margin(0px) ]  */
@@ -12,7 +12,11 @@
     font-family: "cormorant";
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8); 
     border-radius: 12px;
-    font-family: "cormorant";
     color: rgb(73, 64, 64);
     text-align: center;
+}
+
+.modal-large {
+    width: 60%;
+    left: calc(50% - 30% - 20px);
 }

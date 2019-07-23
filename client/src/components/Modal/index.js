@@ -25,10 +25,11 @@ import "./style.css";
 document.addEventListener("click", e => {
     let target = e.target;
     let isModal = false;
-
+    
     while (target.id !== "root") {
         if (target.classList.contains("modal") && !target.classList.contains("hidden")) {
             isModal = true;
+            console.log("0");
         }
 
         target = target.parentElement;
@@ -36,7 +37,7 @@ document.addEventListener("click", e => {
 
     if (!isModal) {
         for (let modal of document.getElementsByClassName("modal")) {
-            if (!modal.classList.contains("hidden")) {
+            if (!modal.classList.contains("hidden") && modal.getAttribute("close") !== "false") {
                 modal.classList.add("hidden");
             }
         }
@@ -48,7 +49,7 @@ class Modal extends Component {
 
     render() {
         return (
-            <div className="modal hidden" {...this.props} />
+            <div {...this.props} />
         );
     }
 }
