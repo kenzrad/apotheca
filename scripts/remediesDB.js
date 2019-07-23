@@ -178,7 +178,7 @@ const remedySeed = [
     ingredients: ["1 Teaspoon Acai Berry Powder", "1 Teaspoon Rose Water"],
     instructions: [
       "In a small, clean bowl, pour in all your ingredients.Mix thoroughly.",
-      "Now wash your face with your cleanser or whichever gentle soap you use.Pat dry.This step is optional, but highly recommended.Do some facial steaming to open up your pores.",
+      "Now wash your face with your cleanser or whichever gentle soap you use. Pat dry. This step is optional, but highly recommended.Do some facial steaming to open up your pores.",
       "Time for application! Use your clean finger tips to evenly apply the face mask all over your face.",
       "Leave the mask on your face for about 10 – 15 minutes.",
       "Now wash off with a small cotton cloth.No need to use cleanser / soap at this point.",
