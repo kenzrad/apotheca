@@ -11,3 +11,7 @@ body {
 .hidden {
     display: none!important;
 }
+
+a:hover {
+    color: goldenrod;
+}
