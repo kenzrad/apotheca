@@ -42,7 +42,6 @@
 
 .login-btn {
     color: rgba(73, 64, 64, .5);
-    cursor: pointer;
 }
 
 #loginAndSignup {
@@ -55,7 +54,6 @@
     font-size: 0.75em;
     letter-spacing: 0.1em;
     color: rgb(73, 64, 64);
-    cursor: pointer
 }
 
 .login-link:hover {
@@ -86,6 +84,10 @@
 .chevrons {
     text-align: center;
     margin: 20px;
+}
+
+.chevron:hover {
+    color: goldenrod;
 }
 
 .chevrons button {
@@ -230,4 +232,8 @@
         right: 0;
         opacity: 1;
     }
+}
+
+.brandLink {
+    text-decoration: none;
 }

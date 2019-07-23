@@ -4,8 +4,9 @@ import { withRouter } from 'react-router';
 import API from "../../utils/API";
 import Quiz from "../../components/Quiz";
 import Navbar from "../../components/Navbar";
-import Brand from "../../components/Brand";
+import { Brand, BrandStatement } from "../../components/Brand";
 import Modal from "../../components/Modal";
+import { Link } from "react-router-dom";
 import * as ModalContent from "../../components/ModalContent";
 import "./style.css";
 
@@ -292,13 +293,17 @@ class Login extends Component {
     return (
       <div className="login-backdrop">
         <Navbar display="hide" />
-        <Brand />
+        <Link className="brandLink" to="/Main">
+          <Brand />
+        </Link>
         <div id="loginAndSignup">
           <div id="loginSignupLinks">
             <div>
               <button className="login-link" onClick={e => { this.moveRight(e, 1) }}>Log In</button>
               <span>|</span>
               <button className="login-link" onClick={e => { this.moveRight(e, 2) }}>Sign Up</button>
+              {/* <span>|</span> */}
+              {/* <button className="login-link" onClick={}>Learn More</button> */}
             </div>
           </div>
 
@@ -315,8 +320,8 @@ class Login extends Component {
                 this.moveLeft(e, 1);
                 document.getElementById("loginForm").reset();
                 this.props.resetLogin();
-              }}><i className="fas fa-chevron-left"></i></button>
-              <button title="Log in" onClick={this.finalizeLogin}><i className="fas fa-chevron-right"></i></button>
+              }}><i className="fas fa-chevron-left chevron"></i></button>
+              <button title="Log in" onClick={this.finalizeLogin}><i className="fas fa-chevron-right chevron"></i></button>
             </div>
           </div>
 
@@ -343,11 +348,11 @@ class Login extends Component {
                 this.moveLeft(e, 2);
                 document.getElementById("signupForm").reset();
                 this.props.resetSignup();
-              }}><i className="fas fa-chevron-left"></i></button>
+              }}><i className="fas fa-chevron-left chevron"></i></button>
 
               <button title="Sign up" type="submit" onClick={e => {
                 this.continueToQuiz(this.props.signup(), () => { this.moveRight(e, 1) });
-              }}><i className="fas fa-chevron-right"></i></button>
+              }}><i className="fas fa-chevron-right chevron"></i></button>
             </div>
 
           </div>
@@ -373,6 +378,9 @@ class Login extends Component {
         </Modal>
         <Modal className="modal modal-small hidden" name="LoadingModal" close="false">
           <ModalContent.Loading />
+        </Modal>
+        <Modal name="BrandStatementModal">
+          <BrandStatement />
         </Modal>
       </div>
     )

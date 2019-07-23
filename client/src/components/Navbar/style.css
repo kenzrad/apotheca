@@ -11,7 +11,6 @@
 
 a.navbar-search-container {
   margin: 0;
-
 }
 
 .horizontal-list {
@@ -79,7 +78,10 @@ a.navbar-search-container {
   margin-right: 20px;
   text-decoration: none;
   color: rgb(73, 64, 64);
-  cursor: pointer;
+}
+
+.nav-brand {
+  color: rgb(73, 64, 64) !important;
 }
 
 .nav-search {
@@ -87,7 +89,6 @@ a.navbar-search-container {
   margin-right: 0;
   margin-left: 10px;
   color:  rgb(73, 64, 64);
-  
 }
 
 i.nav-search {
