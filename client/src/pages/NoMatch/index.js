@@ -4,7 +4,7 @@ import Wrapper from "../../components/Wrapper";
 function NoMatch() {
   return (
     <Wrapper>
-      404, bitch!
+      404, you beautiful person!
     </Wrapper>
   );
 }
