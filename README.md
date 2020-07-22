@@ -39,7 +39,7 @@ Member:
 ## Contributors
 * Anna Warner (warnerak) - [<img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt="Anna Github" width="15"/>](https://github.com/warnerak) [<img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Anna linkedin" width="15"/>](https://www.linkedin.com/in/anna-warner-50bb31b7/)
 * Thomas Smith (slowpossum) - [<img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt="Thomas Github" width="15"/>](https://github.com/slowpossum) [<img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Thomas linkedin" width="15"/>](https://www.linkedin.com/in/thomas-smith-a95538178/)
-* Kensey Barker (kenzrad) - [<img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt="Kensey Github" width="15"/>](https://github.com/kenzrad) [<img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Kensey linkedin" width="15"/>](https://www.linkedin.com/in/kensey-barker/)
 * Patrick Caserta (pcaserta) - [<img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt="Patrick Github" width="15"/>](https://github.com/pcaserta) [<img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Patrick linkedin" width="15"/>](
 https://www.linkedin.com/in/patrick-caserta-46530312b/)
+* Kensey Barker (kenzrad) - [<img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt="Kensey Github" width="15"/>](https://github.com/kenzrad) [<img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Kensey linkedin" width="15"/>](https://www.linkedin.com/in/kensey-barker/)
 
