@@ -37,7 +37,7 @@ Member:
 * Axios
 
 ## Contributors
-* Anna Warner - [warnerak](https://github.com/warnerak)
-* Thomas Smith - [slowpossum](https://github.com/slowpossum)
-* Kensey Barker - [kenzrad](https://github.com/kenzrad)
-* Patrick Caserta - [pcaserta](https://github.com/pcaserta)
+* Anna Warner - [warnerak](https://github.com/warnerak) | [LinkedIn]()
+* Thomas Smith - [slowpossum](https://github.com/slowpossum) | [LinkedIn]()
+* Kensey Barker - [kenzrad](https://github.com/kenzrad) | [LinkedIn](https://www.linkedin.com/in/kensey-barker/)
+* Patrick Caserta - [pcaserta](https://github.com/pcaserta) | [LinkedIn]()
