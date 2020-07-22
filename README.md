@@ -1,4 +1,4 @@
-# apotheca
+# [apotheca](https://enigmatic-meadow-75915.herokuapp.com/)
 
 Apotheca is a personalized resource on natural skincare. We provide personalized skin care information to reveal how our holistic elements can enhance, maintain, and sustain your natural beauty.
 
@@ -22,12 +22,16 @@ Member:
 * Incorporate a wellness log and calendar for members
 * Add search and filter options to the remedies and elements pages
 
-## MERN Technologies
+## Technologies
+### MERN
 * MongoDB, Mongoose
 * Express
 * React, React-Router
 * Node
-* API: Ajax
+
+### Deployment
+
+### API
 
 ## Contributors
 * Anna Warner
