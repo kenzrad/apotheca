@@ -34,7 +34,7 @@ Member:
 ### API
 
 ## Contributors
-* Anna Warner
-* Thomas Smith
-* Kensey Barker
-* Patrick Caserta
+* Anna Warner - [warnerak](https://github.com/warnerak)
+* Thomas Smith - [slowpossum](https://github.com/slowpossum)
+* Kensey Barker - [kenzrad](https://github.com/kenzrad)
+* Patrick Caserta - [pcaserta](https://github.com/pcaserta)
