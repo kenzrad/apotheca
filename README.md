@@ -39,5 +39,5 @@ Member:
 ## Contributors
 * Anna Warner - [warnerak](https://github.com/warnerak) | [LinkedIn]()
 * Thomas Smith - [slowpossum](https://github.com/slowpossum) | [LinkedIn]()
-* Kensey Barker - [kenzrad](https://github.com/kenzrad) | [LinkedIn](https://www.linkedin.com/in/kensey-barker/)
+* Kensey Barker - [kenzrad](https://github.com/kenzrad) | ![LinkedIn](https://www.linkedin.com/feed/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Beb5QrR7IQSycCFS98qP%2BNg%3D%3D) [LinkedIn](https://www.linkedin.com/in/kensey-barker/)
 * Patrick Caserta - [pcaserta](https://github.com/pcaserta) | [LinkedIn]()
